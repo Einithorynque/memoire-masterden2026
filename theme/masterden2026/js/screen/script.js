@@ -10,6 +10,32 @@ window.addEventListener('DOMContentLoaded', () => {
   index.id = "index";
   main.prepend(index);
 
+  // selectionner une partie
+  menu.querySelectorAll('a').forEach(link => {
+  const targetId = link.getAttribute('href').substring(1); // enlève le #
+  link.addEventListener('click', function(e) {
+    e.preventDefault();  // empêche le scroll classique
+    showGroup([targetId]); // affiche uniquement cette section
+  });
+  });
+
+  function showGroup(ids) {
+  // cacher toutes les sections
+  document.querySelectorAll("section").forEach(sec => {
+    sec.style.display = "none";
+  });
+
+  // afficher celles du groupe
+  ids.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = "block";
+  });
+}
+
+  // afficher automatiquement la première partie
+  var firstSectionId = sections[0].id;
+  showGroup([firstSectionId]);
+
   // injecte les liens rapides
   var quicklinks = document.querySelector("#quicklinks").cloneNode(true);
   quicklinks.id = "index-quicklinks";
