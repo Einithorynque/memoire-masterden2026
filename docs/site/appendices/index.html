@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Figures et annexes - PageTypeToPrint</title>
+    
+    <script>
+      const customColorMode = window.localStorage.getItem('color-mode');
+      if (customColorMode !== null) document.documentElement.setAttribute('data-force-color-mode', customColorMode);      
+    </script>       
+      <meta name="description" content="PageTypeToPrint est un gabarit web to print destiné à la mise en forme normalisée d’un document écrit de DNA ou d’un mémoire de DNSEP.">
+      <meta name="author" content="Julien Bidoret">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+      <link rel="stylesheet" href="../css/hljs-pttp.css" type="text/css">      
+      <link rel="stylesheet" href="../css/pttp.css" type="text/css">
+
+      
+    
+
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+    
+    <div id="top" class="sidebar">
+      <header role="banner" class="logo">
+  
+  <a class="header-main__link" href="..">PageTypeToPrint</a>
+  
+  <button id="menu-toggle" class="btn btn-default" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle Menu" title="Toggle Menu">
+    <span class="menu-thumb"></span>
+    <span class="menu-thumb"></span>
+    <span class="menu-thumb"></span>
+ </button>
+</header>
+      
+
+<nav class="nav-main collapsed" aria-label="Main menu" role="navigation">
+  
+  
+    
+  
+    
+      <p class="caption"><span class="caption-text">Démarrer</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../installation/">Installation</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../contenu/">Configuration et contenu</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../theme/">Thème</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../gabarits/">Gabarits</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../markdown/">Contenu au format markdown</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../print/">Version imprimable / pdf</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../online/">Mise en ligne</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+    
+      <p class="caption"><span class="caption-text">Composition</span></p>
+      <ul class="current">
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../typo/">Typographie</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../sommaire/">Sommaire</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../images/">Images et vidéos</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1 current">
+            
+<a class="reference internal current" href="./">Figures et annexes</a>
+
+
+    <ul class="current">
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../glossaire/">Glossaire</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../entretiens/">Entretiens</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../references/">Références et bibliographie</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../notes/">Notes</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+    
+      <p class="caption"><span class="caption-text">Aller plus loin</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../extend/">Extensions</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../extendcss/">Premiers pas</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../booklet/">Livret</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../pads/">Collaboration</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../autofolder/">Catalogue d’images</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../advanced-notes/">Notes avancées</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+    
+      <p class="caption"><span class="caption-text">À propos</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../update/">Mise à jour</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../credits/">Crédits</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+  
+      
+  <form class="form form--search" id="content_search" action="../search.html" method="get" role="search">
+    <div class="form-group">
+      <label class="hidden" for="mkdocs-search-query">Search for:</label>
+      <input type="search" aria-label="Search" class="form__input" name="q" id="mkdocs-search-query" placeholder="Rechercher…" tabindex="3"> 
+      <button type="submit" class="form__btn-submit" title="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.166 49.887" direction="ltr" xmlns:v="https://vecta.io/nano"><path stroke-width="2" stroke="var(--light-text-color)" d="M20.689 36.137c3.846 0 7.369-1.396 10.098-3.695l12.418 12.482c.193.172.473.344.795.344.795 0 1.225-.602 1.225-1.225a1.11 1.11 0 0 0-.344-.795L32.463 30.809c2.471-2.771 3.996-6.445 3.996-10.42 0-8.658-7.111-15.77-15.77-15.77S4.941 11.73 4.941 20.389s7.09 15.748 15.748 15.748zm0-1.053c-8.078 0-14.695-6.617-14.695-14.695S12.611 5.672 20.689 5.672s14.717 6.639 14.717 14.717-6.639 14.695-14.717 14.695z"></path></svg>
+      </button>
+    </div>
+  </form>
+
+  
+  
+</nav>
+    </div>
+
+    <div class="main-container">
+        
+      
+      
+        
+          <main class="page-content" data-js="mainContent" role="main">
+  <h2 id="figures-et-annexes">Figures et annexes</h2>
+<p>Les annexes (<em>template</em> <code>appendices</code>) et les sections iconographiques (<em>template</em> <code>figures</code>) sont organisées sur une grille de 12 colonnes.</p>
+<h3 id="dimensions-et-mise-en-page-des-figures-et-des-images">Dimensions et mise en page des figures et des images</h3>
+<p>On peut ajouter au code d’insertion d’une image des attributs <code>width</code>, <code>prinwidth</code>, <code>col</code> et <code>printcol</code> qui permettront de déterminer la largeur et la position (colonne) d’affichage de l’image.</p>
+<p>Par défaut, chaque image ou figure occupe 3 colonnes.</p>
+<pre><code class="language-pttp">(image: images/fichier.jpg width:8 printwidth:4)
+</code></pre>
+<p>↑ Cette image occupera 8 colonnes en version écran et 4 colonnes en version <em>print</em>.</p>
+<pre><code class="language-pttp">(image: images/fichier.jpg width:8 col:5)
+</code></pre>
+<p>↑ Cette image occupera 3 colonnes (par défaut) en version <em>print</em>, 8 colonnes en version écran et sera décalée (à l’écran) en 5<sup>e</sup> colonne.</p>
+<h3 id="mise-en-page-visuelle-des-images">Mise en page visuelle des images</h3>
+<p>Pour aider à la mise en page “visuelle” des images, on peut activer un utilitaire qui aide à déterminer le code d’intégration des images.</p>
+<p>En contexte écran, ajouter <code>/?layout</code> à l’URL. <br />
+En contexte de prévisualisation print : <code>/?print&amp;layout</code>.   </p>
+<p>On peut alors cliquer sur chaque figure pour faire apparaitre un outil d’édition :</p>
+<p><img alt="image layout helper" src="../images/layout-helper.png" /></p>
+<p>Cet outil permet de définir la largeur de la figure (de 3 à 12) et son décalage (auto, ou de 1 à 9). </p>
+<p>⚠️ Le code d’intégration de la figure est alors automatiquement copié dans le presse-papier, et doit être collé dans le document markdown source. </p>
+<p>⚠️ Attention, en contexte d’impression, la mise en page n’est pas recalculée. Il faut copier/coller le nouveau code d’intégration dans le fichier markdown, enregistrer ce dernier, puis actualiser la page dans le navigateur.</p>
+<h3 id="breaking-changes">Breaking changes</h3>
+<p><em>Avant</em> la version « Figures » de PageTypeToPrint (18 janvier 2024), les options de largeur et de décalage étaient déterminées grâce à des <code>class</code> prédéfinies :</p>
+<details markdown="1">
+  <summary>Voir l’ancienne documentation</summary>
+
+<li> <code>offset0</code> : pas de décalage (valeur par défaut)
+<li> <code>offset2</code> décale l’image en colonne 3
+<li> <code>offset4</code> décale l’image en colonne 5
+<li> <code>offset6</code> décale l’image en colonne 7
+<li> <code>offset8</code> décale l’image en colonne 9
+<li> <code>quarter</code> dimensionne l’image sur 3 colonnes (un quart de la largeur — valeur par défaut)
+<li> <code>third</code> dimensionne l’image sur 4 colonnes (un tiers de la largeur)
+<li> <code>half</code> dimensionne l’image sur 6 colonnes (la moitié de la largeur)
+<li> <code>twothird</code> dimensionne l’image sur 8 colonnes (deux tiers de la largeur)
+<li> <code>threequarter</code> dimensionne l’image sur 9 colonnes (trois quarts de la largeur)
+<li> <code>full</code> dimensionne l’image sur 12 colonnes (toute la largeur)
+
+Par exemple :
+
+<pre><code class="language-pttp">(figure: url/de_limage.jpg class: notwhite offset6 half) 
+</code></pre>
+
+
+</details>
+
+  <div class="prevnext">
+    
+      
+        <a href="../images/" class="maincontent__link maincontent__link--previous-page">← Images et vidéos</a>
+      
+      
+        <a href="../glossaire/" class="maincontent__link maincontent__link--next-page"> Glossaire →</a>
+      
+    
+  </div>
+
+</main>
+
+<aside class="page-toc" data-js="toc" role="complementary" aria-label="Table of Contents for this page">
+  <div class="toc">
+    <p class="page-toc__heading">Dans cette page :</p>
+    <ul>
+    
+        <li class="page-toc__item"><a href="#figures-et-annexes" class="page-toc__link" data-js="tocLink" tabindex="0">Figures et annexes</a></li>
+        
+            <li class="page-toc__item"><a href="./#dimensions-et-mise-en-page-des-figures-et-des-images" class="page-toc__link" data-js="tocLink" tabindex="0">Dimensions et mise en page des figures et des images</a></li>
+        
+            <li class="page-toc__item"><a href="./#mise-en-page-visuelle-des-images" class="page-toc__link" data-js="tocLink" tabindex="0">Mise en page visuelle des images</a></li>
+        
+            <li class="page-toc__item"><a href="./#breaking-changes" class="page-toc__link" data-js="tocLink" tabindex="0">Breaking changes</a></li>
+        
+    
+    </ul>
+</div>
+</aside>
+        
+      
+
+      
+        <footer class="page-footer" role="contentinfo">          
+          
+            <p>© Julien Bidoret, 2022–2025. <a href="https://github.com/esadpyrenees/PageTypeToPrint/">PageTypeToPrint </a> docs  built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+          
+          <div class="theme">
+            <input type="checkbox" id="toggle-darkmode" />
+            <label for="toggle-darkmode"><span>mode sombre</span> <span>mode clair</span></label>
+            <script>
+                if ((customColorMode == 'dark') || (customColorMode === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.querySelector('#toggle-darkmode').checked = true;
+                }
+            </script>
+          </div>
+        </footer>
+      
+
+    </main>
+    
+    
+      <script>var base_url = '..';</script>
+      <script src="../js/highlight.min.js"></script>
+      <script src="../js/hljs-pttp.js"></script>
+      <script src="../js/pttp.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+    <!--
+    MkDocs version : 1.6.1
+    PageTypeToPrint MkDocs theme version : 1.0.0
+    Build Date UTC : 2026-02-24 12:39:50.532381+00:00
+    -->
+  </body>
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Documentation - PageTypeToPrint</title>
+    
+    <script>
+      const customColorMode = window.localStorage.getItem('color-mode');
+      if (customColorMode !== null) document.documentElement.setAttribute('data-force-color-mode', customColorMode);      
+    </script>       
+      <meta name="description" content="PageTypeToPrint est un gabarit web to print destiné à la mise en forme normalisée d’un document écrit de DNA ou d’un mémoire de DNSEP.">
+      <meta name="author" content="Julien Bidoret">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+      <link rel="stylesheet" href="css/hljs-pttp.css" type="text/css">      
+      <link rel="stylesheet" href="css/pttp.css" type="text/css">
+
+      
+    
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+    
+    <div id="top" class="sidebar">
+      <header role="banner" class="logo">
+  
+  <a class="header-main__link" href=".">PageTypeToPrint</a>
+  
+  <button id="menu-toggle" class="btn btn-default" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle Menu" title="Toggle Menu">
+    <span class="menu-thumb"></span>
+    <span class="menu-thumb"></span>
+    <span class="menu-thumb"></span>
+ </button>
+</header>
+      
+
+<nav class="nav-main collapsed" aria-label="Main menu" role="navigation">
+  
+  
+    
+  
+    
+      <p class="caption"><span class="caption-text">Démarrer</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="installation/">Installation</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="contenu/">Configuration et contenu</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="theme/">Thème</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="gabarits/">Gabarits</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="markdown/">Contenu au format markdown</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="print/">Version imprimable / pdf</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="online/">Mise en ligne</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+    
+      <p class="caption"><span class="caption-text">Composition</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="typo/">Typographie</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="sommaire/">Sommaire</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="images/">Images et vidéos</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="appendices/">Figures et annexes</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="glossaire/">Glossaire</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="entretiens/">Entretiens</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="references/">Références et bibliographie</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="notes/">Notes</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+    
+      <p class="caption"><span class="caption-text">Aller plus loin</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="extend/">Extensions</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="extendcss/">Premiers pas</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="booklet/">Livret</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="pads/">Collaboration</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="autofolder/">Catalogue d’images</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="advanced-notes/">Notes avancées</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+    
+      <p class="caption"><span class="caption-text">À propos</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="update/">Mise à jour</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="credits/">Crédits</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+  
+      
+  <form class="form form--search" id="content_search" action="./search.html" method="get" role="search">
+    <div class="form-group">
+      <label class="hidden" for="mkdocs-search-query">Search for:</label>
+      <input type="search" aria-label="Search" class="form__input" name="q" id="mkdocs-search-query" placeholder="Rechercher…" tabindex="3"> 
+      <button type="submit" class="form__btn-submit" title="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.166 49.887" direction="ltr" xmlns:v="https://vecta.io/nano"><path stroke-width="2" stroke="var(--light-text-color)" d="M20.689 36.137c3.846 0 7.369-1.396 10.098-3.695l12.418 12.482c.193.172.473.344.795.344.795 0 1.225-.602 1.225-1.225a1.11 1.11 0 0 0-.344-.795L32.463 30.809c2.471-2.771 3.996-6.445 3.996-10.42 0-8.658-7.111-15.77-15.77-15.77S4.941 11.73 4.941 20.389s7.09 15.748 15.748 15.748zm0-1.053c-8.078 0-14.695-6.617-14.695-14.695S12.611 5.672 20.689 5.672s14.717 6.639 14.717 14.717-6.639 14.695-14.717 14.695z"></path></svg>
+      </button>
+    </div>
+  </form>
+
+  
+  
+</nav>
+    </div>
+
+    <div class="main-container">
+        
+      
+      
+        
+          <main class="page-content" data-js="mainContent" role="main">
+  <p><img alt="patata" src="images/pttp.svg" /></p>
+<p>PageTypeToPrint est un outil de mise en page et de publication <em>web + print</em>.</p>
+<p>Conçu originellement comme un gabarit de mise en forme des mémoires des étudiant⋅es de l’École supérieure d’art et de design des Pyrénées, il est basé sur la simplicité de l’édition (contenu textuel au format <em>markdown</em>), mais peut être adapté, augmenté et personnalisé.</p>
+<p>Il produit un contenu lisible en ligne sous la forme d’une page web et permet de générer un document PDF téléchargeable et imprimable.</p>
+<h2 id="fonctionnement">Fonctionnement</h2>
+<p>PageTypeToPrint est un outil qui…</p>
+<ol>
+<li>utilise le langage PHP,</li>
+<li>pour transformer des textes au format markdown en une page HTML, </li>
+<li>afin de pouvoir l’afficher dans un navigateur web, </li>
+<li>et en générer un PDF imprimable.</li>
+</ol>
+<h2 id="demarrer">Démarrer</h2>
+<p><a class="bigbutton" href="installation">→ Par ici !</a> </p>
+<h2 id="demo">Démo</h2>
+<p>Une démo est accessible en ligne sur <a href="https://ateliers.esad-pyrenees.fr/pagetypetoprint/demo/">ateliers.esad-pyrenees.fr/pagetypetoprint/demo</a> avec sa version <a href="https://ateliers.esad-pyrenees.fr/pagetypetoprint/demo/esadpyrenees/?print"><em>print</em></a> et le <a href="https://ateliers.esad-pyrenees.fr/pagetypetoprint/demo/esadpyrenees/document.pdf">document pdf</a> généré. </p>
+<h2 id="open-source">Open source</h2>
+<p>PageTypeToPrint est un logiciel libre. Son code est accessible sur : <a href="https://github.com/esadpyrenees/PageTypeToPrint/">github.com/esadpyrenees/PageTypeToPrint</a> ; vous pouvez librement l’utiliser, l’étudier, le modifier (la diffusion de vos modifications, si elle n’est pas indispensable, sera fort bienvenue).</p>
+<p><a class="bigbutton" href="https://github.com/esadpyrenees/PageTypeToPrint/zipball/main/">↓ Télécharger </a> </p>
+</main>
+        
+      
+
+      
+        <footer class="page-footer" role="contentinfo">          
+          
+            <p>© Julien Bidoret, 2022–2025. <a href="https://github.com/esadpyrenees/PageTypeToPrint/">PageTypeToPrint </a> docs  built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+          
+          <div class="theme">
+            <input type="checkbox" id="toggle-darkmode" />
+            <label for="toggle-darkmode"><span>mode sombre</span> <span>mode clair</span></label>
+            <script>
+                if ((customColorMode == 'dark') || (customColorMode === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.querySelector('#toggle-darkmode').checked = true;
+                }
+            </script>
+          </div>
+        </footer>
+      
+
+    </main>
+    
+    
+      <script>var base_url = '.';</script>
+      <script src="js/highlight.min.js"></script>
+      <script src="js/hljs-pttp.js"></script>
+      <script src="js/pttp.js"></script>
+      
+        <script src="search/main.js"></script>
+      
+    
+    <!--
+    MkDocs version : 1.6.1
+    PageTypeToPrint MkDocs theme version : 1.0.0
+    Build Date UTC : 2026-02-24 12:39:50.528622+00:00
+    -->
+  </body>
+</html>

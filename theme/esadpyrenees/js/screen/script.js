@@ -37,9 +37,11 @@ window.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       const id = entry.target.getAttribute('id');      
       if (entry.intersectionRatio > 0) {
-        document.querySelector(`#index li a[href="#${id}"]`).parentElement.classList.add('active');
+        const l = document.querySelector(`#index li a[href="#${id}"]`);
+        if(l) l.parentElement.classList.add('active');
       } else {
-        document.querySelector(`#index li a[href="#${id}"]`).parentElement.classList.remove('active');
+        const li = document.querySelector(`#index li a[href="#${id}"]`);
+        if(li) li.parentElement.classList.remove('active');
       }
     });
   });
@@ -62,33 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const video = button.previousElementSibling;
     video.src = video.dataset.src;
   }))
-
-  // sommaire overlay
-  var toggleBtn = document.getElementById('toggle-btn');
-  var nav = document.getElementById('nav');
-  var closeBtn = document.getElementById('btn-fermer');
-
-
-    // ── Fonctions d'ouverture / fermeture ─────────────────────────────────────
-
-
-    // ── Écouteurs d'événements ────────────────────────────────────────────────
-
-    // Clic sur le lien "Sommaire" : ouvre le panneau
-    toggleBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      nav.style.display = "grid";
-    });
-
-    // Clic sur le bouton "Fermer" : ferme le panneau
-    closeBtn.addEventListener('click', (e) => {
-      nav.style.display = "none";
-    });
-
-    // Touche Échap : ferme le panneau (accessibilité)
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') close();
-    });
+  
 
 });
 

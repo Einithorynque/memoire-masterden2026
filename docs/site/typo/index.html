@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Typographie - PageTypeToPrint</title>
+    
+    <script>
+      const customColorMode = window.localStorage.getItem('color-mode');
+      if (customColorMode !== null) document.documentElement.setAttribute('data-force-color-mode', customColorMode);      
+    </script>       
+      <meta name="description" content="PageTypeToPrint est un gabarit web to print destiné à la mise en forme normalisée d’un document écrit de DNA ou d’un mémoire de DNSEP.">
+      <meta name="author" content="Julien Bidoret">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+      <link rel="stylesheet" href="../css/hljs-pttp.css" type="text/css">      
+      <link rel="stylesheet" href="../css/pttp.css" type="text/css">
+
+      
+    
+
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+    
+    <div id="top" class="sidebar">
+      <header role="banner" class="logo">
+  
+  <a class="header-main__link" href="..">PageTypeToPrint</a>
+  
+  <button id="menu-toggle" class="btn btn-default" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle Menu" title="Toggle Menu">
+    <span class="menu-thumb"></span>
+    <span class="menu-thumb"></span>
+    <span class="menu-thumb"></span>
+ </button>
+</header>
+      
+
+<nav class="nav-main collapsed" aria-label="Main menu" role="navigation">
+  
+  
+    
+  
+    
+      <p class="caption"><span class="caption-text">Démarrer</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../installation/">Installation</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../contenu/">Configuration et contenu</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../theme/">Thème</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../gabarits/">Gabarits</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../markdown/">Contenu au format markdown</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../print/">Version imprimable / pdf</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../online/">Mise en ligne</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+    
+      <p class="caption"><span class="caption-text">Composition</span></p>
+      <ul class="current">
+        
+          <li class="toctree-l1 current">
+            
+<a class="reference internal current" href="./">Typographie</a>
+
+
+    <ul class="current">
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../sommaire/">Sommaire</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../images/">Images et vidéos</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../appendices/">Figures et annexes</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../glossaire/">Glossaire</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../entretiens/">Entretiens</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../references/">Références et bibliographie</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../notes/">Notes</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+    
+      <p class="caption"><span class="caption-text">Aller plus loin</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../extend/">Extensions</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../extendcss/">Premiers pas</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../booklet/">Livret</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../pads/">Collaboration</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../autofolder/">Catalogue d’images</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../advanced-notes/">Notes avancées</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+    
+      <p class="caption"><span class="caption-text">À propos</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../update/">Mise à jour</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../credits/">Crédits</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+  
+      
+  <form class="form form--search" id="content_search" action="../search.html" method="get" role="search">
+    <div class="form-group">
+      <label class="hidden" for="mkdocs-search-query">Search for:</label>
+      <input type="search" aria-label="Search" class="form__input" name="q" id="mkdocs-search-query" placeholder="Rechercher…" tabindex="3"> 
+      <button type="submit" class="form__btn-submit" title="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.166 49.887" direction="ltr" xmlns:v="https://vecta.io/nano"><path stroke-width="2" stroke="var(--light-text-color)" d="M20.689 36.137c3.846 0 7.369-1.396 10.098-3.695l12.418 12.482c.193.172.473.344.795.344.795 0 1.225-.602 1.225-1.225a1.11 1.11 0 0 0-.344-.795L32.463 30.809c2.471-2.771 3.996-6.445 3.996-10.42 0-8.658-7.111-15.77-15.77-15.77S4.941 11.73 4.941 20.389s7.09 15.748 15.748 15.748zm0-1.053c-8.078 0-14.695-6.617-14.695-14.695S12.611 5.672 20.689 5.672s14.717 6.639 14.717 14.717-6.639 14.695-14.717 14.695z"></path></svg>
+      </button>
+    </div>
+  </form>
+
+  
+  
+</nav>
+    </div>
+
+    <div class="main-container">
+        
+      
+      
+        
+          <main class="page-content" data-js="mainContent" role="main">
+  <h2 id="typographie">Typographie</h2>
+<p>La majeure partie des problématiques de micro-typographie est corrigée automatiquement (points de suspension, espaces avant et après ! ? « » “ ”, unités). </p>
+<p>Cete automatisation ne dispense aucunement du soin à apporter à la composition typographique du texte !</p>
+<h3 id="sauts-de-page-ou-de-colonnes">Sauts de page ou de colonnes</h3>
+<p>À l’impression, on peut forcer un saut de page en intégrant le code :</p>
+<pre><code class="language-html">&lt;br class=&quot;breakpage&quot;&gt;
+</code></pre>
+<p>Les sauts de page doivent être intégrés en fin de section / chapitre plutôt qu’au début du suivant.</p>
+<p>Pour forcer un saut dans des colonnes (notes de bas de page, notamment), utiliser :</p>
+<pre><code class="language-html">&lt;br class=&quot;breakcolumn&quot;&gt;
+</code></pre>
+<p>Des sauts de ligne conditionnels (écran <em>ou</em> impression) peuvent être générés grâce aux balises :</p>
+<pre><code class="language-html">&lt;br class=&quot;breakscreen&quot;&gt;&lt;!-- uniquement à l’écran --&gt;
+&lt;br class=&quot;breakprint&quot;&gt;&lt;!-- uniquement à l’impression --&gt;
+</code></pre>
+<h3 id="espaces">Espaces</h3>
+<ul>
+<li>Pour une espace mot insécable, utiliser <code>&amp;nbsp;</code>    </li>
+<li>Pour une espace fine insécable, utiliser <code>&amp;#8239;</code></li>
+</ul>
+<h3 id="apostrophe-courbe-et-guillemets">Apostrophe courbe et guillemets</h3>
+<p>Les apostrophes sont composées grâce au signe ’ et pas '.</p>
+<p>Les « guillemets droits », simples ou doubles (" et ') devraient être proscrits. Dans PageTypeToPrint, en Markdown, ils sont automatiquement remplacés par des guillemets français («»). </p>
+<p>Les guillemets français devraient être utilisés dans l’immense majorité des cas. Les guillemets anglais (“”) sont réservés à la mise entre guillemets au sein-même d’un texte déjà entre guillemets français :</p>
+<blockquote>
+<p>« Une citation peut contenir des mots “entre guillemets”. »</p>
+</blockquote>
+<p>Les caractères dans le tableau ci-dessous peuvent être composés directement (les entités HTML ne sont présentées qu’à titre informatif).</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Entité HTML</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>’</strong></td>
+<td>&amp;<span>rsquo;</span></td>
+<td>Apostrophe courbe</td>
+</tr>
+<tr>
+<td><strong>« » </strong></td>
+<td>&amp;<span>laquo;</span> &amp;<span>raquo;</span></td>
+<td>Guillemet français ouvrant et fermant</td>
+</tr>
+<tr>
+<td><strong>“ ”</strong></td>
+<td>&amp;<span>ldquo;</span> &amp;<span>rdquo;</span></td>
+<td>Guillemet anglais ouvrant et fermant</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exposants">Exposants</h3>
+<p>Pour un exposant, utiliser <code>XX^e^ siècle</code>, afin d’afficher XX<sup>e</sup> siècle. Les abbréviations premier, deuxième, etc. se composent également en exposants : « <code>la 1^re^ vague et la 2^e^ vague</code> » pour afficher « la 1<sup>re</sup> vague et la 2<sup>e</sup> vague ». </p>
+<h3 id="points-de-suspension">Points de suspension</h3>
+<p>Les points de suspension doivent être composés grâce au caractère dédié : « … ».  <br />
+(Pas en faisant se succéder trois points : ...).</p>
+<h3 id="spacing">Spacing</h3>
+<p>Pour réduire une ligne de texte et empêcher un saut malencontreux (veuves ou orphelines), on peut introduire au sein du texte markdown des balises <code>span</code> qui vont permettre de régler finement le <em>spacing</em> d’une phrase ou d’une ligne:</p>
+<pre><code class="language-html">Lorem &lt;span style=&quot;--ls:4&quot;&gt;ipsum dolor sit amet, consectetur adipiscing elit.&lt;/span&gt; Sed non risus […] 
+</code></pre>
+<p>Dans la CSS doit être présent :</p>
+<pre><code class="language-css">[style^=&quot;--ls&quot;] { letter-spacing: calc(var(--ls, 0) * -0.001em); }
+</code></pre>
+<p>La valeur attribuée à la propriété <code>--ls</code> permettra d’étendre le <em>spacing</em> (si elle est négative) ou de le resserrer si elle est positive. L’inspecteur web permet de modifier la valeur à la volée afin de l’ajuster précisément.</p>
+<p>⚠️ Attention, ne procéder à ces ajustements qu’en toute fin de mise en forme, quand tout le reste a été fait !</p>
+
+  <div class="prevnext">
+    
+      
+        <a href="../online/" class="maincontent__link maincontent__link--previous-page">← Mise en ligne</a>
+      
+      
+        <a href="../sommaire/" class="maincontent__link maincontent__link--next-page"> Sommaire →</a>
+      
+    
+  </div>
+
+</main>
+
+<aside class="page-toc" data-js="toc" role="complementary" aria-label="Table of Contents for this page">
+  <div class="toc">
+    <p class="page-toc__heading">Dans cette page :</p>
+    <ul>
+    
+        <li class="page-toc__item"><a href="#typographie" class="page-toc__link" data-js="tocLink" tabindex="0">Typographie</a></li>
+        
+            <li class="page-toc__item"><a href="./#sauts-de-page-ou-de-colonnes" class="page-toc__link" data-js="tocLink" tabindex="0">Sauts de page ou de colonnes</a></li>
+        
+            <li class="page-toc__item"><a href="./#espaces" class="page-toc__link" data-js="tocLink" tabindex="0">Espaces</a></li>
+        
+            <li class="page-toc__item"><a href="./#apostrophe-courbe-et-guillemets" class="page-toc__link" data-js="tocLink" tabindex="0">Apostrophe courbe et guillemets</a></li>
+        
+            <li class="page-toc__item"><a href="./#exposants" class="page-toc__link" data-js="tocLink" tabindex="0">Exposants</a></li>
+        
+            <li class="page-toc__item"><a href="./#points-de-suspension" class="page-toc__link" data-js="tocLink" tabindex="0">Points de suspension</a></li>
+        
+            <li class="page-toc__item"><a href="./#spacing" class="page-toc__link" data-js="tocLink" tabindex="0">Spacing</a></li>
+        
+    
+    </ul>
+</div>
+</aside>
+        
+      
+
+      
+        <footer class="page-footer" role="contentinfo">          
+          
+            <p>© Julien Bidoret, 2022–2025. <a href="https://github.com/esadpyrenees/PageTypeToPrint/">PageTypeToPrint </a> docs  built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+          
+          <div class="theme">
+            <input type="checkbox" id="toggle-darkmode" />
+            <label for="toggle-darkmode"><span>mode sombre</span> <span>mode clair</span></label>
+            <script>
+                if ((customColorMode == 'dark') || (customColorMode === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.querySelector('#toggle-darkmode').checked = true;
+                }
+            </script>
+          </div>
+        </footer>
+      
+
+    </main>
+    
+    
+      <script>var base_url = '..';</script>
+      <script src="../js/highlight.min.js"></script>
+      <script src="../js/hljs-pttp.js"></script>
+      <script src="../js/pttp.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+    <!--
+    MkDocs version : 1.6.1
+    PageTypeToPrint MkDocs theme version : 1.0.0
+    Build Date UTC : 2026-02-24 12:39:50.544107+00:00
+    -->
+  </body>
+</html>

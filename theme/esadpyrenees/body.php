@@ -1,16 +1,4 @@
-
 <header id="header">
-    <!-- navigation en header -->
-     <div class="nav-principale">
-        <a href="">Retour à l'accueil</a>
-        <div>
-            <img src="" alt="">
-        </div>
-        <a href=""  id="toggle-btn">Sommaire</a>
-     </div>
-
-    <!-- la navigation (= le sommaire) -->
-
     <!-- Le titre du mémoire / doc écrit -->
     <h1><?= $title ?></h1>
 
@@ -19,30 +7,44 @@
 
     <!-- le titre courant (version print) -->
     <div class="runningtitle">
-        <div><span class="name"><?= $name ?></span> <span class="title"><?= $title ?></span></div>
+        <div><?= $name ?></div>
+        <div><?= $runningtitle ?></div>
+    </div>
+
+    <!-- le folio courant (version print) -->
+    <div class="runningfolio">
         <span class="folio"></span>
+        <!-- Logo ÉSAD Pyrénées -->
+        <img src="<?= $theme_url ?>/css/logo.png" alt="ESAD Pyrénées">
+        <!-- Votre diplôme -->
+        <span class="diploma"><?= $diploma ?></span>
     </div>
 
     <!-- les méta-données -->
     <div class="meta">
-        <!-- l’année YYYY – YYYY  -->
-        <div class="meta-year"><?= $year ?></div>
-        <!-- Votre nom -->
-        <div class="meta-name"><?= $name ?></div>
         <div class="meta-data">
-            <!-- Votre diplôme, option et mention -->
-            <p>
-                <?= $diploma ?> <br>
-                <?= $mention ?> 
-            </p>
             <p>
                 École supérieure <br class="breakprint">
                 d’art &amp; de design <br class="breakprint">
                 des&nbsp;Pyrénées<br><br class="breakprint">
                 <!-- Votre pôle éventuel -->
                 <?= $pole ?>
-            </p>
+            </p>         
         </div>
+        <div>
+            <!-- Votre diplôme, option et mention -->
+            <p>
+                <?= $diploma ?> <br>
+                <?= $mention ?> 
+            </p>   
+        </div>
+        <div>
+            <!-- Votre nom -->
+            <div class="meta-name"><?= $name ?></div>
+            <!-- l’année YYYY – YYYY  -->
+            <div class="meta-year"><?= $year ?></div>
+        </div>
+        
     </div>
 
     <!-- les liens rapides: lire, imprimmer, télécharger -->
@@ -58,13 +60,13 @@
     </nav>
 </header>
 
- <nav id="nav">
-        <ul class="nav-ul">
-            <?= $nav() ?>
-        </ul>
-        <button id="btn-fermer">Fermer</button>
+<!-- la navigation (= le sommaire) -->
+<nav id="nav">
+    <h2>Sommaire</h2>
+    <ul class="nav-ul">
+        <?= $nav() ?>
+    </ul>
 </nav>
-
 
 <main id="main">
     <!-- le contenu -->      
