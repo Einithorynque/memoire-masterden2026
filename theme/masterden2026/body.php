@@ -1,36 +1,18 @@
 <header id="header">
+    <!-- navigation en header -->
+     <div class="nav-principale">
+        <a href=""><button>Retour à l'accueil</button></a>
+        <div>
+            <img src="" alt="">
+        </div>
+        <a href=""><button id="toggle-btn">Sommaire</button></a>
+     </div>
+
+    <div class="header-content">
     <!-- Le titre du mémoire / doc écrit -->
     <h1><?= $title ?></h1>
-
-    <!-- Le sous-titre éventuel (si pas de sous-titre, supprimer le h2) -->
-    <h2><?= $subtitle ?></h2>
-
-    <!-- le titre courant (version print) -->
-    <div class="runningtitle">
-        <div><span class="name"><?= $name ?></span> <span class="title"><?= $title ?></span></div>
-        <span class="folio"></span>
-    </div>
-
-    <!-- les méta-données -->
-    <div class="meta">
-        <!-- l’année YYYY – YYYY  -->
-        <div class="meta-year"><?= $year ?></div>
         <!-- Votre nom -->
         <div class="meta-name"><?= $name ?></div>
-        <div class="meta-data">
-            <!-- Votre diplôme, option et mention -->
-            <p>
-                <?= $diploma ?> <br>
-                <?= $mention ?> 
-            </p>
-            <p>
-                École supérieure <br class="breakprint">
-                d’art &amp; de design <br class="breakprint">
-                des&nbsp;Pyrénées<br><br class="breakprint">
-                <!-- Votre pôle éventuel -->
-                <?= $pole ?>
-            </p>
-        </div>
     </div>
 
     <!-- les liens rapides: lire, imprimmer, télécharger -->
@@ -46,13 +28,14 @@
     </nav>
 </header>
 
-<!-- la navigation (= le sommaire) -->
-<nav id="nav">
-    <h2>Sommaire</h2>
-    <ul class="nav-ul">
-        <?= $nav() ?>
-    </ul>
+  <!-- la navigation (= le sommaire) -->
+ <nav id="nav">
+        <ul class="nav-ul">
+            <?= $nav() ?>
+        </ul>
+        <button id="btn-fermer" onclick="goTo('B')">Fermer</button>
 </nav>
+
 
 <main id="main">
     <!-- le contenu -->      

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Notes - PageTypeToPrint</title>
+    
+    <script>
+      const customColorMode = window.localStorage.getItem('color-mode');
+      if (customColorMode !== null) document.documentElement.setAttribute('data-force-color-mode', customColorMode);      
+    </script>       
+      <meta name="description" content="PageTypeToPrint est un gabarit web to print destiné à la mise en forme normalisée d’un document écrit de DNA ou d’un mémoire de DNSEP.">
+      <meta name="author" content="Julien Bidoret">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+      <link rel="stylesheet" href="../css/hljs-pttp.css" type="text/css">      
+      <link rel="stylesheet" href="../css/pttp.css" type="text/css">
+
+      
+    
+
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+    
+    <div id="top" class="sidebar">
+      <header role="banner" class="logo">
+  
+  <a class="header-main__link" href="..">PageTypeToPrint</a>
+  
+  <button id="menu-toggle" class="btn btn-default" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle Menu" title="Toggle Menu">
+    <span class="menu-thumb"></span>
+    <span class="menu-thumb"></span>
+    <span class="menu-thumb"></span>
+ </button>
+</header>
+      
+
+<nav class="nav-main collapsed" aria-label="Main menu" role="navigation">
+  
+  
+    
+  
+    
+      <p class="caption"><span class="caption-text">Démarrer</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../installation/">Installation</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../contenu/">Configuration et contenu</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../theme/">Thème</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../gabarits/">Gabarits</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../markdown/">Contenu au format markdown</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../print/">Version imprimable / pdf</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../online/">Mise en ligne</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+    
+      <p class="caption"><span class="caption-text">Composition</span></p>
+      <ul class="current">
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../typo/">Typographie</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../sommaire/">Sommaire</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../images/">Images et vidéos</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../appendices/">Figures et annexes</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../glossaire/">Glossaire</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../entretiens/">Entretiens</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../references/">Références et bibliographie</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1 current">
+            
+<a class="reference internal current" href="./">Notes</a>
+
+
+    <ul class="current">
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+    
+      <p class="caption"><span class="caption-text">Aller plus loin</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../extend/">Extensions</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../extendcss/">Premiers pas</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../booklet/">Livret</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../pads/">Collaboration</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../autofolder/">Catalogue d’images</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../advanced-notes/">Notes avancées</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+    
+      <p class="caption"><span class="caption-text">À propos</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../update/">Mise à jour</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../credits/">Crédits</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+  
+      
+  <form class="form form--search" id="content_search" action="../search.html" method="get" role="search">
+    <div class="form-group">
+      <label class="hidden" for="mkdocs-search-query">Search for:</label>
+      <input type="search" aria-label="Search" class="form__input" name="q" id="mkdocs-search-query" placeholder="Rechercher…" tabindex="3"> 
+      <button type="submit" class="form__btn-submit" title="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.166 49.887" direction="ltr" xmlns:v="https://vecta.io/nano"><path stroke-width="2" stroke="var(--light-text-color)" d="M20.689 36.137c3.846 0 7.369-1.396 10.098-3.695l12.418 12.482c.193.172.473.344.795.344.795 0 1.225-.602 1.225-1.225a1.11 1.11 0 0 0-.344-.795L32.463 30.809c2.471-2.771 3.996-6.445 3.996-10.42 0-8.658-7.111-15.77-15.77-15.77S4.941 11.73 4.941 20.389s7.09 15.748 15.748 15.748zm0-1.053c-8.078 0-14.695-6.617-14.695-14.695S12.611 5.672 20.689 5.672s14.717 6.639 14.717 14.717-6.639 14.695-14.717 14.695z"></path></svg>
+      </button>
+    </div>
+  </form>
+
+  
+  
+</nav>
+    </div>
+
+    <div class="main-container">
+        
+      
+      
+        
+          <main class="page-content" data-js="mainContent" role="main">
+  <h2 id="notes">Notes</h2>
+<p>Pour créer une note, insérer <code>[^identifiant_de_la_note]</code> au fil du texte, puis, ailleurs dans le même document, créer un paragraphe contentant :   </p>
+<p><code>[^identifiant_de_la_note]: Contenu de la note mise en forme.</code></p>
+<p>Il est préférable de ne pas identifier les notes via des identifiants numériques (1, 2, 3…) afin de laisser la numérotation automatique à la charge de l’outil.</p>
+<h3 id="appels-de-notes-et-citations">Appels de notes et citations</h3>
+<p>Dans le texte, un appel de note précède toujours le signe de ponctuation. Il se placera donc toujours avant le point final d’une phrase. En fin de citation, il se place avant le guillemet fermant. On le saisit sans le faire précéder d’une espace :</p>
+<pre><code class="language-pttp">C’est ainsi que Paul Watzlawick formule son axiome d’impossibilité[^axiome].
+&lt;!-- ici, avant le point --&gt;
+
+L’axiome d’impossibilité, «&amp;#8239;On ne peut pas ne pas communiquer[^axiome].&amp;#8239;», est formulé […]
+&lt;!-- ici, avant le point concluant la citation, avant le guillemet qui l’encadre (précédé d’une espace fine insécable) --&gt;
+
+Paul Watzlawick affirme «&amp;#8239;On ne peut pas ne pas communiquer[^axiome].&amp;#8239;». Ainsi […]
+&lt;!-- ici, un point final conclut la phrase comportant une citation --&gt;
+</code></pre>
+<p>De la même manière, les images de note doivent être saisies <em>immédiatement</em> (sans espace) après le mot qu’elles précisent :</p>
+<pre><code class="language-pttp">Les illustrations de Gustave Doré(imagenote: images/gustave.jpg) sont gravées dans les mémoires.
+&lt;!--                             ↑ pas d’espace… --&gt;
+</code></pre>
+<h3 id="problemes-de-notes">Problèmes de notes</h3>
+<p>En contexte d’impression, si trop d'images de note sont présentes sur une seule page, l’outil ne peut pas gérer automatiquement le “reflux” de la note sur la page suivante. Une <code>alert</code> est alors affichée.</p>
+<p>Plusieurs solutions : </p>
+<ul>
+<li>Utiliser une grande <code>image</code> au fil du texte pour développer la pagination différemment:</li>
+</ul>
+<pre><code class="language-pttp">(image: nomdufichier.jpg caption: La légende de l’image)
+</code></pre>
+<ul>
+<li>Utiliser un appel de <code>figure</code> au fil du texte (l’image sera alors affichée en fin de section):</li>
+</ul>
+<pre><code class="language-pttp">(figure: nomdufichier.jpg caption: La légende de l’image)
+</code></pre>
+<ul>
+<li>Déporter certaines images de notes en annexes.</li>
+<li>Forcer un saut de page en intégrant le code :</li>
+</ul>
+<pre><code class="language-html">&lt;br class=&quot;breakpage&quot;&gt;
+</code></pre>
+<h3 id="modifier-laffichage-des-notes">Modifier l’affichage des notes</h3>
+<p>Pour étendre ou modifier l’affichage des notes, il importe de comprendre comment elles sont générées et mises en page. Une documentation dédiée est accessible ici : <a href="../advanced-notes/">Pour aller plus loin avec les notes</a>.</p>
+
+  <div class="prevnext">
+    
+      
+        <a href="../references/" class="maincontent__link maincontent__link--previous-page">← Références et bibliographie</a>
+      
+      
+        <a href="../extend/" class="maincontent__link maincontent__link--next-page"> Extensions →</a>
+      
+    
+  </div>
+
+</main>
+
+<aside class="page-toc" data-js="toc" role="complementary" aria-label="Table of Contents for this page">
+  <div class="toc">
+    <p class="page-toc__heading">Dans cette page :</p>
+    <ul>
+    
+        <li class="page-toc__item"><a href="#notes" class="page-toc__link" data-js="tocLink" tabindex="0">Notes</a></li>
+        
+            <li class="page-toc__item"><a href="./#appels-de-notes-et-citations" class="page-toc__link" data-js="tocLink" tabindex="0">Appels de notes et citations</a></li>
+        
+            <li class="page-toc__item"><a href="./#problèmes-de-notes" class="page-toc__link" data-js="tocLink" tabindex="0">Problèmes de notes</a></li>
+        
+            <li class="page-toc__item"><a href="./#modifier-l’affichage-des-notes" class="page-toc__link" data-js="tocLink" tabindex="0">Modifier l’affichage des notes</a></li>
+        
+    
+    </ul>
+</div>
+</aside>
+        
+      
+
+      
+        <footer class="page-footer" role="contentinfo">          
+          
+            <p>© Julien Bidoret, 2022–2025. <a href="https://github.com/esadpyrenees/PageTypeToPrint/">PageTypeToPrint </a> docs  built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+          
+          <div class="theme">
+            <input type="checkbox" id="toggle-darkmode" />
+            <label for="toggle-darkmode"><span>mode sombre</span> <span>mode clair</span></label>
+            <script>
+                if ((customColorMode == 'dark') || (customColorMode === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.querySelector('#toggle-darkmode').checked = true;
+                }
+            </script>
+          </div>
+        </footer>
+      
+
+    </main>
+    
+    
+      <script>var base_url = '..';</script>
+      <script src="../js/highlight.min.js"></script>
+      <script src="../js/hljs-pttp.js"></script>
+      <script src="../js/pttp.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+    <!--
+    MkDocs version : 1.6.1
+    PageTypeToPrint MkDocs theme version : 1.0.0
+    Build Date UTC : 2026-02-24 12:39:50.539849+00:00
+    -->
+  </body>
+</html>

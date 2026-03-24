@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Notes avancées - PageTypeToPrint</title>
+    
+    <script>
+      const customColorMode = window.localStorage.getItem('color-mode');
+      if (customColorMode !== null) document.documentElement.setAttribute('data-force-color-mode', customColorMode);      
+    </script>       
+      <meta name="description" content="PageTypeToPrint est un gabarit web to print destiné à la mise en forme normalisée d’un document écrit de DNA ou d’un mémoire de DNSEP.">
+      <meta name="author" content="Julien Bidoret">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+      <link rel="stylesheet" href="../css/hljs-pttp.css" type="text/css">      
+      <link rel="stylesheet" href="../css/pttp.css" type="text/css">
+
+      
+    
+
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+    
+    <div id="top" class="sidebar">
+      <header role="banner" class="logo">
+  
+  <a class="header-main__link" href="..">PageTypeToPrint</a>
+  
+  <button id="menu-toggle" class="btn btn-default" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle Menu" title="Toggle Menu">
+    <span class="menu-thumb"></span>
+    <span class="menu-thumb"></span>
+    <span class="menu-thumb"></span>
+ </button>
+</header>
+      
+
+<nav class="nav-main collapsed" aria-label="Main menu" role="navigation">
+  
+  
+    
+  
+    
+      <p class="caption"><span class="caption-text">Démarrer</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../installation/">Installation</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../contenu/">Configuration et contenu</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../theme/">Thème</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../gabarits/">Gabarits</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../markdown/">Contenu au format markdown</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../print/">Version imprimable / pdf</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../online/">Mise en ligne</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+    
+      <p class="caption"><span class="caption-text">Composition</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../typo/">Typographie</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../sommaire/">Sommaire</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../images/">Images et vidéos</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../appendices/">Figures et annexes</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../glossaire/">Glossaire</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../entretiens/">Entretiens</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../references/">Références et bibliographie</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../notes/">Notes</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+    
+      <p class="caption"><span class="caption-text">Aller plus loin</span></p>
+      <ul class="current">
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../extend/">Extensions</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../extendcss/">Premiers pas</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../booklet/">Livret</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../pads/">Collaboration</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../autofolder/">Catalogue d’images</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1 current">
+            
+<a class="reference internal current" href="./">Notes avancées</a>
+
+
+    <ul class="current">
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+    
+      <p class="caption"><span class="caption-text">À propos</span></p>
+      <ul>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../update/">Mise à jour</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+          <li class="toctree-l1">
+            
+<a class="reference internal" href="../credits/">Crédits</a>
+
+
+    <ul>
+        
+            
+        
+    </ul>
+
+
+          </li>
+        
+      </ul>
+    
+  
+  
+      
+  <form class="form form--search" id="content_search" action="../search.html" method="get" role="search">
+    <div class="form-group">
+      <label class="hidden" for="mkdocs-search-query">Search for:</label>
+      <input type="search" aria-label="Search" class="form__input" name="q" id="mkdocs-search-query" placeholder="Rechercher…" tabindex="3"> 
+      <button type="submit" class="form__btn-submit" title="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.166 49.887" direction="ltr" xmlns:v="https://vecta.io/nano"><path stroke-width="2" stroke="var(--light-text-color)" d="M20.689 36.137c3.846 0 7.369-1.396 10.098-3.695l12.418 12.482c.193.172.473.344.795.344.795 0 1.225-.602 1.225-1.225a1.11 1.11 0 0 0-.344-.795L32.463 30.809c2.471-2.771 3.996-6.445 3.996-10.42 0-8.658-7.111-15.77-15.77-15.77S4.941 11.73 4.941 20.389s7.09 15.748 15.748 15.748zm0-1.053c-8.078 0-14.695-6.617-14.695-14.695S12.611 5.672 20.689 5.672s14.717 6.639 14.717 14.717-6.639 14.695-14.717 14.695z"></path></svg>
+      </button>
+    </div>
+  </form>
+
+  
+  
+</nav>
+    </div>
+
+    <div class="main-container">
+        
+      
+      
+        
+          <main class="page-content" data-js="mainContent" role="main">
+  <h2 id="notes-avancees">Notes avancées</h2>
+<p>PageTypeToPrint gère nativement deux types de notes : des notes « textuelles » et des notes « iconographiques ».</p>
+<h3 id="notes-textuelles">Notes textuelles</h3>
+<p>Elles sont générées grâce à l’extension <code>MarkdownItFootnote</code> et suivent le format d’appel et de création de notes markdown le plus commun :    </p>
+<pre><code class="language-html">Insérer un appel de note[^appel], puis créer un paragraphe contentant :   
+
+[^appel]: Contenu de la note.
+</code></pre>
+<p>Les appels de notes sont insérés au fil du texte :</p>
+<pre><code class="language-html">&lt;p&gt;Insérer un appel de note&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, puis créer un paragraphe contentant : &lt;/p&gt;
+</code></pre>
+<p>L’ensemble des notes se retrouve à la fin du document, dans une liste. Un lien de retour vers l’appel de note est inséré à la fin de son contenu :</p>
+<pre><code class="language-html">&lt;hr class=&quot;footnotes-sep&quot;&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+  &lt;ol class=&quot;footnotes-list&quot;&gt;
+    &lt;li id=&quot;fn1&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;Contenu de la note &lt;a href=&quot;#fnref1&quot; class=&quot;footnote-backref&quot;&gt;&amp;#8617;&amp;#65038;&lt;/a&gt;&lt;p&gt;&lt;/li&gt;
+    […]
+  &lt;/ol&gt;
+&lt;/section&gt;
+</code></pre>
+<h4 id="affichage-ecran-notes-textuelles-en-marge">Affichage écran : notes textuelles en marge</h4>
+<p>Pour l’affichage à l’écran, le script <code>js/screen/sideNotes.js</code> parcourt les appels de note, récupère leur contenu cible et l’insère au fil du texte, à la place de l’appel de note initial, dans une structure HTML constituée de trois éléments :</p>
+<pre><code class="language-html">&lt;label class=&quot;sn-toggle-label&quot; for=&quot;sn-note-fn1&quot;&gt;1&lt;/label&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;sn-note-fn1&quot; class=&quot;sn-toggle&quot;&gt;
+&lt;aside class=&quot;sn-note&quot; data-ref=&quot;2&quot;&gt;&lt;p&gt;Contenu de la note&lt;/p&gt;&lt;/aside&gt;
+</code></pre>
+<p>Ces éléments permettent un affichage <em>responsive</em> des notes : soit sur le côté du texte si le viewport est suffisamment grand, soit au sein du texte après un clic sur le <code>label</code> en affichage mobile (voir la section “Notes” du fichier <code>css/styles.css</code>).</p>
+<h4 id="impression-notes-textuelles-en-bas-de-page">Impression : notes textuelles en bas de page</h4>
+<p>En contexte d’impression, la structure HTML des notes textuelles est soumise à une modification similaire grâce au script <code>js/screen/footNotes.js</code> afin de suivre le balisage recommandé dans la spécification HTML du W3C. Les notes textuelles seront ainsi intégrées au bas de chaque page par la librairie <code>paged.js</code>.</p>
+<p>Si l’on souhaite déplacer les notes de bas de page en marge, ce script devra être désactivé et une opération similaire à celle à laquelles sont soumises les notes iconographiques devra être opérée.</p>
+<h3 id="notes-iconographiques">Notes iconographiques</h3>
+<p>Les notes iconographiques ( ou <em>images de note</em>) sont générées grâce au <em>shortcode</em> <code>(imagenote: fichier.jpg)</code> inséré après le mot qu’elles précisent :</p>
+<pre><code class="language-pttp">Les illustrations de Gustave Doré(imagenote: images/gustave.jpg caption: Gustave Doré) sont gravées dans les mémoires.
+</code></pre>
+<p>Elles peuvent bénéficier de l’ensemble des attributs liés aux figures (<code>class</code> et <code>caption</code>) et sont insérées au fil du texte grâce au parsing des <em>shortcodes</em> de la librairie <code>_inc/Specials/Tags.php</code>.</p>
+<p>En contexte d’impression, elles mises en marge grâce au script <code>js/print/imageNotes.js</code>.</p>
+
+  <div class="prevnext">
+    
+      
+        <a href="../autofolder/" class="maincontent__link maincontent__link--previous-page">← Catalogue d’images</a>
+      
+      
+        <a href="../update/" class="maincontent__link maincontent__link--next-page"> Mise à jour →</a>
+      
+    
+  </div>
+
+</main>
+
+<aside class="page-toc" data-js="toc" role="complementary" aria-label="Table of Contents for this page">
+  <div class="toc">
+    <p class="page-toc__heading">Dans cette page :</p>
+    <ul>
+    
+        <li class="page-toc__item"><a href="#notes-avancees" class="page-toc__link" data-js="tocLink" tabindex="0">Notes avancées</a></li>
+        
+            <li class="page-toc__item"><a href="./#notes-textuelles" class="page-toc__link" data-js="tocLink" tabindex="0">Notes textuelles</a></li>
+        
+            <li class="page-toc__item"><a href="./#notes-iconographiques" class="page-toc__link" data-js="tocLink" tabindex="0">Notes iconographiques</a></li>
+        
+    
+    </ul>
+</div>
+</aside>
+        
+      
+
+      
+        <footer class="page-footer" role="contentinfo">          
+          
+            <p>© Julien Bidoret, 2022–2025. <a href="https://github.com/esadpyrenees/PageTypeToPrint/">PageTypeToPrint </a> docs  built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+          
+          <div class="theme">
+            <input type="checkbox" id="toggle-darkmode" />
+            <label for="toggle-darkmode"><span>mode sombre</span> <span>mode clair</span></label>
+            <script>
+                if ((customColorMode == 'dark') || (customColorMode === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.querySelector('#toggle-darkmode').checked = true;
+                }
+            </script>
+          </div>
+        </footer>
+      
+
+    </main>
+    
+    
+      <script>var base_url = '..';</script>
+      <script src="../js/highlight.min.js"></script>
+      <script src="../js/hljs-pttp.js"></script>
+      <script src="../js/pttp.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+    <!--
+    MkDocs version : 1.6.1
+    PageTypeToPrint MkDocs theme version : 1.0.0
+    Build Date UTC : 2026-02-24 12:39:50.529798+00:00
+    -->
+  </body>
+</html>

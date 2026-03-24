@@ -124,6 +124,7 @@
 
   /* header nav = Lire / imprimer / télécharger */
   #header nav { display: none; } 
+  .nav-principale { display: none; } 
 
   /* ------------------------------------------------------------------------ Cover */
   #nav {

@@ -1,5 +1,5 @@
 ### Patataprint
-### Configuration 
+### Configuration
 
 # Lire la documentation en ligne :
 # https://ateliers.esad-pyrenees.fr/pagetypetoprint/contenu/
@@ -8,7 +8,7 @@
 theme: "masterden2026"
 
 # Le titre du document
-title: PageTypeToPrint 
+title: PageTypeToPrint
 
 # Le sous-titre éventuel du document
 subtitle: "A thesis template<br class='breakprint'> in _web + print_"
@@ -20,13 +20,13 @@ runningtitle: PageTypeToPrint <br class='breakprint'>_aka_ PaTaTaPrint.
 name: John Doe
 
 # L’année, par ex. : 2021 – 2022
-year: 2023 – 2024 
+year: 2023 – 2024
 
 # Votre diplôme, par ex. : DNA Design
 diploma: DNSEP Design
 
 # Le mention du diplôme, par ex. : Mention Design graphique Multimédia
-mention: Mention Design <br class='breakprint'>graphique Multimédia 
+mention: Mention Design <br class='breakprint'>graphique Multimédia
 
 # Votre pôle éventuel, par ex. : Pôle Nouveaux médias, ou
 # Pôle Image, édition &amp;<br class="breakprint"> dessin de caractères
@@ -40,44 +40,44 @@ pdf: ""
 parts:
   - title: Prefatory Note
     file: content/text/0.prefatorynote.md
-    template : default
-  
+    template: default
+
   - title: Introduction
     file: content/text/1.intro.md
     template: default
-  
+
   - title: Art in Printing
     file: content/text/2.artinprinting.md
     template: default
-   
+
   - title: Pictorial Composition
     file: content/text/3.pictorial.md
     template: default
-   
+
   - title: Type Composition
     file: content/text/4.type.md
     template: default
-   
+
   - title: Conclusion
     file: content/text/5.conclusion.md
     template: default
-   
+
   - title: Annexes
     file: content/text/6.annexes.md
     template: appendices
-   
+
   - title: Entretiens
     file: content/text/7.entretiens.md
     template: interview
-   
+
   - title: Glossaire
     file: content/text/8.glossaire.md
     template: references
-   
+
   - title: Références
     file: content/text/9.references.md
     template: references
-   
+
   - title: Remerciements
     file: content/text/10.remerciements.md
     template: thanks
