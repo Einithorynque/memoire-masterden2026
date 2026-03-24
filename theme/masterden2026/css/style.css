@@ -4,6 +4,7 @@ Sommaire :
   - Variables
   - Éléments communs
   - Couverture (écran d’accueil)
+  - Boutons
   - Sommaire et navigation 
   - Contenu
   - Entretiens (template = interview)
@@ -13,6 +14,8 @@ Sommaire :
   - Images de notes
   - Images en annexes
   - Vidéos
+  - Footer
+
 */
 
 
@@ -56,8 +59,15 @@ Sommaire :
   --bigsize: clamp(2.50rem, calc(1.83rem + 3.33vw), 6.00rem);
   --basesize: 1.15rem;
   --color: rgba(0, 0, 0, 0.85);
+  --primary: rgba(255,83,83,1);
+  --secondary: rgba(255,156,156,1);
+  --gradient: linear-gradient(90deg,rgba(255, 83, 83, 1) 0%, rgba(255, 232, 250, 1) 100%);
+  --white: rgba(255, 234, 232, 1);
+
   /* espacements homogènes */
+  --spacerXS: 1rem;
   --spacer: 2rem;
+  --spacerXL : 8rem; 
   /* largeur des notes de côté */
   --sn-width: 15rem;
   /* couleur d’accentuation */
@@ -68,7 +78,9 @@ Sommaire :
 
 @media (max-width:30rem) {
   :root{
+     --spacerXS: 0.5rem;
     --spacer:1rem;
+    --spacerXL : 4rem; 
     --basesize:1rem;
     --bigsize: clamp(1.5rem, -1.2500rem + 10.0000vw, 4rem);
   }
@@ -78,8 +90,8 @@ Sommaire :
 /* box model */
 *, *::after, *::before { box-sizing: border-box; }
 /* smooth scroll */
-html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+/*html { scroll-behavior: smooth; }
+/*@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 /* page defaults */
 body {
   font-family: var(--fontfamily);
@@ -88,6 +100,7 @@ body {
   line-height: 1.45;
   margin: 0;
   overflow-x: hidden;
+  height: fit-content;
 }
 p:first-child { margin-top: 0; }
 a { color: currentColor; }
@@ -104,8 +117,6 @@ hr{
   background: none;
   border-top: 2px solid #000;
   width: 4em;
-  margin: 1em 0;
-  text-indent: 0;
 }
 
 /* ------------------------------------------------------------------------ Cover */
@@ -161,6 +172,46 @@ hr{
   .meta > * { margin-bottom: 1em;}
   #header nav a { display: block; }
 }
+/* ------------------------------------------------------------------------ Boutons */
+button{
+  background: none;
+  position: relative;
+  border: none;
+  text-decoration: underline;
+  font-family: var(--fontfamily);
+  font-size: var(--basesize);
+}
+button::before{
+  position: absolute;
+  z-index: 2;
+  content: '';
+  background: var(--secondary) ;
+  mix-blend-mode: multiply;
+  height: 1.2em;
+  left: -1px;
+  width: 0;
+  transition: all 0.5s;
+}
+button:after {
+  display: inline-flex;
+  padding-left: 0.5em;
+  content: url('../assets/arrow-button.svg');
+  zoom:100%
+}
+button:hover{
+  text-decoration: none;
+}
+button:active{
+  text-decoration: none;
+}
+
+button:hover::before {
+  width:100%;
+}
+button:active::before {
+  width:100%;
+}
+
 /* ------------------------------------------------------------------------ Nav */
 #nav {
   min-height: 100vh;
@@ -656,4 +707,38 @@ figcaption::before {
 }
 .video + figcaption {
   margin-top: -1em;
+}
+/* ------------------------------------------------------------------------ Footer */
+#footer{
+  width: 100vw;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  gap:var(--spacer);
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacerXL);
+}
+
+
+#footer-nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:var(--spacerXS)
+}
+
+#footer-nav button::before{
+  background: var(--white) ;
+  mix-blend-mode: normal;
+  z-index:-1;
+}
+
+#footer-nav button{
+  z-index:2;
+}
+
+#footer-button-next{
+  display: flex;
+  justify-content: center;
 }
