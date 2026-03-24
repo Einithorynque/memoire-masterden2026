@@ -58,6 +58,7 @@ Sommaire :
   --color: rgba(0, 0, 0, 0.85);
   /* espacements homogènes */
   --spacer: 2rem;
+  --spacerXL: 8rem;
   /* largeur des notes de côté */
   --sn-width: 15rem;
   /* couleur d’accentuation */
@@ -65,7 +66,7 @@ Sommaire :
   /* largeur max. des textes */
   --maxwidth: 46rem;
   /* couleurs */
-  --primarycolor: #FF39D7;
+  --primary: #FF39D7;
 }
 
 @media (max-width:30rem) {
@@ -113,8 +114,16 @@ hr{
 /* ------------------------------------------------------------------------ Cover */
 #header {
   min-height: 100vh;
-  padding: var(--spacer);
+  padding: var(--spacer); 
 }
+
+.header-content{
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 #header h1 {
   margin: 0;
   line-height: 1.1;
@@ -145,6 +154,7 @@ hr{
   position: absolute;
   bottom: var(--spacer);
 }
+
 #header nav a {
   display: inline-block;
   margin-right: 1em;
@@ -173,12 +183,14 @@ hr{
 }
 /* ------------------------------------------------------------------------ Nav */
 #nav {
-  background-color: var(--primarycolor); 
+  background-color: var(--primary); 
   height: 100vh;
   width: 33vw;
-  display: none;
+  display: grid;
+  transform: translate(50vw);
+  transition: transform 0.6s ease-in-out;
   grid-gap: var(--spacer);
-  padding: 8rem var(--spacer);
+  padding: var(--spacerXL) var(--spacer);
   align-content: space-between;
   position: fixed;
   top: 0;

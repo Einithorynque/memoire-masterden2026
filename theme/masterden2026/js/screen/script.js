@@ -63,33 +63,28 @@ window.addEventListener('DOMContentLoaded', () => {
     video.src = video.dataset.src;
   }))
 
-  // sommaire overlay
+   // sommaire overlay
   var toggleBtn = document.getElementById('toggle-btn');
   var nav = document.getElementById('nav');
   var closeBtn = document.getElementById('btn-fermer');
 
-
-    // ── Fonctions d'ouverture / fermeture ─────────────────────────────────────
-
-
-    // ── Écouteurs d'événements ────────────────────────────────────────────────
-
     // Clic sur le lien "Sommaire" : ouvre le panneau
     toggleBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      nav.style.display = "grid";
+      nav.style.transform = "translateX(0)";
     });
 
     // Clic sur le bouton "Fermer" : ferme le panneau
     closeBtn.addEventListener('click', (e) => {
-      nav.style.display = "none";
+      nav.style.transform = "translateX(50vw)";
     });
 
     // Touche Échap : ferme le panneau (accessibilité)
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') close();
+      if (e.key === 'Escape') nav.style.transform = "translateX(50vw)";
     });
 
 });
+
 
 
