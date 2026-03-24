@@ -41,3 +41,12 @@
     <!-- le contenu -->      
     <?= $html() ?>
 </main>
+
+<footer id="footer">
+        <h2>Lire la partie suivante</h2>
+        <div id="footer-nav">
+            <div id="footer-button-next"></div>
+            <hr/>
+            <a href="content\text-no-median.md" download="texte-sans-median.md"><button>Télécharger sans les points médians</button></a>
+        </div>
+</footer>
