@@ -179,6 +179,46 @@ hr{
   .meta > * { margin-bottom: 1em;}
   #header nav a { display: block; }
 }
+/* ------------------------------------------------------------------------ Boutons */
+button{
+  background: none;
+  position: relative;
+  border: none;
+  text-decoration: underline;
+  font-family: var(--fontfamily);
+  font-size: var(--basesize);
+}
+button::before{
+  position: absolute;
+  z-index: 2;
+  content: '';
+  background: var(--secondary) ;
+  mix-blend-mode: multiply;
+  height: 1.2em;
+  left: -1px;
+  width: 0;
+  transition: all 0.5s;
+}
+button:after {
+  display: inline-flex;
+  padding-left: 0.5em;
+  content: url('../assets/arrow-button.svg');
+  zoom:100%
+}
+button:hover{
+  text-decoration: none;
+}
+button:active{
+  text-decoration: none;
+}
+
+button:hover::before {
+  width:100%;
+}
+button:active::before {
+  width:100%;
+}
+
 /* ------------------------------------------------------------------------ Nav */
 #nav {
   background-color: var(--primary); 
