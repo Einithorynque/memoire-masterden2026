@@ -22,7 +22,7 @@ var processFootNotesToSideNotes = function processFootNotesToSideNotes(opts) {
     back.parentElement.removeChild(back);
 
     // build note node
-    var node = document.createElement('aside');
+    var node = document.createElement('i');
     node.classList.add('sn-note');
     node.setAttribute('data-ref', i);
     node.innerHTML = target.innerHTML;
