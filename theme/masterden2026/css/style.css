@@ -524,9 +524,9 @@ main blockquote {
 .sn-toggle:checked + .sn-note {
   display: inline;
   background-color: var(--secondary);
+  padding-left: 0.25rem;
   margin-right: 0.25rem;
 }
-.sn-note::before {content: " ";}
 
 label[for^="sn-"] {
   cursor: pointer;
