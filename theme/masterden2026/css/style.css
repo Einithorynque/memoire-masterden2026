@@ -129,6 +129,7 @@ hr{
   padding: var(--spacer);
   background-image: var(--background-header);
   background-size: cover;
+  background-position: center;
 }
 
 .header-content{
@@ -229,7 +230,7 @@ button:after {
   display: inline-flex;
   padding-left: 0.5em;
   content: url('../assets/arrow-button.svg');
-  zoom:100%
+  zoom:100% 
 }
 button:hover{
   text-decoration: none;

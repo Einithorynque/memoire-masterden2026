@@ -6,36 +6,32 @@
         <a href=""><button id="toggle-btn">Sommaire</button></a>
      </div>
 
+    <!-- contenu du hero + cover haut -->
     <div class="header-content">
-    <!-- Le titre du mémoire / doc écrit -->
-    <h1><?= $title ?></h1>
-        <!-- Votre nom -->
+        <h1><?= $title ?></h1>
         <div class="meta-name"><?= $name ?></div>
+        <div class="meta meta-column">
+            <p><?= $mention ?></p>
+            <p><?= $pole ?></p>
+        </div>
+    </div>
+    <!-- contenu bas cover -->
+    <div class="meta meta-data">
+        <div class="meta-column">
+            <p><?= $diploma ?></p>
+            <div class="meta-inline">
+                <img src="memoire-masterden2026\theme\masterden2026\assets\arrow-button.svg" alt="arrow"/>
+                <p>Environnements numériques</p>
+            </div>
+            <p>Université de Strasbourg</p>
+        </div>
+        <div class="meta-year"><?= $year ?></div>
     </div>
 
     <!-- le titre courant (version print) -->
     <div class="runningtitle">
         <div><span class="name"><?= $name ?></span> <span class="title"><?= $title ?></span></div>
         <span class="folio"></span>
-    </div>
-
-    <!-- les méta-données -->
-    <div class="meta">
-        <!-- l’année YYYY – YYYY  -->
-        <div class="meta-year"><?= $year ?></div>
-        <!-- Votre nom -->
-        <div class="meta-name"><?= $name ?></div>
-        <div class="meta-data">
-            <!-- Votre diplôme, option et mention -->
-            <p>
-                <?= $diploma ?> <br>
-                <!--<?= $mention ?>-->
-            </p>
-            <p> Université de Strasbourg
-                <!-- Votre pôle éventuel -->
-                <!--<?= $pole ?>-->
-            </p>
-        </div>
     </div>
 
     <!-- les liens rapides: lire, imprimmer, télécharger -->

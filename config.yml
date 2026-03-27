@@ -20,17 +20,17 @@ runningtitle: PageTypeToPrint <br class='breakprint'>_aka_ PaTaTaPrint.
 name: John Doe
 
 # L’année, par ex. : 2021 – 2022
-year: 2023 – 2024
+year: 2025 – 2026
 
 # Votre diplôme, par ex. : DNA Design
-diploma: Master Design des Environnements numériques
+diploma: Master Design
 
 # Le mention du diplôme, par ex. : Mention Design graphique Multimédia
-mention: 
+mention: Mémoire de recherche
 
 # Votre pôle éventuel, par ex. : Pôle Nouveaux médias, ou
 # Pôle Image, édition &amp;<br class="breakprint"> dessin de caractères
-pole: 
+pole: Sous la direction de Nolwenn Maudet
 
 # Le nom du fichier pdf généré depuis Chrome / Chromium
 # Cf. https://ateliers.esad-pyrenees.fr/pagetypetoprint/print/
