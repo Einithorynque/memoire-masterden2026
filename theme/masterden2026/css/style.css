@@ -45,11 +45,26 @@ Sommaire :
   font-style: normal;
 }
 
+@font-face {
+  font-family: "ApfelGrotezk";
+  src: url("fonts/ApfelGrotezk-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ApfelGrotezk";
+  src: url("fonts/ApfelGrotezk-Mittel.woff2") format("woff2");
+  font-weight: normal;
+  font-style: medium;
+}
+
 
 /* ------------------------------------------------------------------------ Variables */
 :root {
   /* typographie */
-  --fontfamily: "Ecole", sans-serif;
+  --fontfamily: "DMsans", sans-serif;
+  --fontTitle: "ApfelGrotezk", sans-serif;
   --bigsize: clamp(2.50rem, calc(1.83rem + 3.33vw), 6.00rem);
   --basesize: 1.15rem;
   --color: rgba(0, 0, 0, 0.85);
@@ -131,6 +146,7 @@ hr{
   max-width: calc(var(--bigsize) * 16);
   font-size: calc(var(--bigsize) * 1);
   color: var(--accentcolor);
+  font-family: var(--fontTitle);
 }
 #header h2 {
   margin: 0;
@@ -138,6 +154,7 @@ hr{
   max-width: calc(var(--bigsize) * 16);
   font-size: calc(var(--bigsize) * .75);
   color: var(--accentcolor);
+  font-family: var(--fontTitle);
 }
 #header h2::before{
   content: "—";
@@ -368,20 +385,24 @@ main h3:first-child {
 
 main h1 {
   font-size: 1.5em;
+  font-family: var(--fontTitle);
 }
 main h2 {
   font-size: 1em;
+  font-family: var(--fontTitle);
 }
 main h3 {
   font-size: 1em;
   margin-left: 2em;
   font-weight: normal;
   text-decoration: underline;
+  font-family: var(--fontTitle);
 }
 main h4 {
   font-size: 1em;
   margin-left: 2em;
   font-weight: normal;
+  font-family: var(--fontTitle);
 }
 
 main figure {
@@ -757,8 +778,11 @@ figcaption::before {
 
 #footer h2{
   margin: 0;
-  font-size: calc(var(--bigsize) * .75);
+  font-size: calc(var(--bigsize) * .65);
+  font-weight: 400;
   text-align: center;
+  font-family: var(--fontTitle);
+  font-style: italic;
 }
 
 #footer-nav{
