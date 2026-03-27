@@ -4,7 +4,6 @@ Sommaire :
   - Variables
   - Éléments communs
   - Couverture (écran d’accueil)
-  - Boutons
   - Sommaire et navigation 
   - Contenu
   - Entretiens (template = interview)
@@ -14,40 +13,41 @@ Sommaire :
   - Images de notes
   - Images en annexes
   - Vidéos
-  - Footer
-
 */
 
 
 /* ------------------------------------------------------------------------ Fonts */
 @font-face {
-  font-family: "DMsans";
-  src: url("fonts/BBBDMSans-Bold.woff") format("woff");
+  font-family: "Ecole";
+  src: url("fonts/Ecole-Italic.woff2") format("woff2"),
+    url("fonts/Ecole-Italic.woff") format("woff");
   font-weight: normal;
-  font-style: bold;
+  font-style: italic;
 }
 
 @font-face {
-  font-family: "DMsans";
-  src: url("fonts/BBBDMSans-Light.woff") format("woff");
-  font-weight: normal;
-  font-style: light;
-}
-
-@font-face {
-  font-family: "DMsans";
-  src: url("fonts/BBBDMSans-Medium.woff") format("woff");
-  font-weight: normal;
-  font-style: medium;
-}
-
-@font-face {
-  font-family: "DMsans";
-  src: url("fonts/BBBDMSans-Regular.woff") format("woff");
+  font-family: "Ecole";
+  src: url("fonts/Ecole-Regular.woff2") format("woff2"),
+    url("fonts/Ecole-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Ecole";
+  src: url("fonts/Ecole-Bold.woff2") format("woff2"),
+    url("fonts/Ecole-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ecole";
+  src: url("fonts/Ecole-BoldItalic.woff2") format("woff2"),
+    url("fonts/Ecole-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
 
 /* ------------------------------------------------------------------------ Variables */
 :root {
@@ -56,30 +56,19 @@ Sommaire :
   --bigsize: clamp(2.50rem, calc(1.83rem + 3.33vw), 6.00rem);
   --basesize: 1.15rem;
   --color: rgba(0, 0, 0, 0.85);
-  --primary: rgba(255,83,83,1);
-  --secondary: rgba(255,156,156,1);
-  --gradient: linear-gradient(90deg,rgba(255, 83, 83, 1) 0%, rgba(255, 232, 250, 1) 100%);
-  --white: rgba(255, 234, 232, 1);
-
   /* espacements homogènes */
-  --spacerXS: 1rem;
   --spacer: 2rem;
-  --spacerXL: 8rem;
   /* largeur des notes de côté */
   --sn-width: 15rem;
   /* couleur d’accentuation */
   --accentcolor: black;
   /* largeur max. des textes */
   --maxwidth: 46rem;
-  /* couleurs */
-  --primary: #FF39D7;
 }
 
 @media (max-width:30rem) {
   :root{
-     --spacerXS: 0.5rem;
     --spacer:1rem;
-    --spacerXL : 4rem; 
     --basesize:1rem;
     --bigsize: clamp(1.5rem, -1.2500rem + 10.0000vw, 4rem);
   }
@@ -89,8 +78,8 @@ Sommaire :
 /* box model */
 *, *::after, *::before { box-sizing: border-box; }
 /* smooth scroll */
-/*html { scroll-behavior: smooth; }
-/*@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 /* page defaults */
 body {
   font-family: var(--fontfamily);
@@ -99,10 +88,9 @@ body {
   line-height: 1.45;
   margin: 0;
   overflow-x: hidden;
-  height: fit-content;
 }
 p:first-child { margin-top: 0; }
-a { color: currentColor; text-decoration: none; }
+a { color: currentColor; }
 img { max-width: 100%; height: auto; }
 mark { background: var(--accentcolor); padding: 0 .15em; color: white;}
 sub, sup { line-height: 0; }
@@ -116,21 +104,15 @@ hr{
   background: none;
   border-top: 2px solid #000;
   width: 4em;
+  margin: 1em 0;
+  text-indent: 0;
 }
 
 /* ------------------------------------------------------------------------ Cover */
 #header {
   min-height: 100vh;
-  padding: var(--spacer); 
+  padding: var(--spacer);
 }
-
-.header-content{
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
 #header h1 {
   margin: 0;
   line-height: 1.1;
@@ -161,19 +143,10 @@ hr{
   position: absolute;
   bottom: var(--spacer);
 }
-
 #header nav a {
   display: inline-block;
   margin-right: 1em;
 }
-
-.nav-principale {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: var(--spacer);
-}
-
 /* le titre courant n’est affiché qu’en contexte print */
 .runningtitle, .runningfolio {
   display: none;
@@ -188,66 +161,18 @@ hr{
   .meta > * { margin-bottom: 1em;}
   #header nav a { display: block; }
 }
-/* ------------------------------------------------------------------------ Boutons */
-button{
-  background: none;
-  position: relative;
-  border: none;
-  text-decoration: underline;
-  font-family: var(--fontfamily);
-  font-size: var(--basesize);
-}
-button::before{
-  position: absolute;
-  z-index: 2;
-  content: '';
-  background: var(--secondary) ;
-  mix-blend-mode: multiply;
-  height: 1.2em;
-  left: -1px;
-  width: 0;
-  transition: all 0.5s;
-}
-button:after {
-  display: inline-flex;
-  padding-left: 0.5em;
-  content: url('../assets/arrow-button.svg');
-  zoom:100%
-}
-button:hover{
-  text-decoration: none;
-}
-button:active{
-  text-decoration: none;
-}
-
-button:hover::before {
-  width:100%;
-}
-button:active::before {
-  width:100%;
-}
-
 /* ------------------------------------------------------------------------ Nav */
 #nav {
-  background-color: var(--primary); 
-  height: 100vh;
-  width: 33vw;
+  min-height: 100vh;
   display: grid;
-  transform: translate(50vw);
-  transition: transform 0.6s ease-in-out;
+  grid-template-columns: 15vw 1fr;
   grid-gap: var(--spacer);
-  padding: var(--spacerXL) var(--spacer);
-  align-content: space-between;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 90;
+  padding: var(--spacer);
+  align-content: center;
 }
-
-#nav button,
+#nav h2,
 #nav ul {
-  grid-column: 1;
+  grid-column: 2;
   margin: 0;
   font-size: 1em;
 }
@@ -259,14 +184,6 @@ button:active::before {
   margin: 0;
   padding: 0;
 }
-
-#nav button{
-  border: none;
-  background-color: transparent;
-  width: fit-content;
-  cursor: pointer;
-}
-
 /* #index : le sommaire, une fois cloné */
 #index {
   position: sticky;
@@ -277,6 +194,17 @@ button:active::before {
   justify-content: space-between;
   flex-direction: column;
 }
+
+#index li {
+  display: none;
+}
+#index li#nav-introduction {
+  display: block;
+  font-family: "Ecole", italic;
+  font-size: 35px;
+
+}
+
 /* bouton toggle menu */
 #index button {
   display: none;
@@ -339,7 +267,7 @@ button:active::before {
 /* ------------------------------------------------------------------------ Content */
 main {
   display: grid;
-  grid-template-columns: 15vw 1fr;
+  grid-template-columns: 40vw 1fr;
   grid-gap: var(--spacer);
   align-self: start;
   padding: var(--spacer);
@@ -468,11 +396,12 @@ main blockquote {
 /* ------------------------------------------------------------------------ Images de notes */
 /* footnotes */
 .imagenote {
-  float: right;
-  clear: right;
+  float: left;
+  clear: left;
   width: 250px;
   font-size: 0.85rem;
-  margin-right: calc(-250px - var(--spacer));
+  margin-left: 0;
+  margin-right: var(--spacer);
   margin-bottom: 1rem;
 }
 .imagenote img {
@@ -489,9 +418,9 @@ main blockquote {
 
 @media screen and (max-width: 80rem) {
   .imagenote {
-    /* margin: .5em 1em .5em calc(var(--spacer ) * -1);
+    margin: .5em 1em .5em calc(var(--spacer ) * -1);
     float: left;
-    clear: left; */
+    clear: left;
     margin: .5em calc(-1 * ((100vw - var(--maxwidth)) / 2) - var(--spacer)) .5em var(--spacer);
     display: block;
     width: 40%;
@@ -739,38 +668,4 @@ figcaption::before {
 }
 .video + figcaption {
   margin-top: -1em;
-}
-/* ------------------------------------------------------------------------ Footer */
-#footer{
-  width: 100vw;
-  background-color: var(--primary);
-  display: flex;
-  flex-direction: column;
-  gap:var(--spacer);
-  align-items: center;
-  justify-content: center;
-  padding: var(--spacerXL);
-}
-
-
-#footer-nav{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap:var(--spacerXS)
-}
-
-#footer-nav button::before{
-  background: var(--white) ;
-  mix-blend-mode: normal;
-  z-index:-1;
-}
-
-#footer-nav button{
-  z-index:2;
-}
-
-#footer-button-next{
-  display: flex;
-  justify-content: center;
 }
