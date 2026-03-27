@@ -16,11 +16,10 @@
     </div>
 
     <!-- les liens rapides: lire, imprimmer, télécharger -->
-    <nav id="quicklinks">
-        <a href="#nav">Lire en ligne</a>
+    <nav id="quicklinks" aria-label="navigation rapide">
         <?php if(empty($pdf)): ?>
             <!-- Il est possible de supprimer ce lien une fois le PDF généré : -->
-            <a href="?print" title="Web to print">Imprimer</a>
+            <a href="?print" title="Web to print" class="quicklinks-button">Imprimer</a>
         <?php else : ?>
             <!-- Modifier l’URL dans config.yml -->
             <a href="<?= $pdf ?>">Télécharger</a>
