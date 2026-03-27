@@ -52,7 +52,7 @@ Sommaire :
 /* ------------------------------------------------------------------------ Variables */
 :root {
   /* typographie */
-  --fontfamily: "Ecole", sans-serif;
+  --fontfamily: "DMsans", sans-serif;
   --bigsize: clamp(2.50rem, calc(1.83rem + 3.33vw), 6.00rem);
   --basesize: 1.15rem;
   --color: rgba(0, 0, 0, 0.85);
@@ -521,50 +521,26 @@ main blockquote {
 .sn-note {
   display: none;
 }
-/* .sn-note {
-  top: 0.25em;
-  font-size: 0.85rem;
-  float: right;
-  clear: right;
-  width: var(--sn-width);
-  margin-right: calc(var(--sn-width) * -1 - var(--spacer));
-  margin-bottom: 1rem;
-  position: relative;
-  font-style: normal;
-} */
 .sn-toggle:checked + .sn-note {
-  display: inline-block;
-  /* width: 100%; */
-  /* float: none; */
-  /* clear: both; */
-  /* margin: 1em 0; */
-  /* top: 0; */
+  display: inline;
+  background-color: var(--secondary);
+  margin-right: 0.25rem;
 }
-label[for^="sn-"] {
-  color: #ff06cd;
-  cursor: pointer;
-  font-weight: 400;
-}
+.sn-note::before {content: " ";}
 
+label[for^="sn-"] {
+  cursor: pointer;
+  background-color: var(--secondary)
+}
 .sn-toggle-label,
 sup a.footnote-ref {
-  padding: 0 0 0.25em 0.15em;
-  font-size: 0.75em;
-  top: -0.05em;
-  position: relative;
   text-decoration: none;
   border: none;
-  font-weight: bold;
 }
 /* appels de note */
 .sn-toggle-label::before {content: "["}
 .sn-toggle-label::after {content: "]"}
-/* rappel */
-/* .sn-note::before {
-  float: left;
-  padding-right: 0.5em;
-  content: "[" attr(data-ref) "]";
-} */
+
 sup[id^="fn"] {
   vertical-align: baseline;
 }
@@ -581,9 +557,6 @@ sup a.footnote-ref {
 }
 .sn-note img {
   display: block;
-}
-.sn-note p {
-  margin: 0;
 }
 .sn-note .caption {
   display: block;

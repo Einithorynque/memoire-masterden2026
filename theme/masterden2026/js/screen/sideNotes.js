@@ -22,10 +22,11 @@ var processFootNotesToSideNotes = function processFootNotesToSideNotes(opts) {
     back.parentElement.removeChild(back);
 
     // build note node
-    var node = document.createElement('i');
+    var node = document.createElement('cite');
     node.classList.add('sn-note');
     node.setAttribute('data-ref', i);
-    node.innerHTML = target.innerHTML;
+    var targetContent = target.querySelector('p');
+    node.innerHTML = targetContent ? targetContent.innerHTML : target.innerHTML;
 
     // build label + input
     var label = document.createElement('label');
