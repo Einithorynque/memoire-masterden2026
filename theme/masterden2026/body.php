@@ -54,7 +54,7 @@
         <ul class="nav-ul">
             <?= $nav() ?>
         </ul>
-        <button id="btn-fermer" onclick="goTo('B')">Fermer</button>
+        <button id="btn-fermer">Fermer</button>
 </nav>
 
 

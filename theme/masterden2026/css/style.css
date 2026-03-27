@@ -59,7 +59,7 @@ Sommaire :
   --primary: rgba(255,83,83,1);
   --secondary: rgba(255,156,156,1);
   --gradient: linear-gradient(90deg,rgba(255, 83, 83, 1) 0%, rgba(255, 232, 250, 1) 100%);
-  --white: rgba(255, 234, 232, 1);
+  --white:  #FFE8FA;
 
   /* espacements homogènes */
   --spacerXS: 1rem;
@@ -73,7 +73,6 @@ Sommaire :
   --maxwidth: 46rem;
   /* couleurs */
   --primary: #FF39D7;
-  --background: #FFE8FA;
   /* image */
   --background-header : url("../assets/background-header.jpg");
 }
@@ -103,7 +102,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   height: fit-content;
-  background-color: var(--background);
+  background-color: var(--white);
 }
 p:first-child { margin-top: 0; }
 a { color: currentColor; text-decoration: none; }
