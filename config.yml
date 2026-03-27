@@ -23,14 +23,14 @@ name: John Doe
 year: 2023 – 2024
 
 # Votre diplôme, par ex. : DNA Design
-diploma: DNSEP Design
+diploma: Master Design des Environnements numériques
 
 # Le mention du diplôme, par ex. : Mention Design graphique Multimédia
-mention: Mention Design <br class='breakprint'>graphique Multimédia
+mention: 
 
 # Votre pôle éventuel, par ex. : Pôle Nouveaux médias, ou
 # Pôle Image, édition &amp;<br class="breakprint"> dessin de caractères
-pole: Pôle Nouveaux médias
+pole: 
 
 # Le nom du fichier pdf généré depuis Chrome / Chromium
 # Cf. https://ateliers.esad-pyrenees.fr/pagetypetoprint/print/

@@ -2,9 +2,7 @@
     <!-- navigation en header -->
      <div class="nav-principale">
         <a href=""><button>Retour à l'accueil</button></a>
-        <div>
-            <img src="" alt="">
-        </div>
+        <img src="theme/masterden2026/assets/icons-nav-principale.svg" alt="icons">
         <a href=""><button id="toggle-btn">Sommaire</button></a>
      </div>
 
@@ -13,6 +11,31 @@
     <h1><?= $title ?></h1>
         <!-- Votre nom -->
         <div class="meta-name"><?= $name ?></div>
+    </div>
+
+    <!-- le titre courant (version print) -->
+    <div class="runningtitle">
+        <div><span class="name"><?= $name ?></span> <span class="title"><?= $title ?></span></div>
+        <span class="folio"></span>
+    </div>
+
+    <!-- les méta-données -->
+    <div class="meta">
+        <!-- l’année YYYY – YYYY  -->
+        <div class="meta-year"><?= $year ?></div>
+        <!-- Votre nom -->
+        <div class="meta-name"><?= $name ?></div>
+        <div class="meta-data">
+            <!-- Votre diplôme, option et mention -->
+            <p>
+                <?= $diploma ?> <br>
+                <!--<?= $mention ?>-->
+            </p>
+            <p> Université de Strasbourg
+                <!-- Votre pôle éventuel -->
+                <!--<?= $pole ?>-->
+            </p>
+        </div>
     </div>
 
     <!-- les liens rapides: lire, imprimmer, télécharger -->
