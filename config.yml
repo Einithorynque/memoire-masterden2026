@@ -8,16 +8,16 @@
 theme: "masterden2026"
 
 # Le titre du document
-title: PageTypeToPrint
+title: L'interprétation dans les géovisualisation
 
 # Le sous-titre éventuel du document
 subtitle: "A thesis template<br class='breakprint'> in _web + print_"
 
 # Le titre courant, si différent du titre du document
-runningtitle: PageTypeToPrint <br class='breakprint'>_aka_ PaTaTaPrint.
+runningtitle: L'interprétation dans les géovisualisation <br class='breakprint'>_aka_ PaTaTaPrint.
 
 # Votre nom
-name: John Doe
+name: Thomas Frelet
 
 # L’année, par ex. : 2021 – 2022
 year: 2025 – 2026
