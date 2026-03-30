@@ -181,11 +181,6 @@ hr{
   display: none;
 }
 
-#header nav {
-  position: absolute;
-  bottom: var(--spacer);
-}
-
 #header nav a {
   display: inline-block;
   margin-right: 1em;
@@ -218,7 +213,7 @@ hr{
 @media screen and (max-width:45rem) {
   /*.meta { display: block;}
   .meta > * { margin-bottom: 1em;}*/
-  /* #header nav a { display: block; } */
+  /* #header nav { display: block; } */
 }
 /* ------------------------------------------------------------------------ Boutons */
 button{
