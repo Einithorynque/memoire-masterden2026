@@ -8,29 +8,29 @@
 theme: "masterden2026"
 
 # Le titre du document
-title: PageTypeToPrint
+title: L'interprétation dans les géovisualisation
 
 # Le sous-titre éventuel du document
 subtitle: "A thesis template<br class='breakprint'> in _web + print_"
 
 # Le titre courant, si différent du titre du document
-runningtitle: PageTypeToPrint <br class='breakprint'>_aka_ PaTaTaPrint.
+runningtitle: L'interprétation dans les géovisualisation <br class='breakprint'>_aka_ PaTaTaPrint.
 
 # Votre nom
-name: John Doe
+name: Thomas Frelet
 
 # L’année, par ex. : 2021 – 2022
-year: 2023 – 2024
+year: 2025 – 2026
 
 # Votre diplôme, par ex. : DNA Design
-diploma: DNSEP Design
+diploma: Master Design
 
 # Le mention du diplôme, par ex. : Mention Design graphique Multimédia
-mention: Mention Design <br class='breakprint'>graphique Multimédia
+mention: Mémoire de recherche
 
 # Votre pôle éventuel, par ex. : Pôle Nouveaux médias, ou
 # Pôle Image, édition &amp;<br class="breakprint"> dessin de caractères
-pole: Pôle Nouveaux médias
+pole: Sous la direction de Nolwenn Maudet
 
 # Le nom du fichier pdf généré depuis Chrome / Chromium
 # Cf. https://ateliers.esad-pyrenees.fr/pagetypetoprint/print/
@@ -38,23 +38,23 @@ pdf: ""
 
 # Structure du contenu (= sommaire)
 parts:
-  - title: Prefatory Note
+  - title: Design narratif et social
     file: content/text/0.prefatorynote.md
     template: default
 
-  - title: Introduction
+  - title: Des sites institutionnels
     file: content/text/1.intro.md
     template: default
 
-  - title: Art in Printing
+  - title: .
     file: content/text/2.artinprinting.md
     template: default
 
-  - title: Pictorial Composition
+  - title: .
     file: content/text/3.pictorial.md
     template: default
 
-  - title: Type Composition
+  - title: .
     file: content/text/4.type.md
     template: default
 
@@ -62,22 +62,22 @@ parts:
     file: content/text/5.conclusion.md
     template: default
 
-  - title: Annexes
+  - title: .
     file: content/text/6.annexes.md
     template: appendices
 
-  - title: Entretiens
+  - title: .
     file: content/text/7.entretiens.md
     template: interview
 
-  - title: Glossaire
+  - title: .
     file: content/text/8.glossaire.md
     template: references
 
-  - title: Références
+  - title: Bibliographie
     file: content/text/9.references.md
     template: references
 
-  - title: Remerciements
+  - title: .
     file: content/text/10.remerciements.md
     template: thanks

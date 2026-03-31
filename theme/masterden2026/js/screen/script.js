@@ -9,18 +9,31 @@ window.addEventListener('DOMContentLoaded', () => {
   // -> On filtre : on ne garde que les sections dont l'ID est dans les slugs
   const filteredSections = Array.from(sections)
   .filter(sec => slugsFromNav.includes(sec.id));
-  // -> creation du clone
-  var menu = document.querySelector("#nav ul").cloneNode(true);
-  var main = document.querySelector('#main');
-  var index = document.createElement('nav');
+  // -> creation des liens
+  
+  var menu = document.createElement('ul');
+  filteredSections.forEach((sec) => {
+  const li = document.createElement('li');
+  const a  = document.createElement('a');
+  a.classList.add('quicklinks-button')
+  a.href        = "#" + sec.id;
+  a.textContent = document.querySelector(`#nav a[href="#${sec.id}"]`)?.textContent || sec.id;
+  li.appendChild(a);
+  menu.appendChild(li);
+  });
+
+  var quicklinks = document.querySelector('#quicklinks');
+  var index = document.createElement('div');
   index.appendChild(menu);
-  index.id = "index";
-  main.prepend(index);
+  index.id = "fastTravel";
+  quicklinks.prepend(index);
 
   // État de la section actuel
   let currentIndex = 0;
 
-  // Fonction centrale (afficher / désafficher) ---
+  // Fonction centrale (afficher / désafficher / scroller vers / changer l'état des boutons) ---
+  let isFirstLoad = true;
+
   function showSection(i) {
     currentIndex = i;
     document.querySelectorAll("section").forEach(sec => {
@@ -28,7 +41,18 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     const el = filteredSections[currentIndex];
     if (el) el.style.display = "block";
+    
+    // Scroll vers la section
+    if (!isFirstLoad) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // ↓ Mettre à jour la classe active dans le menu
+    menu.querySelectorAll('a').forEach((l, index) => {
+      l.classList.toggle('active', index === currentIndex);
+    });
     updateBtn();
+    isFirstLoad = false;
   }
 
   // Sélection des séctions
@@ -38,6 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
       showSection(i); // on passe l'index, pas l'ID
     });
   });
+  menu.querySelector('a').classList.add('active');
 
   // Bouton suivant 
   var buttonFooter = document.querySelector('#footer-button-next');
@@ -46,66 +71,29 @@ window.addEventListener('DOMContentLoaded', () => {
   nextBtn.addEventListener('click', function() {
     if (currentIndex < filteredSections.length - 1) {
       showSection(currentIndex + 1);
+    } else {
+      showSection(currentIndex = 0)
     }
   });
   buttonFooter.appendChild(nextBtn);
 
   function updateBtn() {
   if (currentIndex >= filteredSections.length - 1) {
-    nextBtn.style.display = "none";  // dernière section → on cache
+    nextBtn.textContent = "Revenir au début";  // dernière section → on cache
   } else {
-    nextBtn.style.display = "block"; // sinon → on montre
+    nextBtn.textContent = "Lire la partie suivante"; // sinon → on montre
   }
   }
 
   // Afficher uniquement la première section au chargement de la page
   showSection(0);
-  
-  // injecte les liens rapides
-  var quicklinks = document.querySelector("#quicklinks").cloneNode(true);
-  quicklinks.id = "index-quicklinks";
-  index.appendChild(quicklinks);
-  // mise à jour dupremier lien (vers la première section, et non plus vers le sommaire)
-  quicklinks.querySelector('a').textContent = "↑";
-  quicklinks.querySelector('a').href = "#" + index.nextElementSibling.id;
-
-
-  // menu mobile: insère un bouton pour afficher/masquer le menu
-  var togglemenu = document.createElement('button');
-  togglemenu.textContent = "☰";
-  togglemenu.addEventListener('click', function(e){
-    e.stopPropagation();
-    index.classList.toggle('visible');
-  })
-  index.prepend(togglemenu);
-
-  index.addEventListener('click', function(){
-    index.classList.remove('visible');
-  })
-  
-  // surligne le chapître courant au scroll
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const id = entry.target.getAttribute('id');      
-      if (entry.intersectionRatio > 0) {
-        document.querySelector(`#index li a[href="#${id}"]`).parentElement.classList.add('active');
-      } else {
-        document.querySelector(`#index li a[href="#${id}"]`).parentElement.classList.remove('active');
-      }
-    });
-  });
-
-  // observe chaque section
-  sections.forEach((section) => {
-    observer.observe(section);
-  });
 
   var downloadlink = quicklinks.querySelector('a:last-child');
   downloadlink.onclick = () => {
-    if(downloadlink.getAttribute('href') == ""){
-      alert("Un fichier PDF doit être généré et téléversé dans le dossier. Le nom du fichier doit être configuré dans config.php. Documentation: https://ateliers.esad-pyrenees.fr/pagetypetoprint/print/.")
-    }
-  }
+     if(downloadlink.getAttribute('href') == ""){
+       alert("Un fichier PDF doit être généré et téléversé dans le dossier. Le nom du fichier doit être configuré dans config.php. Documentation: https://ateliers.esad-pyrenees.fr/pagetypetoprint/print/.")
+     }
+   }
 
   // youtube and vimeo light embeds
   document.querySelectorAll(':is(vimeo-embed, youtube-embed) button').forEach(button => button.addEventListener('click', (e) => {
@@ -114,6 +102,7 @@ window.addEventListener('DOMContentLoaded', () => {
     video.src = video.dataset.src;
   }))
 
+   
    // sommaire overlay
   var toggleBtn = document.getElementById('toggle-btn');
   var nav = document.getElementById('nav');
@@ -134,8 +123,19 @@ window.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') nav.style.transform = "translateX(50vw)";
     });
-
 });
+
+// Aparition et disparition du sommaire au scroll
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("quicklinks").style.top = "90vh";
+      } else {
+        document.getElementById("quicklinks").style.top = "120vh";
+      }
+      prevScrollpos = currentScrollPos;
+    } 
 
 
 

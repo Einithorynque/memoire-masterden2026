@@ -71,13 +71,14 @@
 
   /* ------------------------------------------------------------------------ Variables */
   :root {
-    --bigsize: 60px;
+    --bigsize: 32px;
+    --mediumsize: 18px;
     --basesize: 12px;
     --smallsize: 10px;
     --color: rgba(0, 0, 0, 0.85);
     --spacer: .5cm;
     /* couleur d’accentuation */
-    --accentcolor: #ff6347;
+    --accentcolor: black;
     /* maximum width for texts */
     --maxwidth: 40em;
     /* columns */
@@ -100,6 +101,11 @@
   }
 
   /* ------------------------------------------------------------------------ Cover */
+
+  .header-content {
+    justify-content: flex-start;
+  }
+
   #header {
     padding: 0;
     background: url(logo.svg) no-repeat 0 100%;
@@ -114,13 +120,41 @@
   #index { display: none; } 
 
   .meta {
-    display: grid;
-    grid-gap: var(--spacer);
-    grid-template-columns: 4fr 4fr 4fr;
+    display: flex;
+  }
+
+  .meta-data { 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+  }
+
+  .meta-column {
+    flex-direction: column;
+  }
+
+  .meta-column p {
+    margin: 0;
+  }
+
+  .meta-inline{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .meta-name{
+    font-size: var(--mediumsize);
+    font-weight: 600;
     margin-top: 2rem;
   }
-  .meta-year { grid-column: 3; grid-row: 1; }
-  .meta-data { grid-column: 1; grid-row: 1; }
+
+  .meta-year { 
+    transform: rotate(-90deg);
+    block-size: fit-content;
+  }
 
   /* header nav = Lire / imprimer / télécharger */
   #header nav { display: none; } 
@@ -398,5 +432,9 @@
     /* margin-left: calc(-4em - 40px); */
   }
 
+  /* ------------------------------------------------------------------------ footer */
+  #footer{
+    display: none;
+  }
 
 }

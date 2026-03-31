@@ -2,25 +2,45 @@
     <!-- navigation en header -->
      <div class="nav-principale">
         <a href=""><button>Retour à l'accueil</button></a>
-        <div>
-            <img src="" alt="">
-        </div>
+        <img src="theme/masterden2026/assets/icons-nav-principale.svg" alt="icons">
         <a href=""><button id="toggle-btn">Sommaire</button></a>
      </div>
 
+    <!-- contenu du hero + cover haut -->
     <div class="header-content">
-    <!-- Le titre du mémoire / doc écrit -->
-    <h1><?= $title ?></h1>
-        <!-- Votre nom -->
+        <h1><?= $title ?></h1>
         <div class="meta-name"><?= $name ?></div>
+        <div class="meta meta-column">
+            <p><?= $mention ?></p>
+            <p><?= $pole ?></p>
+        </div>
+    </div>
+    <!-- contenu bas cover -->
+    <div class="meta meta-data">
+        <div class="meta-column">
+            <p><?= $diploma ?></p>
+            <div class="meta-inline">
+                <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.5918 6.49698L9.09481 -2.83992e-07L8.17874 0.916074L13.1035 5.84728L-0.00096299 5.84728L-0.000963047 7.14668L13.1035 7.14668L8.17874 12.0779L9.09481 12.994L15.5918 6.49698Z" fill="#1E1E1E"/>
+                </svg>
+                <p>Environnements numériques</p>
+            </div>
+            <p>Université de Strasbourg</p>
+        </div>
+        <div class="meta-year"><?= $year ?></div>
+    </div>
+
+    <!-- le titre courant (version print) -->
+    <div class="runningtitle">
+        <div><span class="name"><?= $name ?></span> <span class="title"><?= $title ?></span></div>
+        <span class="folio"></span>
     </div>
 
     <!-- les liens rapides: lire, imprimmer, télécharger -->
-    <nav id="quicklinks">
-        <a href="#nav">Lire en ligne</a>
+    <nav id="quicklinks" aria-label="navigation rapide">
         <?php if(empty($pdf)): ?>
             <!-- Il est possible de supprimer ce lien une fois le PDF généré : -->
-            <a href="?print" title="Web to print">Imprimer</a>
+            <a href="?print" title="Web to print" class="quicklinks-button">Imprimer</a>
         <?php else : ?>
             <!-- Modifier l’URL dans config.yml -->
             <a href="<?= $pdf ?>">Télécharger</a>
@@ -33,7 +53,7 @@
         <ul class="nav-ul">
             <?= $nav() ?>
         </ul>
-        <button id="btn-fermer" onclick="goTo('B')">Fermer</button>
+        <button id="btn-fermer">Fermer</button>
 </nav>
 
 
