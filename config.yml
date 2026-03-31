@@ -39,11 +39,11 @@ pdf: ""
 # Structure du contenu (= sommaire)
 parts:
   - title: Introduction
-    file: content/text/0.prefatorynote.md
+    file: content/text/0.intro.md
     template: default
 
-  - title: Des sites institutionnels
-    file: content/text/1.intro.md
+  - title: La construction des géovisualisations
+    file: content/text/1.chapitre1.md
     template: default
 
   - title: Titre
