@@ -38,7 +38,7 @@ pdf: ""
 
 # Structure du contenu (= sommaire)
 parts:
-  - title: Design narratif et social
+  - title: Introduction
     file: content/text/0.prefatorynote.md
     template: default
 
@@ -46,15 +46,15 @@ parts:
     file: content/text/1.intro.md
     template: default
 
-  - title: .
+  - title: Titre
     file: content/text/2.artinprinting.md
     template: default
 
-  - title: .
+  - title: Titre
     file: content/text/3.pictorial.md
     template: default
 
-  - title: .
+  - title: Titre
     file: content/text/4.type.md
     template: default
 
@@ -62,15 +62,15 @@ parts:
     file: content/text/5.conclusion.md
     template: default
 
-  - title: .
+  - title: Titre
     file: content/text/6.annexes.md
     template: appendices
 
-  - title: .
+  - title: Titre
     file: content/text/7.entretiens.md
     template: interview
 
-  - title: .
+  - title: Titre
     file: content/text/8.glossaire.md
     template: references
 
@@ -78,6 +78,6 @@ parts:
     file: content/text/9.references.md
     template: references
 
-  - title: .
-    file: content/text/10.remerciements.md
-    template: thanks
+  # - title: Titre
+  #   file: content/text/10.remerciements.md
+  #   template: thanks
