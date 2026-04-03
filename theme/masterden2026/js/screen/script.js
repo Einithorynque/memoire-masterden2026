@@ -1,6 +1,11 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
+  window.Cite = require('citation-js');
+  CitationManager.loadBibFile("content/ref/bib.bib")
+  .then(function () {
+  CitationManager.processPage(); // réécrit le HTML des citations
+
   // menu clone
   var sections = document.querySelectorAll('section[id]');
   // -> On récupère les slugs valides depuis le menu PHP
@@ -123,6 +128,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') nav.style.transform = "translateX(50vw)";
     });
+   }); // fin du .then()
 });
 
 // Aparition et disparition du sommaire au scroll

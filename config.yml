@@ -38,23 +38,23 @@ pdf: ""
 
 # Structure du contenu (= sommaire)
 parts:
-  - title: Design narratif et social
+  - title: Introduction
     file: content/text/0.prefatorynote.md
     template: default
 
-  - title: Des sites institutionnels
+  - title: Etat de l'art
     file: content/text/1.intro.md
     template: default
 
-  - title: .
+  - title: Nouvelles propositions
     file: content/text/2.artinprinting.md
     template: default
 
-  - title: .
+  - title: Résulats des tests utilisateurs
     file: content/text/3.pictorial.md
     template: default
 
-  - title: .
+  - title: Discussion
     file: content/text/4.type.md
     template: default
 
@@ -62,11 +62,11 @@ parts:
     file: content/text/5.conclusion.md
     template: default
 
-  - title: .
+  - title: Colofon
     file: content/text/6.annexes.md
     template: appendices
 
-  - title: .
+  - title: Annexe
     file: content/text/7.entretiens.md
     template: interview
 
