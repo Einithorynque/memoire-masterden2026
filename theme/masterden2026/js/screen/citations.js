@@ -23,7 +23,7 @@
 
     // Style CSL par défaut ("apa", "chicago-author-date", "vancouver", …)
     // Citation.js embarque APA et Vancouver nativement.
-    defaultStyle: "chicago-author-date",
+    defaultStyle: "chicago-notes",
 
     // Locale pour la mise en forme
     locale: "fr-FR",
@@ -37,11 +37,11 @@
     book:                 "Livre",
     inbook:               "Chapitre de livre",
     incollection:         "Contribution dans un ouvrage collectif",
-    document:             "Billet de blog",
+    document:             "Billet de blog et page web",
     "paper-conference":   "Article de colloque",
     conference:           "Actes de conférence",
     thesis:               "Thèse de doctorat",
-    manuscript:           "Mémoire de master",
+    manuscript:           "Mémoire",
     misc:                 "Ressource en ligne / Divers",
     online:               "Ressource en ligne",
     unpublished:          "Document non publié",
@@ -107,35 +107,56 @@
    * @returns {string}
    */
   function _formatInlineCitation(entry) {
-    let authorPart = "Auteur.ice inconnu.e"; // Si trien n'est rempli pour l'auteuricedans le BibTex
-
-    if (entry.author && entry.author.length > 0) {//vérifie qu'il y'est bien une valeur auteur et que celle-ci soit supérieur à 1
-      const a = entry.author;
-      if (a.length === 1) { // Si un auteur
-        authorPart = a[0].family || a[0].literal || "Auteur.ice inconnu.e"; //change le nom de l'auteurice avec le nom de famille ou le prénom
-      } else if (a.length === 2) {
-        authorPart = // Si deux auteurs
-          (a[0].family || a[0].literal) + " & " + (a[1].family || a[1].literal);
-      } else { //Si 3 auteurs ou +
-        authorPart = (a[0].family || a[0].literal) + " et al.";
-      }
-    } else if (entry.editor && entry.editor.length > 0) {//Sinon tente avec l'éditeur --> à préciser
-      const e = entry.editor;
-      authorPart =
-        (e[0].family || e[0].literal || "Dir. inconnu.e") +
-        (e.length > 1 ? " et al." : "") +
-        " (dir.)";
-    } else if (entry.publisher) {
-      authorPart = entry.publisher;
+    try {
+        const singleCite = new Cite([entry]);
+        let rendered = singleCite.format("bibliography", {
+            format:   "html",
+            template: CONFIG.defaultStyle,
+            lang:     CONFIG.locale,
+        });
+        // Nettoyer les div de Citation.js
+        return rendered
+            .replace(/<div[^>]*class="csl-bib-body"[^>]*>/gi, "")
+            .replace(/<div[^>]*class="csl-entry"[^>]*>/gi, "")
+            .replace(/<\/div>/gi, "")
+            .trim();
+    } catch (e) {
+        console.warn(`[CitationManager] Rendu inline impossible :`, e);
+        return entry.id;
     }
 
-    let year = "s.d."; // Si la date n'est pas dans le BibTex
-    if (entry.issued) {
-      const dp = entry.issued["date-parts"];
-      if (dp && dp[0] && dp[0][0]) year = dp[0][0]; //va chercher les deux chiffres de la date
-    }
+    //si on veut du auteur date, commenté la partie précédente et 
+    // enlever le commentaire de cette partie et remplacer dans config par chicago-author-date :
 
-    return `(${authorPart}, ${year})`; // Renvoie l'expression Auteur.ice, date
+    // let authorPart = "Auteur.ice inconnu.e"; // Si trien n'est rempli pour l'auteuricedans le BibTex
+
+    // if (entry.author && entry.author.length > 0) {//vérifie qu'il y'est bien une valeur auteur et que celle-ci soit supérieur à 1
+    //   const a = entry.author;
+    //   if (a.length === 1) { // Si un auteur
+    //     authorPart = a[0].family || a[0].literal || "Auteur.ice inconnu.e"; //change le nom de l'auteurice avec le nom de famille ou le prénom
+    //   } else if (a.length === 2) {
+    //     authorPart = // Si deux auteurs
+    //       (a[0].family || a[0].literal) + " & " + (a[1].family || a[1].literal);
+    //   } else { //Si 3 auteurs ou +
+    //     authorPart = (a[0].family || a[0].literal) + " et al.";
+    //   }
+    // } else if (entry.editor && entry.editor.length > 0) {//Sinon tente avec l'éditeur --> à préciser
+    //   const e = entry.editor;
+    //   authorPart =
+    //     (e[0].family || e[0].literal || "Dir. inconnu.e") +
+    //     (e.length > 1 ? " et al." : "") +
+    //     " (dir.)";
+    // } else if (entry.publisher) {
+    //   authorPart = entry.publisher;
+    // }
+
+    // let year = "s.d."; // Si la date n'est pas dans le BibTex
+    // if (entry.issued) {
+    //   const dp = entry.issued["date-parts"];
+    //   if (dp && dp[0] && dp[0][0]) year = dp[0][0]; //va chercher les deux chiffres de la date
+    // }
+
+    // return `(${authorPart}, ${year})`; // Renvoie l'expression Auteur.ice, date
   }
 
   /**

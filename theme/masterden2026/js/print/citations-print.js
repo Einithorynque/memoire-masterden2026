@@ -1,58 +1,57 @@
 /**
- * citations-print.js
+ * citations.js
  * ─────────────────────────────────────────────────────────────────────────────
- * Version pour PagedJS / page-type-to-print.
- * Différence clé avec citations.js : on N'utilise PAS innerHTML pour remplacer
- * les citations — on parcourt les nœuds texte un par un avec TreeWalker.
- * Cela évite de détruire le DOM pendant que PagedJS le mesure.
+ * Gestion des citations BibTeX dans un contexte PHP / page-type-to-print.
+ * Utilise Citation.js via CDN (pas de Node.js).
+ 
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
-(function (global) {
+(function (global) { //Pour éviter de rentrer en conflit avec d'autres fonctions de la page
   "use strict";
 
   /* ═══════════════════════════════════════════════════════════════════════════
-     CONFIGURATION
+     CONFIGURATION — adaptez les valeurs au projet
   ═══════════════════════════════════════════════════════════════════════════ */
   const CONFIG = {
-    // ⚠️ On cible le BODY — c'est le HTML source avant que PagedJS pagine.
-    // Ne PAS mettre .pagedjs_pages ici : ces éléments n'existent pas encore
-    // au moment où ce script s'exécute.
-    mainSelector: "body",
+    // Sélecteur du conteneur principal injecté par PHP/page-type-to-print
+    mainSelector: "#main",
 
-    // ID de la section bibliographie dans votre HTML source.
-    // Elle doit exister dans votre markdown : <section id="biblio"></section>
+    // ID de l'élément où la bibliographie sera injectée.
+    // S'il n'existe pas dans le DOM, il sera créé à la fin de #main.
     bibliographyContainerId: "biblio",
 
-    // Style CSL : "apa", "chicago-author-date", "vancouver"
-    defaultStyle: "chicago-author-date",
+    // Style CSL par défaut ("apa", "chicago-author-date", "vancouver", …)
+    // Citation.js embarque APA et Vancouver nativement.
+    defaultStyle: "chicago-notes",
 
-    // Locale
+    // Locale pour la mise en forme
     locale: "fr-FR",
   };
 
   /* ═══════════════════════════════════════════════════════════════════════════
-     TYPES BibTeX → libellés français
+     TYPES BibTeX → libellés français pour la bibliographie
   ═══════════════════════════════════════════════════════════════════════════ */
   const TYPE_LABELS = {
-    "article-journal":  "Article de revue",
-    book:               "Livre",
-    inbook:             "Chapitre de livre",
-    incollection:       "Contribution dans un ouvrage collectif",
-    document:           "Billet de blog",
-    "paper-conference": "Article de colloque",
-    conference:         "Actes de conférence",
-    thesis:             "Thèse de doctorat",
-    manuscript:         "Mémoire de master",
-    misc:               "Ressource en ligne / Divers",
-    online:             "Ressource en ligne",
-    unpublished:        "Document non publié",
-    proceedings:        "Actes de conférence (ouvrage)",
-    booklet:            "Livret",
-    manual:             "Manuel",
-    electronic:         "Document électronique",
+    "article-journal":    "Article de revue",
+    book:                 "Livre",
+    inbook:               "Chapitre de livre",
+    incollection:         "Contribution dans un ouvrage collectif",
+    document:             "Billet de blog et page web",
+    "paper-conference":   "Article de colloque",
+    conference:           "Actes de conférence",
+    thesis:               "Thèse de doctorat",
+    manuscript:           "Mémoire",
+    misc:                 "Ressource en ligne / Divers",
+    online:               "Ressource en ligne",
+    unpublished:          "Document non publié",
+    proceedings:          "Actes de conférence (ouvrage)",
+    booklet:              "Livret",
+    manual:               "Manuel",
+    electronic:           "Document électronique",
   };
 
+  // Ordre d'affichage des groupes dans la bibliographie
   const TYPE_ORDER = [
     "book", "incollection", "inbook",
     "article-journal", "paper-conference",
@@ -62,94 +61,135 @@
   ];
 
   /* ═══════════════════════════════════════════════════════════════════════════
-     ÉTAT INTERNE
+     Variables propre au script
   ═══════════════════════════════════════════════════════════════════════════ */
-  let _cite        = null;
-  let _entries     = {};
-  let _usedKeys    = [];
+  let _cite        = null;   // instance Cite globale
+  let _entries     = {};     // map clé BibTeX → objet CSL-JSON
+  let _usedKeys    = [];     // ordre d'apparition des clés citées
   let _initialized = false;
 
   /* ═══════════════════════════════════════════════════════════════════════════
-     HELPERS PRIVÉS
+     Sécurité et parserBibTex
   ═══════════════════════════════════════════════════════════════════════════ */
 
+  //Sécurité, au cas où citation-js ne ce soit pas charger
   function _checkDeps() {
     if (typeof Cite === "undefined") {
-      console.error("[CitationManager] Citation.js n'est pas chargé.");
+      console.error(
+        "[CitationManager] Citation.js n'est pas chargé. " +
+        "Ajoutez les balises <script> CDN dans <head> avant citations.js."
+      );
       return false;
     }
     return true;
   }
 
+  // Parse la chaîne BibTeX et indexe les entrées par leur clé.
   function _parseBibtex(bibtexString) {
-    if (!_checkDeps()) return;
-    try {
+    if (!_checkDeps()) return; //Si le fihier n'est pas chargé arrête le script
+    try { //Instructions à faire
       _cite    = new Cite(bibtexString, { forceType: "@bibtex/text" });
-      _entries = {};
-      _cite.data.forEach((entry) => {
+      _cite.data.forEach((entry) => { //Permet de remplir le tableau -entries avec les données au format CSL JSON
         _entries[entry.id] = entry;
       });
-      _initialized = true;
-      console.info(`[CitationManager] ${Object.keys(_entries).length} référence(s) chargée(s).`);
-    } catch (e) {
+      _initialized = true; // On confirme que citation-js est initialisé
+      console.info(
+        `[CitationManager] ${Object.keys(_entries).length} référence(s) chargée(s).`
+      );
+    } catch (e) { // si une des instructions rencontre une erreur alors diffuse ce message dans la console
       console.error("[CitationManager] Erreur de parsing BibTeX :", e);
     }
   }
 
+  /**
+   * Formate la citation inline (Auteur, année) à partir d'un objet CSL-JSON.
+   * @param {object} entry
+   * @returns {string}
+   */
   function _formatInlineCitation(entry) {
-    let authorPart = "Auteur.ice inconnu.e";
-
-    if (entry.author && entry.author.length > 0) {
-      const a = entry.author;
-      if (a.length === 1) {
-        authorPart = a[0].family || a[0].literal || "Auteur.ice inconnu.e";
-      } else if (a.length === 2) {
-        authorPart = (a[0].family || a[0].literal) + " & " + (a[1].family || a[1].literal);
-      } else {
-        authorPart = (a[0].family || a[0].literal) + " et al.";
-      }
-    } else if (entry.editor && entry.editor.length > 0) {
-      const e = entry.editor;
-      authorPart =
-        (e[0].family || e[0].literal || "Dir. inconnu.e") +
-        (e.length > 1 ? " et al." : "") +
-        " (dir.)";
-    } else if (entry.publisher) {
-      authorPart = entry.publisher;
+    try {
+        const singleCite = new Cite([entry]);
+        let rendered = singleCite.format("bibliography", {
+            format:   "html",
+            template: CONFIG.defaultStyle,
+            lang:     CONFIG.locale,
+        });
+        // Nettoyer les div de Citation.js
+        return rendered
+            .replace(/<div[^>]*class="csl-bib-body"[^>]*>/gi, "")
+            .replace(/<div[^>]*class="csl-entry"[^>]*>/gi, "")
+            .replace(/<\/div>/gi, "")
+            .trim();
+    } catch (e) {
+        console.warn(`[CitationManager] Rendu inline impossible :`, e);
+        return entry.id;
     }
 
-    let year = "s.d.";
-    if (entry.issued) {
-      const dp = entry.issued["date-parts"];
-      if (dp && dp[0] && dp[0][0]) year = dp[0][0];
-    }
+    //si on veut du auteur date, commenté la partie précédente et 
+    // enlever le commentaire de cette partie et remplacer dans config par chicago-author-date :
 
-    return `(${authorPart}, ${year})`;
+    // let authorPart = "Auteur.ice inconnu.e"; // Si trien n'est rempli pour l'auteuricedans le BibTex
+
+    // if (entry.author && entry.author.length > 0) {//vérifie qu'il y'est bien une valeur auteur et que celle-ci soit supérieur à 1
+    //   const a = entry.author;
+    //   if (a.length === 1) { // Si un auteur
+    //     authorPart = a[0].family || a[0].literal || "Auteur.ice inconnu.e"; //change le nom de l'auteurice avec le nom de famille ou le prénom
+    //   } else if (a.length === 2) {
+    //     authorPart = // Si deux auteurs
+    //       (a[0].family || a[0].literal) + " & " + (a[1].family || a[1].literal);
+    //   } else { //Si 3 auteurs ou +
+    //     authorPart = (a[0].family || a[0].literal) + " et al.";
+    //   }
+    // } else if (entry.editor && entry.editor.length > 0) {//Sinon tente avec l'éditeur --> à préciser
+    //   const e = entry.editor;
+    //   authorPart =
+    //     (e[0].family || e[0].literal || "Dir. inconnu.e") +
+    //     (e.length > 1 ? " et al." : "") +
+    //     " (dir.)";
+    // } else if (entry.publisher) {
+    //   authorPart = entry.publisher;
+    // }
+
+    // let year = "s.d."; // Si la date n'est pas dans le BibTex
+    // if (entry.issued) {
+    //   const dp = entry.issued["date-parts"];
+    //   if (dp && dp[0] && dp[0][0]) year = dp[0][0]; //va chercher les deux chiffres de la date
+    // }
+
+    // return `(${authorPart}, ${year})`; // Renvoie l'expression Auteur.ice, date
   }
 
+  /**
+   * Génère le HTML complet d'une entrée bibliographique.
+   * @param {string} key  clé BibTeX
+   * @returns {string}    HTML du <li>
+   */
   function _formatBibEntry(key) {
     const entry = _entries[key];
     if (!entry) return "";
 
+    // Rendu Chicago via Citation.js
     let rendered = "";
     try {
       const singleCite = new Cite([entry]);
-      rendered = singleCite.format("bibliography", {
+      rendered = singleCite.format("bibliography", { //On demande à citation-js de nous générer la citation biblio
         format:   "html",
         template: CONFIG.defaultStyle,
         lang:     CONFIG.locale,
       });
-      rendered = rendered
+      // De base Citation.js enveloppe dans des div avec des class "csl-bib-body" & "csl-entry" donc on les remplace
+      rendered = rendered  //La citation de citation-js sans les div
         .replace(/<div[^>]*class="csl-bib-body"[^>]*>/gi, "")
         .replace(/<div[^>]*class="csl-entry"[^>]*>/gi, "")
         .replace(/<\/div>/gi, "")
-        .trim();
-    } catch (e) {
+        .trim(); //retire les espace en début et fin de chaîne
+    } catch (e) { // Si la citation échoue : 
       console.warn(`[CitationManager] Rendu impossible pour "${key}" :`, e);
       rendered = key;
     }
 
-    const rawType   = (entry.type || "misc").toLowerCase();
+    const rawType  = (entry.type || "misc").toLowerCase(); // à approfondir
+    const typeLabel = TYPE_LABELS[rawType] || rawType;
 
     return `
       <li class="bib-entry bib-type-${rawType}" id="bib-${key}">
@@ -157,129 +197,47 @@
       </li>`;
   }
 
-  /* ─────────────────────────────────────────────────────────────────────────
-     ✅ LA FONCTION CLÉ : remplacement via TreeWalker (sans innerHTML)
-     
-     Pourquoi TreeWalker et pas innerHTML ?
-     innerHTML détruit et recrée TOUT le DOM du conteneur.
-     Si PagedJS est en train de mesurer des éléments dans ce conteneur,
-     il essaie d'accéder à des éléments qui n'existent plus → crash.
-     
-     TreeWalker parcourt les nœuds texte un par un et les remplace
-     chirurgicalement avec replaceChild → le reste du DOM est intact.
-  ───────────────────────────────────────────────────────────────────────── */
-  function _replaceInTextNodes(container) {
+  /**
+   Parcourt le HTML de #main, remplace [@clé] par des liens de citation,
+   et mémorise l'ordre d'apparition.
+   * @param {string} html
+   * @returns {string}
+   */
+  function _replaceCitations(html) {
+    _usedKeys = [];
+    const keyOrder = {};
+    let counter = 0;
 
-    // TreeWalker : un "curseur" qui se déplace de nœud texte en nœud texte
-    // NodeFilter.SHOW_TEXT → on ne veut voir que les nœuds texte,
-    // pas les balises HTML
-    const walker = document.createTreeWalker(
-      container,
-      NodeFilter.SHOW_TEXT,
-      {
-        acceptNode(node) {
-          const parent = node.parentElement;
-
-          // Sécurité : on ignore les nœuds sans parent
-          if (!parent) return NodeFilter.FILTER_REJECT;
-
-          // On ignore ce qui est dans <script> ou <style>
-          // (pas de citations à remplacer là-dedans)
-          const tag = parent.tagName.toLowerCase();
-          if (tag === "script" || tag === "style") return NodeFilter.FILTER_REJECT;
-
-          // Optimisation : si le texte ne contient pas [@, inutile de le traiter
-          if (!node.textContent.includes("[@")) return NodeFilter.FILTER_REJECT;
-
-          return NodeFilter.FILTER_ACCEPT;
-        }
-      }
-    );
-
-    // ⚠️ On collecte D'ABORD tous les nœuds à traiter dans un tableau,
-    // puis on les modifie. On ne modifie JAMAIS le DOM pendant qu'on
-    // le parcourt avec walker — cela déplacerait le curseur et ferait
-    // sauter des nœuds.
-    const nodesToReplace = [];
-    let node;
-    while ((node = walker.nextNode())) {
-      nodesToReplace.push(node);
-    }
-
-    // L'expression régulière qui détecte [@clé] et [@@clé]
+    // cherche et accepte [@clé] et [@@clé], clé = lettres, chiffres, _, :, -
     const regex = /\[@@?([a-zA-Z0-9_:\-]+)\]/g;
 
-    nodesToReplace.forEach((textNode) => {
-      const text = textNode.textContent;
-
-      // .test() vérifie s'il y a un match — puis on remet lastIndex à 0
-      // car .test() et .exec() partagent la même position dans la regex /g
-      if (!regex.test(text)) return;
-      regex.lastIndex = 0;
-
-      // Un DocumentFragment est un "sac" invisible qui peut contenir
-      // plusieurs nœuds. On va le construire, puis l'insérer d'un coup
-      // à la place du nœud texte original.
-      const fragment = document.createDocumentFragment();
-      let lastIndex = 0;
-      let match;
-
-      // .exec() trouve les matches un par un
-      while ((match = regex.exec(text)) !== null) {
-        const key = match[1]; // le contenu capturé entre [@  et ]
-
-        // 1. Texte AVANT la citation → nœud texte simple
-        if (match.index > lastIndex) {
-          fragment.appendChild(
-            document.createTextNode(text.slice(lastIndex, match.index))
-          );
-        }
-
-        // 2. La citation elle-même
-        if (!_entries[key]) {
-          // Clé inconnue → span rouge pour signaler le problème
-          console.warn(`[CitationManager] Clé inconnue : "${key}"`);
-          const span = document.createElement("span");
-          span.className = "citation-unknown";
-          span.title     = "Référence introuvable";
-          span.textContent = `[?${key}]`;
-          fragment.appendChild(span);
-        } else {
-          // Clé connue → on mémorise son ordre d'apparition
-          if (!_usedKeys.includes(key)) _usedKeys.push(key);
-
-          // On crée le span de citation
-          const span = document.createElement("span");
-          span.className      = "citation-text";
-          span.dataset.key    = key;
-          span.textContent    = _formatInlineCitation(_entries[key]);
-          fragment.appendChild(span);
-        }
-
-        // On avance le curseur après la fin de ce match
-        lastIndex = regex.lastIndex;
+    return html.replace(regex, (match, key) => {
+      if (!_entries[key]) {
+        console.warn(`[CitationManager] Clé inconnue : "${key}"`);
+        return `<span class="citation-unknown" title="Référence introuvable">[?${key}]</span>`;
       }
 
-      // 3. Texte APRÈS la dernière citation
-      if (lastIndex < text.length) {
-        fragment.appendChild(
-          document.createTextNode(text.slice(lastIndex))
-        );
+      if (!(key in keyOrder)) {
+        keyOrder[key] = ++counter;
+        _usedKeys.push(key);
       }
 
-      // Remplacement chirurgical : le nœud texte original est remplacé
-      // par le fragment (qui contient texte + spans de citation)
-      // Le reste du DOM autour est intact.
-      textNode.parentNode.replaceChild(fragment, textNode);
+      const inlineText = _formatInlineCitation(_entries[key]);
+      return `<span class="citation-text" data-key="${key}">${inlineText}</span>`; //création de la citation avec les éléments déffinit plutôt
     });
   }
 
   /* ═══════════════════════════════════════════════════════════════════════════
-     API PUBLIQUE
+     Générateur de citations et biblio
   ═══════════════════════════════════════════════════════════════════════════ */
   const CitationManager = {
 
-    loadBibFile(url) {
+    /**
+     * Charge un fichier .bib via fetch, puis résout la promesse.
+     * @param {string} url
+     * @returns {Promise<void>}
+     */
+    loadBibFile(url) { // charge un fichier .bib 
       return fetch(url)
         .then((r) => {
           if (!r.ok) throw new Error(`HTTP ${r.status} pour ${url}`);
@@ -291,63 +249,68 @@
         );
     },
 
-    loadBibString(bibtexString) {
+    /**
+     * Charge directement une chaîne BibTeX (déjà disponible dans la page).
+     * @param {string} bibtexString
+     */
+    loadBibString(bibtexString) { // charge du BibTeX déjà en mémoire
       _parseBibtex(bibtexString);
     },
 
-    /* ───────────────────────────────────────────────────────────────────────
-       processPagedJS — à appeler dans DOMContentLoaded, AVANT que PagedJS
-       ne pagine le document.
-       
-       Flux correct :
-         DOMContentLoaded
-           → loadBibFile() charge le .bib
-           → processPagedJS() remplace les [@clé] dans le HTML source
-           → renderBibliography() remplit #biblio dans le HTML source
-           → PagedJS pagine le HTML DÉJÀ traité ✅
-    ─────────────────────────────────────────────────────────────────────── */
-    processPagedJS(sourceSelectors) {
+    /**
+     * Remplace toutes les citations dans #main, puis injecte la bibliographie.
+     * À appeler après loadBibFile() ou loadBibString().
+     */
+    processPage() { // remplace les [@clé] + génère la biblio
       if (!_initialized) {
-        console.error("[CitationManager] BibTeX non chargé.");
+        console.error(
+          "[CitationManager] Aucun BibTeX chargé. " +
+          "Appelez loadBibFile() ou loadBibString() d'abord."
+        );
         return;
       }
 
-      const selectors = sourceSelectors || ["body"];
+      const main = document.querySelector(CONFIG.mainSelector);
+      if (!main) {
+        console.error(
+          `[CitationManager] Conteneur "${CONFIG.mainSelector}" introuvable.`
+        );
+        return;
+      }
 
-      selectors.forEach((selector) => {
-        const container = document.querySelector(selector);
-        if (!container) {
-          console.warn(`[CitationManager] Sélecteur introuvable : "${selector}"`);
-          return;
-        }
-        // ✅ TreeWalker : pas de innerHTML, DOM intact pour PagedJS
-        _replaceInTextNodes(container);
-      });
+      // 1. Remplacer les marqueurs [@clé] par des span
+      main.innerHTML = _replaceCitations(main.innerHTML);
 
-      // Remplit #biblio dans le HTML source
-      this.renderBibliography();
+      // 2. Générer et injecter la bibliographie
+      this.renderBibliography(main);
     },
 
+    /**
+     * Génère et injecte le bloc bibliographie.
+     * Peut être appelé indépendamment (ex. : rechargement AJAX partiel).
+     * @param {HTMLElement} [container]  par défaut : document.querySelector(mainSelector)
+     */
     renderBibliography(container) {
       if (!_initialized) return;
 
       const main = container || document.querySelector(CONFIG.mainSelector);
       if (!main) return;
 
+      // Récupère ou crée le conteneur de bibliographie
       let bibContainer = document.getElementById(CONFIG.bibliographyContainerId);
       if (!bibContainer) {
-        // Si #biblio n'existe pas dans le HTML source, on le crée dans body
         bibContainer = document.createElement("section");
         bibContainer.id = CONFIG.bibliographyContainerId;
         main.appendChild(bibContainer);
       }
 
-      if (_usedKeys.length === 0) {
-        bibContainer.innerHTML = "<p><em>Aucune citation détectée.</em></p>";
+      if (_usedKeys.length === 0) { //Si il n'y a pas de citations dans la liste des clés de citations
+        bibContainer.innerHTML =
+          "<p><em>Aucune citation détectée dans ce document.</em></p>";
         return;
       }
 
-      // Grouper par type
+      // Grouper les clés par type BibTeX
       const groups = {};
       _usedKeys.forEach((key) => {
         const rawType = (_entries[key] && _entries[key].type
@@ -358,6 +321,7 @@
         groups[rawType].push(key);
       });
 
+      // Types présents, dans l'ordre canonique + éventuels types inconnus à la fin
       const presentTypes = [
         ...TYPE_ORDER.filter((t) => groups[t]),
         ...Object.keys(groups).filter((t) => !TYPE_ORDER.includes(t)),
@@ -377,13 +341,26 @@
         bibHtml += `</ul></div>`;
       });
 
-      // ✅ innerHTML ici est acceptable : #biblio est vide au départ,
-      // PagedJS ne l'a pas encore mesuré quand on l'écrit.
       bibContainer.innerHTML = bibHtml;
     },
 
+    formatInlineCitation(key) {
+        const entry = _entries[key];
+        if (!entry) return `[?${key}]`;
+        // Mémorise la clé si pas encore vue
+        if (!_usedKeys.includes(key)) _usedKeys.push(key);
+        return _formatInlineCitation(entry);
+      },
+
+    /* — Utilitaires — */
+
+    /** Clés citées dans l'ordre d'apparition. */
     getUsedKeys() { return [..._usedKeys]; },
+
+    /** Map complète clé → CSL-JSON de toutes les références chargées. */
     getEntries()  { return { ..._entries }; },
+
+    /** Réinitialise l'état (rechargement AJAX, navigation SPA…). */
     reset() {
       _cite        = null;
       _entries     = {};
