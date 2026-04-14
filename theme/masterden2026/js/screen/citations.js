@@ -327,7 +327,7 @@
         ...Object.keys(groups).filter((t) => !TYPE_ORDER.includes(t)),
       ];
 
-      let bibHtml = `<h2 class="bib-title">Bibliographie</h2>`;
+      let bibHtml = ``; // Si on veut ajouter un titre dans la partie bibliographie généré par le js, le mettre ici
 
       presentTypes.forEach((type) => {
         const label = TYPE_LABELS[type] || type;

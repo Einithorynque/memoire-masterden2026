@@ -764,6 +764,35 @@ figcaption::before {
   margin-top: -1em;
 }
 
+/* ------------------------------------------------------------------------ Citations et bibliographie */
+.bib-group{
+  padding-bottom: var(--spacerXS);
+}
+
+.bib-list{
+  display: flex;
+  flex-flow:row wrap;
+  gap: var(--spacer);
+  max-width: 92rem;
+}
+.bib-entry{
+  list-style: none;
+  max-width: 20rem;
+  min-width: 16rem;
+} 
+
+@media(max-width:30rem){
+  .bib-list{
+    flex-flow: column nowrap;
+    max-width: var(--maxwidth);
+  }
+  .bib-entry{
+    max-width: fit-content;
+    min-width:min-content;
+  }
+}
+
+
 /* ------------------------------------------------------------------------ Footer */
 #footer{
   width: 100vw;

@@ -74,10 +74,10 @@ parts:
     file: content/text/8.glossaire.md
     template: references
 
-  - title: Bibliographie
-    file: content/text/9.references.md
+  - title: .
+    file: content/text/9.remerciements.md
     template: references
 
-  - title: .
-    file: content/text/10.remerciements.md
+  - title: Bibliographie
+    file: content/text/10.references.md
     template: thanks

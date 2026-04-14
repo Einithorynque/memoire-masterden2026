@@ -53,8 +53,8 @@
 
   // Ordre d'affichage des groupes dans la bibliographie
   const TYPE_ORDER = [
-    "book", "incollection", "inbook",
-    "article-journal", "paper-conference",
+    "incollection", "inbook",
+    "article-journal", "book", "paper-conference",
     "inproceedings", "conference", "proceedings",
     "thesis", "manuscript",
     "techreport", "misc", "online", "electronic", "unpublished",
@@ -327,7 +327,7 @@
         ...Object.keys(groups).filter((t) => !TYPE_ORDER.includes(t)),
       ];
 
-      let bibHtml = `<h2 class="bib-title">Bibliographie</h2>`;
+      let bibHtml = ``; // Si on veut ajouter un titre dans la partie bibliographie généré par le js, le mettre ici
 
       presentTypes.forEach((type) => {
         const label = TYPE_LABELS[type] || type;
