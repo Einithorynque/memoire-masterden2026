@@ -70,14 +70,6 @@ parts:
     file: content/text/7.entretiens.md
     template: interview
 
-  - title: .
-    file: content/text/8.glossaire.md
-    template: references
-
-  - title: .
-    file: content/text/9.remerciements.md
-    template: references
-
   - title: Bibliographie
-    file: content/text/10.references.md
+    file: content/text/8.references.md
     template: thanks

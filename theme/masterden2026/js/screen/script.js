@@ -20,9 +20,12 @@ window.addEventListener('DOMContentLoaded', () => {
   filteredSections.forEach((sec) => {
   const li = document.createElement('li');
   const a  = document.createElement('a');
-  a.classList.add('quicklinks-button')
+  const aChildren = document.createElement('div')
+  a.classList.add('quicklinks-button');
+  aChildren.classList.add('quicklinks_text')
   a.href        = "#" + sec.id;
-  a.textContent = document.querySelector(`#nav a[href="#${sec.id}"]`)?.textContent || sec.id;
+  aChildren.textContent = document.querySelector(`#nav a[href="#${sec.id}"]`)?.textContent || sec.id;
+  a.appendChild(aChildren)
   li.appendChild(a);
   menu.appendChild(li);
   });
@@ -136,7 +139,7 @@ window.addEventListener('DOMContentLoaded', () => {
     window.onscroll = function() {
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
-        document.getElementById("quicklinks").style.top = "90vh";
+        document.getElementById("quicklinks").style.top = "93vh";
       } else {
         document.getElementById("quicklinks").style.top = "120vh";
       }
