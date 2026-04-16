@@ -1,0 +1,1558 @@
+[
+	{
+		"id": "[@ait-touati_terra_2023]",
+		"type": "book",
+		"abstract": "Nouvelle édition augmentée d'un poster et d'une préface inédite de Bruno Latour Terra Forma raconte l’exploration d’une terre inconnue: la nôtre. Cinq siècles après les voyageurs de la Renaissance partis cartographier les terra incognita du Nouveau Monde, cet ouvrage propose de redécouvrir autrement cette Terre que nous croyons si bien…",
+		"ISBN": "978-2-490077-95-3",
+		"language": "fr-FR",
+		"title": "TERRA FORMA",
+		"URL": "https://editions-b42.com/produit/terra-forma/",
+		"author": [
+			{
+				"family": "GREGOIRE",
+				"given": "Axelle"
+			},
+			{
+				"family": "ARENES",
+				"given": "Alexandra"
+			},
+			{
+				"family": "AÏT-TOUATI",
+				"given": "Frédérique"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2024",
+					6,
+					10
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2019"
+				]
+			]
+		}
+	},
+	{
+		"id": "[@bianchi_street_2021]",
+		"type": "article-journal",
+		"abstract": "Google street view à la renaissance.",
+		"container-title": "Etapes",
+		"issue": "262",
+		"language": "fr",
+		"title": "Street view du XVI siècle",
+		"author": [
+			{
+				"family": "BIANCHI",
+				"given": "Laeticia"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2021",
+					8,
+					2
+				]
+			]
+		}
+	},
+	{
+		"id": "[@geofabrik_tools_map_nodate]",
+		"type": "webpage",
+		"title": "Map Compare",
+		"URL": "https://tools.geofabrik.de/mc/#4/49.0000/8.3778&num=4&mt0=mapnik&mt1=wanderreitkarte&mt2=mapnik-german&mt3=mapnik",
+		"author": [
+			{
+				"family": "Geofabrik tools",
+				"given": ""
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					1,
+					2
+				]
+			]
+		}
+	},
+	{
+		"id": "[@vuillemot_boundary_2021]",
+		"type": "article-journal",
+		"abstract": "We propose to take an artifact-centric approach to design studies by leveraging the concept of boundary object. Design studies typically focus on processes and articulate design decisions in a project-specific context with a goal of transferability. We argue that design studies could benefit from paying attention to the material conditions in which teams collaborate to reach design outcomes. We report on a design study of isochrone maps following cartographic generalization principles. Focusing on boundary objects enables us to characterize five categories of artifacts and tools that facilitated collaboration between actors involved in the design process (structured collections, structuring artifacts, process-centric artifacts, generative artifacts, and bridging artifacts). We found that artifacts such as layered maps and map collections played a unifying role for our inter-disciplinary team. We discuss how such artifacts can be pivotal in the design process. Finally, we discuss how considering boundary objects could improve the transferability of design study results, and support reflection on inter-disciplinary collaboration in the domain of Information Visualization.",
+		"container-title": "Computer Graphics Forum",
+		"DOI": "10.1111/cgf.14312",
+		"note": "publisher: Wiley",
+		"source": "HAL",
+		"title": "Boundary Objects in Design Studies: Reflections on the Collaborative Creation of Isochrone Maps",
+		"title-short": "Boundary Objects in Design Studies",
+		"URL": "https://hal.science/hal-03203128",
+		"author": [
+			{
+				"family": "Vuillemot",
+				"given": "Romain"
+			},
+			{
+				"family": "Rivière",
+				"given": "Philippe"
+			},
+			{
+				"family": "Beignon",
+				"given": "Anaëlle"
+			},
+			{
+				"family": "Tabard",
+				"given": "Aurélien"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					1,
+					2
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2021",
+					6
+				]
+			]
+		}
+	},
+	{
+		"id": "[@esri_web_nodate]",
+		"type": "webpage",
+		"abstract": "Transform spatial data into interactive web maps & create GIS web apps with the world’s leading GIS mapping software. Try ArcGIS Online for free today!",
+		"language": "en-us",
+		"title": "Web GIS Mapping Software | Create Web Maps with ArcGIS Online",
+		"URL": "https://www.esri.com/en-us/arcgis/products/arcgis-online/overview",
+		"author": [
+			{
+				"family": "ESRI",
+				"given": ""
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					1,
+					2
+				]
+			]
+		}
+	},
+	{
+		"id": "[@villeneuve_liverain_nodate]",
+		"type": "webpage",
+		"abstract": "Cartes météo sublimes, en 3D, basées sur AROME HD de Météo France.",
+		"container-title": "LiveRain",
+		"language": "fr-FR",
+		"title": "LiveRain: Cartes météo 3D",
+		"title-short": "LiveRain",
+		"URL": "https://liverain.app/",
+		"author": [
+			{
+				"family": "Villeneuve",
+				"given": "Michael"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					1,
+					2
+				]
+			]
+		}
+	},
+	{
+		"id": "[@altermap_app_nodate]",
+		"type": "webpage",
+		"container-title": "App où vivre",
+		"genre": "outil",
+		"language": "fr-FR",
+		"title": "App où vivre",
+		"URL": "https://app.ou-vivre.fr/map/?config=apps/explore.fr.xml",
+		"author": [
+			{
+				"family": "Altermap",
+				"given": ""
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					1,
+					2
+				]
+			]
+		}
+	},
+	{
+		"id": "[@harley_deconstruire_1989]",
+		"type": "article-journal",
+		"container-title": "Cartographica",
+		"issue": "2",
+		"language": "fr-FR",
+		"page": "1-20",
+		"title": "Déconstruire la carte",
+		"URL": "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.anthonymasure.com/attachments/slides/img/2019-07-from-semiology-of-graphics-to-cultural-analytics-icc-tokyo/Article-Harley.pdf",
+		"volume": "26",
+		"author": [
+			{
+				"family": "Harley",
+				"given": "John Brian"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					1,
+					2
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"1989"
+				]
+			]
+		}
+	},
+	{
+		"id": "[@frelet_vous_2025]",
+		"type": "manuscript",
+		"genre": "Mémoire de DSAA",
+		"language": "fr-FR",
+		"number-of-pages": "116",
+		"publisher-place": "Villefontaine",
+		"title": "Vous êtes ici ? Une expérience approfondie de la cartographie numérique par la simulation de la position.",
+		"title-short": "Vous êtes ici ?",
+		"author": [
+			{
+				"family": "Frelet",
+				"given": "Thomas"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2025",
+					5
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/19124267/items/23TUK26P",
+		"type": "entry-encyclopedia",
+		"container-title": "ESRI",
+		"language": "fr-FR",
+		"title": "Données géographiques",
+		"URL": "https://support.esri.com/fr-fr/gis-dictionary/geographic-data#:~:text=%5Bg%C3%A9ographie%5D%20Informations%20qui%20d%C3%A9crivent%20la,spatiales%20et%20des%20donn%C3%A9es%20attributaires.",
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					11,
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "[@noauthor_point_nodate]",
+		"type": "entry-encyclopedia",
+		"title": "Point de vue",
+		"URL": "https://www.larousse.fr/dictionnaires/francais/point_de_vue/62008"
+	},
+	{
+		"id": "[@grootens_lambiguite_nodate]",
+		"type": "webpage",
+		"container-title": "Back Office",
+		"language": "french",
+		"title": "De l’ambiguïté du design cartographique",
+		"URL": "http://www.revue-backoffice.com/numeros/02-penser-classer-representer/joost-grootens-ambiguite-design-cartographique",
+		"author": [
+			{
+				"family": "Grootens",
+				"given": "Joost"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					12,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "[@mericskay_cartographie_2016]",
+		"type": "article-journal",
+		"abstract": "Au sein de ses nouveaux environnements en ligne, les modalités de représentation de l'information géographique (déjà bouleversées par les SIG) évoluent selon de nouvelles logiques propres à l'Internet en général (infographie, Web design, datavisualisation). Au-delà d'un artefact marketing ou d'un effet de mode, le développement rapide du géoweb tend à modifier en profondeur les manières de visualiser comme de représenter le monde par le biais des données et des cartes numériques. Afin de bien comprendre cette nouvelle cartographie et les enjeux sous-jacents, cet article revient sur les fondements socio-techniques du géoweb et le langage cartographique qui y prend forme en explorant les nouvelles modalités de représentation spatiale des données numériques en ligne.",
+		"collection-title": "La sémiologie dans tous les sens – Temps, Art & Cartographie",
+		"container-title": "Cartes & géomatique",
+		"note": "publisher: Comité français de cartographie [2011, n° 209-....]",
+		"page": "37-50",
+		"source": "HAL",
+		"title": "La cartographie à l'heure du Géoweb : Retour sur les nouveaux modes de représentation spatiale des données numériques",
+		"title-short": "La cartographie à l'heure du Géoweb",
+		"URL": "https://shs.hal.science/halshs-01468314",
+		"volume": "229-230",
+		"author": [
+			{
+				"family": "Mericskay",
+				"given": "Boris"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					12,
+					9
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2016"
+				]
+			]
+		}
+	},
+	{
+		"id": "[@mericskay_cartographie_nodate]",
+		"type": "article-journal",
+		"language": "fr",
+		"source": "Zotero",
+		"title": "La cartographie à l'heure du Géoweb: Retour sur les nouveaux modes de représentation spatiale des données numériques",
+		"author": [
+			{
+				"family": "Mericskay",
+				"given": "Boris"
+			}
+		]
+	},
+	{
+		"id": "[@vinck_lobjet_2009]",
+		"type": "article-journal",
+		"abstract": "Ce texte propose de revenir sur la notion d’objet intermédiaire, parfois confondue avec celle d’objet-frontière. Après avoir exposé le contexte de la formation de ce concept et les enjeux de connaissance visés initialement dans le cadre de l’analyse des réseaux de coopération scientifique, le texte revient en détail sur les développements successifs de la notion d’objet intermédiaire, notamment dans le cadre de l’ethnographie de l’activité de conception. Le parcours proposé remet à plat sa force descriptive et analytique en s’appuyant sur des exemples qui permettent d’en éprouver la fécondité. Le texte montre enfin que l’objet intermédiaire devient un objet-frontière par le travail d’équipement.",
+		"container-title": "Revue d’anthropologie des connaissances",
+		"DOI": "10.3917/rac.006.0051",
+		"ISSN": "1760-5393",
+		"issue": "1",
+		"language": "fr",
+		"license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+		"note": "publisher: Société d’Anthropologie des Connaissances",
+		"source": "journals.openedition.org",
+		"title": "De l’objet intermédiaire à l’objet-frontière",
+		"URL": "https://journals.openedition.org/rac/18302",
+		"volume": "3",
+		"author": [
+			{
+				"family": "Vinck",
+				"given": "Dominique"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					11,
+					23
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2009",
+					3,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "[@goeta_donnees_nodate]",
+		"type": "article-journal",
+		"language": "fr",
+		"source": "Zotero",
+		"title": "Les données de la démocratie",
+		"author": [
+			{
+				"family": "Goëta",
+				"given": "Samuel"
+			},
+			{
+				"family": "Lemaire",
+				"given": "Axelle"
+			}
+		]
+	},
+	{
+		"id": "[@plantin_donnees_2013]",
+		"type": "article-journal",
+		"container-title": "Les Cahiers du numérique",
+		"ISSN": "1622-1494",
+		"issue": "1",
+		"language": "fr",
+		"note": "publisher: JLE Éditions\nsection: Économie",
+		"page": "85-107",
+		"source": "shs.cairn.info",
+		"title": "Données ouvertes et cartographie libre:Autour du cas de Montpellier",
+		"title-short": "Données ouvertes et cartographie libre",
+		"URL": "https://shs.cairn.info/revue-les-cahiers-du-numerique-2013-1-page-85",
+		"volume": "9",
+		"author": [
+			{
+				"family": "Plantin",
+				"given": "Jean-Christophe"
+			},
+			{
+				"family": "Valentin",
+				"given": "Jérémie"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					11,
+					20
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2013",
+					10,
+					31
+				]
+			]
+		}
+	},
+	{
+		"id": "[@boy_engager_2015]",
+		"type": "thesis",
+		"language": "fr",
+		"number-of-pages": "436",
+		"publisher": "TELECOM ParisTech",
+		"publisher-place": "46 rue Barrault 75013 Paris",
+		"source": "Zotero",
+		"title": "Engager les Citoyens à Aller au-delà des Simples Représentations de Données Ouvertes",
+		"author": [
+			{
+				"family": "Boy",
+				"given": "Jeremy"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2015",
+					5,
+					18
+				]
+			]
+		}
+	},
+	{
+		"id": "[@allard_pour_2014]",
+		"type": "post-weblog",
+		"container-title": "Citoyens Capteurs",
+		"language": "fr-FR",
+		"title": "Pour un Internet des Objets citoyen : vers une intelligence collective environnementale. – Citoyens Capteurs",
+		"title-short": "Pour un Internet des Objets citoyen",
+		"URL": "https://www.citoyenscapteurs.fr/2014/05/01/pour-un-internet-des-objets-citoyens-vers-une-intelligence-collective-environnementale/",
+		"author": [
+			{
+				"family": "ALLARD",
+				"given": "Laurence"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					10,
+					20
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2014",
+					5,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "[@gray_what_2023]",
+		"type": "article-journal",
+		"abstract": "The past decade has seen the rise of “data portals” as online devices for making data public. They have been accorded a prominent status in political speeches, policy documents, and official communications as sites of innovation, transparency, accountability, and participation. Drawing on research on data portals around the world, data portal software, and associated infrastructures, this paper explores three approaches for studying the social life of data portals as technopolitical devices: (a) interface analysis, (b) software analysis, and (c) metadata analysis. These three approaches contribute to the study of the social lives of data portals as dynamic, heterogeneous, and contested sites of public sector datafication. They are intended to contribute to critically assessing how participation around public sector datafication is invited and organized with portals, as well as to rethinking and recomposing them.",
+		"container-title": "Data & Policy",
+		"DOI": "10.1017/dap.2023.7",
+		"ISSN": "2632-3249",
+		"language": "en",
+		"page": "e10",
+		"source": "Cambridge University Press",
+		"title": "What do data portals do? Tracing the politics of online devices for making data public",
+		"title-short": "What do data portals do?",
+		"URL": "https://www.cambridge.org/core/journals/data-and-policy/article/what-do-data-portals-do-tracing-the-politics-of-online-devices-for-making-data-public/4C71EA4503A83EFA27EA7F7F67FE206F",
+		"volume": "5",
+		"author": [
+			{
+				"family": "Gray",
+				"given": "Jonathan W. Y."
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					10,
+					12
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2023",
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "[@mcgrenere_affordances_2000]",
+		"type": "article-journal",
+		"abstract": "The concept of affordance is popular in the HCI community but not well understood. Donald Norman appropriated the concept of affordances from James J. Gibson for the design of common objects and both implicitly and explicitly adjusted the meaning given by Gibson. There was, however, ambiguity in Norman’s original definition and use of affordances which he has subsequently made efforts to clarify. His definition germinated quickly and through a review of the HCI literature we show that this ambiguity has lead to widely varying uses of the concept. Norman has recently acknowledged the ambiguity, however, important clarifications remain. Using affordances as a basis, we elucidate the role of the designer and the distinction between usefulness and usability. We expand Gibson’s definition into a framework for design.",
+		"language": "en",
+		"source": "Zotero",
+		"title": "Affordances: Clarifying and Evolving a Concept",
+		"author": [
+			{
+				"family": "McGrenere",
+				"given": "Joanna"
+			},
+			{
+				"family": "Ho",
+				"given": "Wayne"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2000"
+				]
+			]
+		}
+	},
+	{
+		"id": "[@goeta_open_2014]",
+		"type": "article-journal",
+		"container-title": "Mouvements",
+		"DOI": "10.3917/mouv.079.0081",
+		"ISSN": "1291-6412",
+		"issue": "3",
+		"language": "fr",
+		"note": "publisher: La Découverte\nsection: Sociologie",
+		"page": "81-91",
+		"source": "shs.cairn.info",
+		"title": "L'open data peut-il (encore) servir les citoyens ?",
+		"URL": "https://shs.cairn.info/revue-mouvements-2014-3-page-81",
+		"volume": "79",
+		"author": [
+			{
+				"family": "Goëta",
+				"given": "Samuel"
+			},
+			{
+				"family": "Mabi",
+				"given": "Clément"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					9,
+					30
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2014",
+					9,
+					23
+				]
+			]
+		}
+	},
+	{
+		"id": "[@palsky_semiologie_2025]",
+		"type": "webpage",
+		"abstract": "C'est en 1967 que paraît la première édition du traité fondateur de Jacques Bertin : Sémiologie graphique. Les diagrammes, les réseaux, les cartes. Avec cet ouvrage semble s'ouvrir un nouveau champ…",
+		"container-title": "Visionscarto",
+		"language": "fr",
+		"title": "La Sémiologie graphique de Jacques Bertin a cinquante ans !",
+		"URL": "https://www.visionscarto.net/la-semiologie-graphique-a-50-ans",
+		"author": [
+			{
+				"family": "Palsky",
+				"given": "Gilles"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					9,
+					23
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2025",
+					9,
+					23
+				]
+			]
+		}
+	},
+	{
+		"id": "[@lynch_image_1998]",
+		"type": "book",
+		"collection-title": "Les beaux livres du savoir",
+		"ISBN": "978-2-10-081505-0",
+		"language": "fr-FR",
+		"note": "section: 1 vol. (240 p.) ; 24 cm.",
+		"number-of-pages": "240",
+		"publisher": "Dunod",
+		"title": "L'image de la cité",
+		"URL": "https://www.calameo.com/read/0008998699f956b143c9b",
+		"author": [
+			{
+				"family": "Lynch",
+				"given": "Kevin"
+			}
+		],
+		"translator": [
+			{
+				"family": "Vénard",
+				"given": "Marie Françoise"
+			},
+			{
+				"family": "Vénard",
+				"given": "Jean-Louis"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1998"
+				]
+			]
+		}
+	},
+	{
+		"id": "[@guiraud_pour_2019]",
+		"type": "post-weblog",
+		"abstract": "Journée doctorale de l’EHESS-Marseille, D’écrire l’espace, usages de la cartographie en sciences sociales 19 juin 2018, Vieille Charité, 13002 Marseille Noé Guiraud Post-doctorant UMR 8504 Géographie-cités, CNRS Cette communication s’appuie sur un recueil d’arguments...",
+		"container-title": "Centre Norbert Elias. Le blog des chercheur·es",
+		"genre": "Billet",
+		"language": "fr-FR",
+		"note": "ISSN: 2679-3911\nDOI: 10.58079/mzot",
+		"title": "Pour une pratique critique de la carte en sciences sociales",
+		"URL": "https://cne.hypotheses.org/237",
+		"author": [
+			{
+				"family": "Guiraud",
+				"given": "Noé"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					4,
+					10
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2019",
+					1,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "[@ait-touati_terra_2023]",
+		"type": "book",
+		"archive": "WorldCat",
+		"edition": "Deuxième édition",
+		"ISBN": "978-2-490077-95-3",
+		"language": "French",
+		"note": "section: 191 pages : illustrations, cartes, graphiques, plans ; 24 cm",
+		"publisher": "Éditions B42",
+		"publisher-place": "Montreuil",
+		"title": "TERRA FORMA : manuel de cartographies potentielles",
+		"author": [
+			{
+				"family": "Aït-Touati",
+				"given": "Frédérique"
+			},
+			{
+				"family": "Arènes",
+				"given": "Alexandra"
+			},
+			{
+				"family": "Grégoire",
+				"given": "Axelle"
+			},
+			{
+				"family": "Latour",
+				"given": "Bruno"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2023"
+				]
+			]
+		}
+	},
+	{
+		"id": "[@baudrillard_simulacres_1981]",
+		"type": "book",
+		"ISBN": "2-7186-0210-4",
+		"language": "fr",
+		"number-of-pages": "150",
+		"publisher": "EDITIONS GAULLEE",
+		"publisher-place": "9 rue Linné, 750005 Paris",
+		"title": "Simulacres et simulations",
+		"author": [
+			{
+				"family": "BAUDRILLARD",
+				"given": "Jean"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					3,
+					10
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"1981"
+				]
+			]
+		}
+	},
+	{
+		"id": "[@grapheine_evolution_2017]",
+		"type": "webpage",
+		"abstract": "Voici un concentré d'évolution du plan de métro de Paris et d'ailleurs, dans lequel on parlera aussi de spaghetti, de bière et de cités futuristes.",
+		"container-title": "Graphéine - Agence de communication Paris Lyon",
+		"language": "fr-FR",
+		"title": "Évolution du plan de métro de Paris : du plat de spaghetti à la cité futuriste",
+		"title-short": "Évolution du plan de métro de Paris",
+		"URL": "https://www.grapheine.com/divers/evolution-du-plan-de-metro-de-paris",
+		"author": [
+			{
+				"family": "graphéine",
+				"given": "Tiphaine"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					2,
+					22
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					3,
+					29
+				]
+			]
+		}
+	},
+	{
+		"id": "[@konovalov_nouveau_nodate]",
+		"type": "webpage",
+		"abstract": "Après avoir observé Paris sous un autre angle, nous avons créé un plan original des lignes de métro, RER et tramways",
+		"language": "fr",
+		"title": "Un nouveau plan du métro de Paris",
+		"URL": "http://metromap.fr",
+		"author": [
+			{
+				"family": "Konovalov",
+				"given": "Константин Коновалов",
+				"suffix": "Constantine"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					2,
+					22
+				]
+			]
+		}
+	},
+	{
+		"id": "[@noauthor_nos_2020]",
+		"type": "post-weblog",
+		"language": "fr-FR",
+		"title": "nos réalisations - micmap",
+		"URL": "https://www.micmap.fr/works/",
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					1,
+					5
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2020",
+					1,
+					27
+				]
+			]
+		}
+	},
+	{
+		"id": "[@vuillemot_boundary_2021]",
+		"type": "article-journal",
+		"abstract": "We propose to take an artifact-centric approach to design studies by leveraging the concept of boundary object. Design studies typically focus on processes and articulate design decisions in a project-speciﬁc context with a goal of transferability. We argue that design studies could beneﬁt from paying attention to the material conditions in which teams collaborate to reach design outcomes. We report on a design study of isochrone maps following cartographic generalization principles. Focusing on boundary objects enables us to characterize ﬁve categories of artifacts and tools that facilitated collaboration between actors involved in the design process (structured collections, structuring artifacts, process-centric artifacts, generative artifacts, and bridging artifacts). We found that artifacts such as layered maps and map collections played a unifying role for our inter-disciplinary team. We discuss how such artifacts can be pivotal in the design process. Finally, we discuss how considering boundary objects could improve the transferability of design study results, and support reﬂection on inter-disciplinary collaboration in the domain of Information Visualization.",
+		"container-title": "Computer Graphics Forum",
+		"DOI": "10.1111/cgf.14312",
+		"ISSN": "0167-7055, 1467-8659",
+		"issue": "3",
+		"journalAbbreviation": "Computer Graphics Forum",
+		"language": "en",
+		"page": "349-360",
+		"source": "DOI.org (Crossref)",
+		"title": "Boundary Objects in Design Studies: Reflections on the Collaborative Creation of Isochrone Maps",
+		"title-short": "Boundary Objects in Design Studies",
+		"URL": "https://onlinelibrary.wiley.com/doi/10.1111/cgf.14312",
+		"volume": "40",
+		"author": [
+			{
+				"family": "Vuillemot",
+				"given": "R."
+			},
+			{
+				"family": "Rivière",
+				"given": "P."
+			},
+			{
+				"family": "Beignon",
+				"given": "A."
+			},
+			{
+				"family": "Tabard",
+				"given": "A."
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2024",
+					12,
+					16
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2021",
+					6
+				]
+			]
+		}
+	},
+	{
+		"id": "[@lab_212_lab212_nodate]",
+		"type": "webpage",
+		"container-title": "Lab212",
+		"genre": "Portfolio",
+		"language": "en-US",
+		"title": "Lab212 - oeuvre - Notes on Blindness",
+		"URL": "https://lab212.org/oeuvres/3:featured/10/Notes-on-Blindness",
+		"author": [
+			{
+				"family": "Lab 212",
+				"given": ""
+			},
+			{
+				"family": "Lartigue",
+				"given": "Béatrice"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2024",
+					12,
+					7
+				]
+			]
+		}
+	},
+	{
+		"id": "[@noauthor_plan_2024]",
+		"type": "entry-encyclopedia",
+		"abstract": "Le plan du métro de Londres (en anglais : Tube map (signifiant « plan du tube ») est le nom communément utilisé pour désigner le diagramme schématique qui représente les lignes, stations, et les zones du métro de Londres, appelé London Underground, ou Tube.\nIl s'agit d'un plan schématique plutôt qu'une carte, sans représentation géographique mais plutôt des relations ; cela aboutit à une distorsion importante de la position réelle des tracés des lignes et de la position des stations, mais correspond à l’ordre exact des stations et les correspondances avec les diverses autres lignes du réseau, ainsi que la répartition selon les zones. Les concepts de base, particulièrement celui qui consiste en une représentation topologique plutôt que géographique, ont été largement repris pour des plans de lignes un peu partout dans le monde. L'exemple du plan du métro de Londres est souvent cité dans les introductions à la topologie car il permet de comprendre intuitivement les spécificités de cette discipline.",
+		"container-title": "Wikipédia",
+		"language": "fr",
+		"license": "Creative Commons Attribution-ShareAlike License",
+		"note": "Page Version ID: 216741564",
+		"source": "Wikipedia",
+		"title": "Plan du métro de Londres",
+		"URL": "https://fr.wikipedia.org/w/index.php?title=Plan_du_m%C3%A9tro_de_Londres&oldid=216741564",
+		"accessed": {
+			"date-parts": [
+				[
+					"2024",
+					10,
+					2
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2024",
+					7,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "[@edelson_geoliteracy_2011]",
+		"type": "article-journal",
+		"container-title": "National Geographic Education",
+		"language": "en",
+		"publisher": "National Geographic Society.",
+		"source": "Zotero",
+		"title": "GEOLITERACY PREPARATION FOR FAR-REACHING DECISIONS",
+		"title-short": "GEOLITERACY",
+		"URL": "http://zimearth.pbworks.com/w/file/fetch/75286598/Geo%20Literacy%20Article.pdf",
+		"author": [
+			{
+				"family": "Edelson",
+				"given": "Daniel C"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					1,
+					21
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2011",
+					3,
+					25
+				]
+			]
+		}
+	},
+	{
+		"id": "[@renon_design_2022]",
+		"type": "article-journal",
+		"collection-title": "Graphisme en France",
+		"container-title": "Graphisme en France - Création, Outils, Recherche, 2022",
+		"ISSN": "1286-2584",
+		"issue": "28",
+		"page": "33-57",
+		"publisher": "Centre National des Arts Plastiques",
+		"publisher-place": "Rennes",
+		"title": "Design graphique, sciences sociales et humanités numériques. Archives et outils de la recherche",
+		"URL": "https://www.cnap.fr/actualites/graphisme-en-france/revues/ndeg28-graphisme-en-france-creation-outils-recherche-2022",
+		"author": [
+			{
+				"family": "Renon",
+				"given": "Anne-Lyse"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					2,
+					4
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2022",
+					11
+				]
+			]
+		}
+	},
+	{
+		"id": "[@davila_diagrams_2019]",
+		"type": "book",
+		"ISBN": "978-90-833501-9-6",
+		"language": "en-US",
+		"number-of-pages": "312",
+		"publisher": "Set Margins",
+		"title": "Diagrams of Power - Visaulizing, Mapping, and Performing Resistance",
+		"URL": "https://www.setmargins.press/books/diagrams-of-power/",
+		"editor": [
+			{
+				"family": "Dávila",
+				"given": "Patricio"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2019"
+				]
+			]
+		}
+	},
+	{
+		"id": "[@harris_webs_nodate]",
+		"type": "broadcast",
+		"abstract": "Jonathan Harris wants to make sense of the emotional world of the Web. With deep compassion for the human condition, his projects troll the Internet to find out what we're all feeling and looking for.",
+		"container-title": "TED",
+		"dimensions": "1016",
+		"language": "en",
+		"source": "www.ted.com",
+		"title": "The Web's secret stories",
+		"URL": "https://www.ted.com/talks/jonathan_harris_the_web_s_secret_stories",
+		"director": [
+			{
+				"family": "Harris",
+				"given": "Jonathan"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					2,
+					14
+				]
+			]
+		},
+		"issued": {
+			"literal": "1183925640"
+		}
+	},
+	{
+		"id": "[@eveillard_millefeuille_2018]",
+		"type": "webpage",
+		"abstract": "Regards critiques sur l’espace quotidien",
+		"container-title": "Revue Sur-Mesure",
+		"language": "fr",
+		"publisher-place": "Nantes",
+		"title": "Millefeuille - Workshop « Données situées et Cartographie sensible »",
+		"URL": "https://www.revuesurmesure.fr",
+		"author": [
+			{
+				"family": "Eveillard",
+				"given": "Louis"
+			},
+			{
+				"family": "Lefevre",
+				"given": "Quentin"
+			},
+			{
+				"family": "Sur-mesure",
+				"given": ""
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					2,
+					14
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2018",
+					7,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "[@burke_entre_2017]",
+		"type": "chapter",
+		"container-title": "Design graphique les formes de l'histoire",
+		"ISBN": "978-2-917855-90-4",
+		"language": "fr-FR",
+		"medium": "240 x 270mm",
+		"page": "172",
+		"publisher": "B42",
+		"title": "Entre philosophie, économie et design graphique : Otto Neurath et l'Isotype",
+		"URL": "https://editions-b42.com/produit/design-graphique-les-formes-de-lhistoire/",
+		"author": [
+			{
+				"family": "Burke",
+				"given": "Christopher"
+			}
+		],
+		"contributor": [
+			{
+				"family": "Cnap",
+				"given": ""
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					11
+				]
+			]
+		}
+	},
+	{
+		"id": "[@roth_user_2017]",
+		"type": "article-journal",
+		"abstract": "The possibility of digital interactivity requires us to reenvision the map reader as the map user, and to address the perceptual, cognitive, cultural, and practical considerations that influence the user’s experience with interactive maps and visualizations. In this article, we present an agenda for empirical research on this user and the interactive designs he or she employs. The research agenda is a result of a multi-stage discussion among international scholars facilitated by the International Cartographic Association that included an early round of position papers and two subsequent workshops to narrow into pressing themes and important research opportunities. The focus of our discussion is epistemological and reflects the wide interdisciplinary influences on user studies in cartography. The opportunities are presented as imperatives that cross basic research and user-centered design studies, and identify practical impediments to empirical research, emerging interdisciplinary recommendations to improve user studies, and key research needs specific to the study of interactive maps and visualizations.",
+		"container-title": "International Journal of Cartography",
+		"DOI": "10.1080/23729333.2017.1288534",
+		"ISSN": "2372-9333",
+		"issue": "sup1",
+		"note": "_eprint: https://doi.org/10.1080/23729333.2017.1288534",
+		"page": "61-89",
+		"publisher": "Taylor & Francis",
+		"source": "Taylor and Francis+NEJM",
+		"title": "User studies in cartography: opportunities for empirical research on interactive maps and visualizations",
+		"title-short": "User studies in cartography",
+		"URL": "https://doi.org/10.1080/23729333.2017.1288534",
+		"volume": "3",
+		"author": [
+			{
+				"family": "Roth",
+				"given": "Robert E."
+			},
+			{
+				"family": "Çöltekin",
+				"given": "Arzu"
+			},
+			{
+				"family": "Delazari",
+				"given": "Luciene"
+			},
+			{
+				"family": "Filho",
+				"given": "Homero Fonseca"
+			},
+			{
+				"family": "Griffin",
+				"given": "Amy"
+			},
+			{
+				"family": "Hall",
+				"given": "Andreas"
+			},
+			{
+				"family": "Korpi",
+				"given": "Jari"
+			},
+			{
+				"family": "Lokka",
+				"given": "Ismini"
+			},
+			{
+				"family": "Mendonça",
+				"given": "André"
+			},
+			{
+				"family": "Ooms",
+				"given": "Kristien"
+			},
+			{
+				"family": "Elzakker",
+				"given": "Corné P.J.M.",
+				"non-dropping-particle": "van"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					2,
+					14
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					10,
+					30
+				]
+			]
+		}
+	},
+	{
+		"id": "[@beaudouin-lafon_reification_2000]",
+		"type": "paper-conference",
+		"abstract": "This paper presents three design principles to support the development of large-scale applications and take advantage of recent research in new interaction techniques: Reification turns concepts into first class objects, polymorphism permits commands to be applied to objects of different types, and reuse makes both user input and system output accessible for later use. We show that the power of these principles lies in their combination. Reification creates new objects that can be acted upon by a small set of polymorphic commands, creating more opportunities for reuse. The result is a simpler yet more powerful interface.To validate these principles, we describe their application in the redesign of a complex interface for editing and simulating Coloured Petri Nets. The cpn2000 interface integrates floating palettes, toolglasses and marking menus in a consistent manner with a new metaphor for managing the workspace. It challenges traditional ideas about user interfaces, getting rid of pull-down menus, scrollbars, and even selection, while providing the same or greater functionality. Preliminary tests with users show that they find the new system both easier to use and more efficient.",
+		"collection-title": "AVI '00",
+		"container-title": "Proceedings of the working conference on Advanced visual interfaces",
+		"DOI": "10.1145/345513.345267",
+		"ISBN": "978-1-58113-252-6",
+		"page": "102–109",
+		"publisher": "Association for Computing Machinery",
+		"publisher-place": "New York, NY, USA",
+		"source": "ACM Digital Library",
+		"title": "Reification, polymorphism and reuse: three principles for designing visual interfaces",
+		"title-short": "Reification, polymorphism and reuse",
+		"URL": "https://dl.acm.org/doi/10.1145/345513.345267",
+		"author": [
+			{
+				"family": "Beaudouin-Lafon",
+				"given": "Michel"
+			},
+			{
+				"family": "Mackay",
+				"given": "Wendy E."
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					2,
+					14
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2000",
+					5,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "[@hary_entretien_2020]",
+		"type": "webpage",
+		"container-title": "LINC -CNIL",
+		"title": "Entretien avec Rose Dumesny : rendre les données intelligibles ? | Linc",
+		"URL": "https://linc.cnil.fr/entretien-avec-rose-dumesny-rendre-les-donnees-intelligibles",
+		"author": [
+			{
+				"family": "Hary",
+				"given": "Estelle"
+			},
+			{
+				"family": "Biéri",
+				"given": "Martin"
+			},
+			{
+				"family": "Chomé",
+				"given": "Dylan"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					2,
+					27
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2020",
+					3,
+					23
+				]
+			]
+		}
+	},
+	{
+		"id": "[@dumesny_design_2026]",
+		"type": "webpage",
+		"container-title": "Design in Translation",
+		"language": "fr-FR",
+		"title": "Design in Translation | Cultural Probes",
+		"URL": "https://dit.dampress.org/glossary/cultural-probes",
+		"author": [
+			{
+				"family": "Dumesny",
+				"given": "Rose"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					2,
+					27
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2026",
+					2,
+					27
+				]
+			]
+		}
+	},
+	{
+		"id": "[@tkacz_being_2022]",
+		"type": "book",
+		"edition": "1",
+		"ISBN": "978-1-5095-4533-9",
+		"language": "en-US",
+		"number-of-pages": "256",
+		"publisher": "Polity",
+		"title": "Being with Data - The Dashboarding of Everyday Life",
+		"author": [
+			{
+				"family": "Tkacz",
+				"given": "Nathaniel"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2022",
+					6,
+					24
+				]
+			]
+		}
+	},
+	{
+		"id": "[@drucker_visualization_2020]",
+		"type": "book",
+		"abstract": "An analysis of visual epistemology in the digital humanities, with attention to the need for interpretive digital tools within humanities contexts.In the s",
+		"DOI": "10.7551/mitpress/12523.001.0001",
+		"ISBN": "978-0-262-36115-6",
+		"language": "en",
+		"note": "DOI: 10.7551/mitpress/12523.001.0001",
+		"publisher": "The MIT Press",
+		"source": "direct.mit.edu",
+		"title": "Visualization and Interpretation: Humanistic Approaches to Display",
+		"title-short": "Visualization and Interpretation",
+		"URL": "https://direct.mit.edu/books/monograph/4976/Visualization-and-InterpretationHumanistic",
+		"author": [
+			{
+				"family": "Drucker",
+				"given": "Johanna"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					2,
+					27
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2020",
+					11,
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "[@gourlet_data_2022]",
+		"type": "post-weblog",
+		"abstract": "Pauline Gourlet (design researcher, co-founder of l’Atelier des chercheurs, Research Fellow at Sciences Po-Médialab) Just like anthropologists are sometimes called on as experts by governments or international organizations to brief decision-makers or conduct fieldwork on specific matters, designers get courted...",
+		"container-title": "Carnets de terrain",
+		"DOI": "10.58079/m2nu",
+		"genre": "Billet",
+		"ISSN": "2553-9906",
+		"language": "en-US",
+		"note": "DOI: 10.58079/m2nu",
+		"title": "Data Design and Diplomacy: What is at stake?",
+		"title-short": "Data Design and Diplomacy",
+		"URL": "https://blogterrain.hypotheses.org/16420",
+		"author": [
+			{
+				"family": "Gourlet",
+				"given": "Pauline"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					2,
+					27
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2022",
+					7,
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "[@gourlet_cairn_2017]",
+		"type": "paper-conference",
+		"abstract": "In this pictorial, we present the design process and the functioning of Cairn: a tangible apparatus that enables data collection, visualization and analysis. Designed within a community of practice of a French FabLab, Cairn aims at understanding the variety of practices within FabLabs. Cairn explores tangible alternatives to questionnaires and other traditional evaluation techniques, and stressed the aesthetic and affective dimensions to create an engaging experience. It invites Fablab visitors to reflect on their practices by materializing their activities using small colored wooden-tiles. Interacting individually with Cairn, people contribute to create a collaborative and meaningful sculpture, upon which they can reflect collectively. We discuss the opportunities that this prototype opens for future situated HCI research.",
+		"collection-title": "DIS '17",
+		"container-title": "Proceedings of the 2017 Conference on Designing Interactive Systems",
+		"DOI": "10.1145/3064663.3064794",
+		"ISBN": "978-1-4503-4922-2",
+		"page": "247–258",
+		"publisher": "Association for Computing Machinery",
+		"publisher-place": "New York, NY, USA",
+		"source": "ACM Digital Library",
+		"title": "Cairn: A Tangible Apparatus for Situated Data Collection, Visualization and Analysis",
+		"title-short": "Cairn",
+		"URL": "https://dl.acm.org/doi/10.1145/3064663.3064794",
+		"author": [
+			{
+				"family": "Gourlet",
+				"given": "Pauline"
+			},
+			{
+				"family": "Dassé",
+				"given": "Thierry"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					2,
+					27
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					6,
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/19124267/items/S2DU5IIG",
+		"type": "webpage",
+		"container-title": "Tribune de Lyon",
+		"language": "fr-FR",
+		"publisher": "Tribune de Lyon",
+		"title": "Exclusif. Jean-Michel Aulas : « mon plan pour apaiser les rues de Lyon »",
+		"URL": "https://tribunedelyon.fr/politique/exclusif-jean-michel-aulas-propositions-pour-apaiser-rue/",
+		"author": [
+			{
+				"family": "Renard",
+				"given": "Lilian"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2026",
+					2,
+					27
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2025",
+					6,
+					12
+				]
+			]
+		}
+	}
+]

@@ -177,6 +177,10 @@
   }
   #nav h2, #nav ul { grid-column: 1; }
 
+  #quicklinks{
+    display: none;
+  }
+
   /* ------------------------------------------------------------------------ Running titles */
   /* running title */
   .runningtitle {

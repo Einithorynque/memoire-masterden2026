@@ -1,6 +1,11 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
+  window.Cite = require('citation-js');
+  CitationManager.loadBibFile("content/ref/bib.bib")
+  .then(function () {
+  CitationManager.processPage(); // réécrit le HTML des citations
+
   // menu clone
   var sections = document.querySelectorAll('section[id]');
   // -> On récupère les slugs valides depuis le menu PHP
@@ -15,9 +20,12 @@ window.addEventListener('DOMContentLoaded', () => {
   filteredSections.forEach((sec) => {
   const li = document.createElement('li');
   const a  = document.createElement('a');
-  a.classList.add('quicklinks-button')
+  const aChildren = document.createElement('div')
+  a.classList.add('quicklinks-button');
+  aChildren.classList.add('quicklinks_text')
   a.href        = "#" + sec.id;
-  a.textContent = document.querySelector(`#nav a[href="#${sec.id}"]`)?.textContent || sec.id;
+  aChildren.textContent = document.querySelector(`#nav a[href="#${sec.id}"]`)?.textContent || sec.id;
+  a.appendChild(aChildren)
   li.appendChild(a);
   menu.appendChild(li);
   });
@@ -123,6 +131,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') nav.style.transform = "translateX(50vw)";
     });
+   }); // fin du .then()
 });
 
 // Aparition et disparition du sommaire au scroll
@@ -130,7 +139,7 @@ window.addEventListener('DOMContentLoaded', () => {
     window.onscroll = function() {
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
-        document.getElementById("quicklinks").style.top = "90vh";
+        document.getElementById("quicklinks").style.top = "93vh";
       } else {
         document.getElementById("quicklinks").style.top = "120vh";
       }

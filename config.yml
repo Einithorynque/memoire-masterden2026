@@ -39,45 +39,37 @@ pdf: ""
 # Structure du contenu (= sommaire)
 parts:
   - title: Introduction
-    file: content/text/0.intro.md
+    file: content/text/0.doc0.md
     template: default
 
-  - title: La construction des géovisualisations
-    file: content/text/1.chapitre1.md
+  - title: Etat de l'art
+    file: content/text/1.doc1.md
     template: default
 
-  - title: Titre
-    file: content/text/2.artinprinting.md
+  - title: Nouvelles propositions
+    file: content/text/2.doc2.md
     template: default
 
-  - title: Titre
-    file: content/text/3.pictorial.md
+  - title: Résulats des tests utilisateurs
+    file: content/text/3.doc3.md
     template: default
 
-  - title: Titre
-    file: content/text/4.type.md
+  - title: Discussion
+    file: content/text/4.doc4.md
     template: default
 
   - title: Conclusion
-    file: content/text/5.conclusion.md
+    file: content/text/5.doc5.md
     template: default
 
-  - title: Titre
-    file: content/text/6.annexes.md
+  - title: Colofon
+    file: content/text/6.doc6.md
     template: appendices
 
-  - title: Titre
-    file: content/text/7.entretiens.md
+  - title: Annexe
+    file: content/text/7.doc7.md
     template: interview
 
-  - title: Titre
-    file: content/text/8.glossaire.md
-    template: references
-
   - title: Bibliographie
-    file: content/text/9.references.md
-    template: references
-
-  # - title: Titre
-  #   file: content/text/10.remerciements.md
-  #   template: thanks
+    file: content/text/8.doc8.md
+    template: thanks

@@ -40,7 +40,7 @@
     <nav id="quicklinks" aria-label="navigation rapide">
         <?php if(empty($pdf)): ?>
             <!-- Il est possible de supprimer ce lien une fois le PDF généré : -->
-            <a href="?print" title="Web to print" class="quicklinks-button">Imprimer</a>
+            <a href="?print" title="Web to print" class="print-button"><button>Imprimer</button></a>
         <?php else : ?>
             <!-- Modifier l’URL dans config.yml -->
             <a href="<?= $pdf ?>">Télécharger</a>
