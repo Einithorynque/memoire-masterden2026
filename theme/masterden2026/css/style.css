@@ -71,6 +71,7 @@ Sommaire :
   --primary:  rgb(255, 108, 0);; 
   --secondary: rgb(255, 194, 156);
   --gradient: linear-gradient(90deg,var(--primary) 0%, var(--white) 100%);
+  --gradient-bg-btn: linear-gradient(90deg,var(--primary) 0%, var(--white) 28%);
   --white:  rgb(255, 251, 249);
   /* espacements homogènes */
   --spacerXS: 1rem;
