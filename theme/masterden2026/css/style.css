@@ -264,9 +264,9 @@ button:active::before {
   align-items: start;
   padding-top: .3rem;
   padding-left: .8rem;
-  margin-left: -71.5vw;
+  margin-left: -74.5vw;
   clip-path: polygon(10% 0, 12% 85%, 100% 85%, 100% 100%, 36% 100%, 0 100%, 0 0);  
-  width: 80vw;
+  width: 82vw;
   height: 3.5rem;
   transition: all ease-in-out .2s;
   background: var(--white);
@@ -358,7 +358,7 @@ button:active::before {
   z-index: 24;
   position: fixed;
   width: 95%;
-  top: 93vh;
+  bottom: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -375,7 +375,7 @@ button:active::before {
 
 #fastTravel ul{
   position: absolute;
-  right: -72vw;
+  right: -75.5vw;
   margin: 0;
   padding: 0;
   width: 100%;
