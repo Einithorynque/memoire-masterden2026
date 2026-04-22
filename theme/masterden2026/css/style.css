@@ -626,12 +626,13 @@ main blockquote {
 
 label[for^="sn-"] {
   cursor: pointer;
-  background-color: var(--secondary)
+  background-color: var(--secondary);
 }
 .sn-toggle-label,
 sup a.footnote-ref {
   text-decoration: none;
   border: none;
+  user-select: none;
 }
 /* appels de note */
 .sn-toggle-label::before {content: "["}
@@ -662,7 +663,6 @@ sup a.footnote-ref {
   content: "↑ ";
 }
 
-
 /* default footnotes (no js) */
 .footnotes {
   max-width: var(--p-width);
@@ -674,7 +674,7 @@ sup a.footnote-ref {
   padding-left: 1em;
 }
 .footnotes :target {
-  background: #ff0;
+  background: var(--secondary);
 }
 hr.footnotes-sep {
   background: none;

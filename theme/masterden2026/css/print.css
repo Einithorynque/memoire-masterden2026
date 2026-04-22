@@ -300,26 +300,37 @@
   section.footnotes { display: none;}
 
   ::footnote-call {
-    font-weight: bold; 
-    content: "[" counter(footnote) "] ";
+    /* font-weight: bold;  */
+    content: "[" counter(footnote) "]";
     font-variant-position:normal;
     vertical-align: baseline;
     font-size: 100%;
-    padding-left: 0.25em;
+    cursor: pointer;
+
+    /* padding-left: 0.25em; */
+    /* background-color: var(--secondary); */
   }
 
   ::footnote-marker {
     content: "[" counter(footnote-marker) "] ";
-    font-weight: bold;
+    /* font-weight: bold; */
   }
+
+  ::footnote-call:hover{
+    background-color: var(--secondary);
+  }
+  
   
   .pagedjs_footnote_inner_content {
     font-size: var(--smallsize);
     margin-top: 1em;
+    padding-top: 1em;
+    border-top: 0.75em solid;
+    border-image: var(--gradient)1;
     /* not working : */
-    column-width: 200px !important;
-    column-count: 2 !important;
-    column-gap: 20px !important;
+    /* column-width: 200px !important; */
+    /* column-count: 2 !important; */
+    /* column-gap: 20px !important; */
     height: auto !important;
   }
 
