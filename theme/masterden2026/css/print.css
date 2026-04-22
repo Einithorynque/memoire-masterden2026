@@ -19,14 +19,8 @@
     }
   }  
 
-
-  @page:left{
-  }
-
-  @page:right{
-  }
   @page:right {
-    margin: 1cm 2cm 2.5cm 1cm;
+    margin: 6mm 6mm 6mm 14mm;
     bleed: 6mm 6mm 6mm 0cm;      
     /* --pagedjs-bleed-right-left: 0mm; 
     --pagedjs-bleed-right-right: 6mm;
@@ -34,7 +28,7 @@
     --pagedjs-bleed-right-bottom: 3mm;  */
   }
   @page:left {
-    margin: 1cm 1cm 2.5cm 2cm;
+    margin: 6mm 14mm 6mm 6mm;
     bleed: 6mm 0cm 6mm 6mm;
     /* --pagedjs-bleed-left-left: 6mm; 
     --pagedjs-bleed-left-right: 0mm;  
@@ -51,7 +45,7 @@
     }
   }
   @page cover {
-    margin: 1cm 1cm 2.5cm 1cm;    
+    margin: 6mm 6mm 6mm 14mm;    
     @bottom-left-corner {
       display: none;
     }
@@ -73,7 +67,7 @@
   :root {
     --bigsize: 32px;
     --mediumsize: 18px;
-    --basesize: 12px;
+    --basesize: 13px;
     --smallsize: 10px;
     --color: rgba(0, 0, 0, 0.85);
     --spacer: .5cm;
@@ -198,7 +192,7 @@
   }
   .pagedjs_margin .runningtitle {
     gap:var(--spacer);
-    padding: 1cm 0 .5cm;
+    padding: 0.1cm 0cm;
     display: flex !important;
     justify-content: space-between;
   }
@@ -223,8 +217,9 @@
     orphans: 2;
     widows: 2;
     margin: 0;
+    line-height: 1.55;
   }
-  .default p + p:not([data-split-from]) { text-indent: 2em;}
+  .default p + p:not([data-split-from]) { padding-top: 1em;}
 
   #nav, section { 
     margin-bottom: 0; 
@@ -324,7 +319,9 @@
   .pagedjs_footnote_inner_content {
     font-size: var(--smallsize);
     margin-top: 1em;
+    margin-bottom: 0.8em;
     padding-top: 1em;
+    padding-right: 25%;
     border-top: 0.75em solid;
     border-image: var(--gradient)1;
     /* not working : */
@@ -332,8 +329,12 @@
     /* column-count: 2 !important; */
     /* column-gap: 20px !important; */
     height: auto !important;
+    line-height: 1.4;
   }
 
+  .pagedjs_footnote_inner_content > .footnote ~ .footnote{
+    margin-top: 0.5em;
+  }
 
 
   /* ------------------------------------------------------------------------ Autofolder */
