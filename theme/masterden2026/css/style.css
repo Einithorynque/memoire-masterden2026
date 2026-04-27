@@ -313,6 +313,7 @@ button:active::before {
 
 
 /* ------------------------------------------------------------------------ Nav */
+
 #nav {
   background-color: var(--primary); 
   height: 100vh;
