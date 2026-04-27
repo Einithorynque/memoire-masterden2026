@@ -178,7 +178,7 @@
     break-after: always;
     page: sommaire;
     padding: 0;
-    position: unset;
+    position: unset !important;
     height: auto;
     min-height: 0;
     page-break-before: right;
@@ -446,6 +446,11 @@
   #list-toc-generated .toc-element-level-2 {
     margin-left: 20px;
   }
+
+  #list-toc-generated .toc-element-level-3 {
+    margin-left: 20px;
+  }
+
   #list-toc-generated .toc-element-level-2 a::before {
     /* margin-left: calc(-4em - 40px); */
   }

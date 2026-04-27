@@ -297,7 +297,7 @@ button:active::before {
   grid-gap: var(--spacer);
   padding: var(--spacerXL) var(--spacer);
   align-content: space-between;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   z-index: 90;

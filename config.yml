@@ -39,7 +39,7 @@ pdf: ""
 # Structure du contenu (= sommaire)
 parts:
   - title: Design narratif et social
-    file: content/text/0.prefatorynote.md
+    file: content
     template: default
 
   - title: Des sites institutionnels
