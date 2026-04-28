@@ -42,34 +42,38 @@ parts:
     file: content/text/0.doc0.md
     template: default
 
-  - title: Etat de l'art
-    file: content/text/1.doc1.md
+  - title: Test Typo
+    file: content/text/1.docfont.md
     template: default
 
-  - title: Nouvelles propositions
-    file: content/text/2.doc2.md
-    template: default
+  # - title: Etat de l'art
+  #   file: content/text/1.doc1.md
+  #   template: default
 
-  - title: Résulats des tests utilisateurs
-    file: content/text/3.doc3.md
-    template: default
+  # - title: Nouvelles propositions
+  #   file: content/text/2.doc2.md
+  #   template: default
 
-  - title: Discussion
-    file: content/text/4.doc4.md
-    template: default
+  # - title: Résulats des tests utilisateurs
+  #   file: content/text/3.doc3.md
+  #   template: default
 
-  - title: Conclusion
-    file: content/text/5.doc5.md
-    template: default
+  # - title: Discussion
+  #   file: content/text/4.doc4.md
+  #   template: default
 
-  - title: Colofon
-    file: content/text/6.doc6.md
-    template: appendices
+  # - title: Conclusion
+  #   file: content/text/5.doc5.md
+  #   template: default
 
-  - title: Annexe
-    file: content/text/7.doc7.md
-    template: interview
+  # - title: Colofon
+  #   file: content/text/6.doc6.md
+  #   template: appendices
 
-  - title: Bibliographie
-    file: content/text/8.doc8.md
-    template: thanks
+  # - title: Annexe
+  #   file: content/text/7.doc7.md
+  #   template: interview
+
+  # - title: Bibliographie
+  #   file: content/text/8.doc8.md
+  #   template: thanks

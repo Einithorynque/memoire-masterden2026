@@ -19,14 +19,8 @@
     }
   }  
 
-
-  @page:left{
-  }
-
-  @page:right{
-  }
   @page:right {
-    margin: 1cm 2cm 2.5cm 1cm;
+    margin: 16mm 6mm 20mm 14mm;
     bleed: 6mm 6mm 6mm 0cm;      
     /* --pagedjs-bleed-right-left: 0mm; 
     --pagedjs-bleed-right-right: 6mm;
@@ -34,7 +28,7 @@
     --pagedjs-bleed-right-bottom: 3mm;  */
   }
   @page:left {
-    margin: 1cm 1cm 2.5cm 2cm;
+    margin: 16mm 14mm 20mm 6mm;
     bleed: 6mm 0cm 6mm 6mm;
     /* --pagedjs-bleed-left-left: 6mm; 
     --pagedjs-bleed-left-right: 0mm;  
@@ -51,7 +45,7 @@
     }
   }
   @page cover {
-    margin: 1cm 1cm 2.5cm 1cm;    
+    margin: 6mm 6mm 6mm 14mm;    
     @bottom-left-corner {
       display: none;
     }
@@ -74,8 +68,8 @@
     --bigsize: 32px;
     --mediumsize: 18px;
     --baseplussize: 14px;
-    --basesize: 12px;
-    --smallsize: 10px;
+    --basesize: 10pt;
+    --smallsize: 7.5pt;
     --color: rgba(0, 0, 0, 0.85);
     --gradientvertical: linear-gradient(180deg,var(--primary) 0%, var(--white) 100%);
     --spacer: .5cm;
@@ -225,7 +219,7 @@
   }
   .pagedjs_margin .runningtitle {
     gap:var(--spacer);
-    padding: 1cm 0 .5cm;
+    padding: 0.1cm 0cm;
     display: flex !important;
     justify-content: space-between;
   }
@@ -250,8 +244,62 @@
     orphans: 2;
     widows: 2;
     margin: 0;
+    margin-left: 2em;
+    line-height: 1.55;
+    text-align: justify; 
+    /* text-justify: inter-word; */
+    hyphens: auto;
   }
-  .default p + p:not([data-split-from]) { text-indent: 2em;}
+  .default p + p:not([data-split-from]) { padding-top: 1em;}
+
+  #header h1 {
+  margin: 0;
+  line-height: 1.1;
+  max-width: calc(var(--bigsize) * 16);
+  font-size: calc(var(--bigsize) * 1);
+  color: var(--color);
+  font-family: var(--fontTitle);
+  font-weight: var(--weightTitle);
+  }
+  #header h2 {
+  margin: 0;
+  line-height: 1.2;
+  max-width: calc(var(--bigsize) * 16);
+  font-size: calc(var(--bigsize) * .75);
+  color: var(--color);
+  font-family: var(--fontTitle);
+  font-weight: var(--weightTitle);
+  }
+  #header h2::before{
+  content: "—";
+  display: block;
+  font-size: calc(var(--bigsize) * .75);
+  }
+  #header h2:empty { display: none;}
+
+  main h1 {
+    font-size: 3em;
+    font-weight: var(--weightTitle);
+    font-family: var(--fontTitle);
+  }
+  main h2 {
+    font-size: 2em;
+    font-weight: var(--weightTitle);
+    font-family: var(--fontTitle);
+  }
+  main h3 {
+    font-size: 1.5em;
+    margin-left: 0;
+    font-weight: var(--weightTitle);
+    text-decoration: none;
+    font-family: var(--fontTitle);
+  }
+  main h4 {
+    font-size: 1em;
+    margin-left: 0;
+    font-weight: var(--weightTitle);
+    font-family: var(--fontTitle);
+  }
 
   #nav, section { 
     margin-bottom: 0; 
@@ -327,29 +375,46 @@
   section.footnotes { display: none;}
 
   ::footnote-call {
-    font-weight: bold; 
-    content: "[" counter(footnote) "] ";
+    /* font-weight: bold;  */
+    content: "[" counter(footnote) "]";
     font-variant-position:normal;
     vertical-align: baseline;
     font-size: 100%;
-    padding-left: 0.25em;
+    cursor: pointer;
+
+    /* padding-left: 0.25em; */
+    /* background-color: var(--secondary); */
   }
 
   ::footnote-marker {
     content: "[" counter(footnote-marker) "] ";
-    font-weight: bold;
+    /* font-weight: bold; */
   }
+
+  ::footnote-call:hover{
+    background-color: var(--secondary);
+  }
+  
   
   .pagedjs_footnote_inner_content {
     font-size: var(--smallsize);
     margin-top: 1em;
+    margin-bottom: 0.8em;
+    padding-top: 1em;
+    padding-right: 25%;
+    border-top: 0.75em solid;
+    border-image: var(--gradient)1;
     /* not working : */
-    column-width: 200px !important;
-    column-count: 2 !important;
-    column-gap: 20px !important;
+    /* column-width: 200px !important; */
+    /* column-count: 2 !important; */
+    /* column-gap: 20px !important; */
     height: auto !important;
+    line-height: 1.4;
   }
 
+  .pagedjs_footnote_inner_content > .footnote ~ .footnote{
+    margin-top: 0.5em;
+  }
 
 
   /* ------------------------------------------------------------------------ Autofolder */
