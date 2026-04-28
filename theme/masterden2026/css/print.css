@@ -20,7 +20,7 @@
   }  
 
   @page:right {
-    margin: 6mm 6mm 6mm 14mm;
+    margin: 16mm 6mm 20mm 14mm;
     bleed: 6mm 6mm 6mm 0cm;      
     /* --pagedjs-bleed-right-left: 0mm; 
     --pagedjs-bleed-right-right: 6mm;
@@ -28,7 +28,7 @@
     --pagedjs-bleed-right-bottom: 3mm;  */
   }
   @page:left {
-    margin: 6mm 14mm 6mm 6mm;
+    margin: 16mm 14mm 20mm 6mm;
     bleed: 6mm 0cm 6mm 6mm;
     /* --pagedjs-bleed-left-left: 6mm; 
     --pagedjs-bleed-left-right: 0mm;  
@@ -219,6 +219,9 @@
     margin: 0;
     margin-left: 1.5em;
     line-height: 1.55;
+    text-align: justify; 
+    /* text-justify: inter-word; */
+    hyphens: auto;
   }
   .default p + p:not([data-split-from]) { padding-top: 1em;}
 
@@ -227,7 +230,7 @@
   line-height: 1.1;
   max-width: calc(var(--bigsize) * 16);
   font-size: calc(var(--bigsize) * 1);
-  color: var(--accentcolor);
+  color: var(--color);
   font-family: var(--fontTitle);
   font-weight: var(--weightTitle);
   }
@@ -236,7 +239,7 @@
   line-height: 1.2;
   max-width: calc(var(--bigsize) * 16);
   font-size: calc(var(--bigsize) * .75);
-  color: var(--accentcolor);
+  color: var(--color);
   font-family: var(--fontTitle);
   font-weight: var(--weightTitle);
   }
@@ -256,7 +259,6 @@
     font-size: 2em;
     font-weight: var(--weightTitle);
     font-family: var(--fontTitle);
-    background: var(--gradient);
   }
   main h3 {
     font-size: 1.5em;
