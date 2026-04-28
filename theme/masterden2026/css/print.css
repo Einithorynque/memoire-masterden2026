@@ -67,8 +67,8 @@
   :root {
     --bigsize: 32px;
     --mediumsize: 18px;
-    --basesize: 13px;
-    --smallsize: 10px;
+    --basesize: 10pt;
+    --smallsize: 7.5pt;
     --color: rgba(0, 0, 0, 0.85);
     --spacer: .5cm;
     /* couleur d’accentuation */
@@ -217,9 +217,60 @@
     orphans: 2;
     widows: 2;
     margin: 0;
+    margin-left: 1.5em;
     line-height: 1.55;
   }
   .default p + p:not([data-split-from]) { padding-top: 1em;}
+
+  #header h1 {
+  margin: 0;
+  line-height: 1.1;
+  max-width: calc(var(--bigsize) * 16);
+  font-size: calc(var(--bigsize) * 1);
+  color: var(--accentcolor);
+  font-family: var(--fontTitle);
+  font-weight: var(--weightTitle);
+  }
+  #header h2 {
+  margin: 0;
+  line-height: 1.2;
+  max-width: calc(var(--bigsize) * 16);
+  font-size: calc(var(--bigsize) * .75);
+  color: var(--accentcolor);
+  font-family: var(--fontTitle);
+  font-weight: var(--weightTitle);
+  }
+  #header h2::before{
+  content: "—";
+  display: block;
+  font-size: calc(var(--bigsize) * .75);
+  }
+  #header h2:empty { display: none;}
+
+  main h1 {
+    font-size: 3em;
+    font-weight: var(--weightTitle);
+    font-family: var(--fontTitle);
+  }
+  main h2 {
+    font-size: 2em;
+    font-weight: var(--weightTitle);
+    font-family: var(--fontTitle);
+    background: var(--gradient);
+  }
+  main h3 {
+    font-size: 1.5em;
+    margin-left: 0;
+    font-weight: var(--weightTitle);
+    text-decoration: none;
+    font-family: var(--fontTitle);
+  }
+  main h4 {
+    font-size: 1em;
+    margin-left: 0;
+    font-weight: var(--weightTitle);
+    font-family: var(--fontTitle);
+  }
 
   #nav, section { 
     margin-bottom: 0; 

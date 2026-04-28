@@ -42,6 +42,10 @@ parts:
     file: content/text/0.doc0.md
     template: default
 
+  - title: Test Typo
+    file: content/text/1.docfont.md
+    template: default
+
   # - title: Etat de l'art
   #   file: content/text/1.doc1.md
   #   template: default

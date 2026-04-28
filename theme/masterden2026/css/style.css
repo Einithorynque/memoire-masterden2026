@@ -17,25 +17,12 @@ Sommaire :
 
 
 /* ------------------------------------------------------------------------ Fonts */
-@font-face {
-  font-family: "DMsans";
-  src: url("fonts/BBBDMSans-Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: bold;
-}
-
+/* DM Sans */
 @font-face {
   font-family: "DMsans";
   src: url("fonts/BBBDMSans-Light.woff") format("woff");
-  font-weight: normal;
-  font-style: light;
-}
-
-@font-face {
-  font-family: "DMsans";
-  src: url("fonts/BBBDMSans-Medium.woff") format("woff");
-  font-weight: normal;
-  font-style: medium;
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
@@ -46,19 +33,32 @@ Sommaire :
 }
 
 @font-face {
+  font-family: "DMsans";
+  src: url("fonts/BBBDMSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DMsans";
+  src: url("fonts/BBBDMSans-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+/* Font personnelle */
+
+@font-face {
   font-family: "ApfelGrotezk";
   src: url("fonts/ApfelGrotezk-Regular.woff2") format("woff2");
   font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
   font-family: "ApfelGrotezk";
   src: url("fonts/ApfelGrotezk-Mittel.woff2") format("woff2");
-  font-weight: normal;
-  font-style: medium;
+  font-weight: 500;
+  font-style: normal;
 }
-
 
 /* ------------------------------------------------------------------------ Variables */
 :root {
@@ -67,6 +67,8 @@ Sommaire :
   --fontTitle: "ApfelGrotezk", sans-serif;
   --bigsize: clamp(2.50rem, calc(1.83rem + 3.33vw), 6.00rem);
   --basesize: 1.25rem;
+  --weightTitle : 500;
+  /* couleur */
   --color: rgba(0, 0, 0, 0.85);
   --primary:  rgb(255, 108, 0);; 
   --secondary: rgb(255, 194, 156);
@@ -158,6 +160,7 @@ hr{
   font-size: calc(var(--bigsize) * 1);
   color: var(--accentcolor);
   font-family: var(--fontTitle);
+  font-weight: var(--weightTitle);
 }
 #header h2 {
   margin: 0;
@@ -173,12 +176,6 @@ hr{
   font-size: calc(var(--bigsize) * .75);
 }
 #header h2:empty { display: none;}
- {
-  display: grid;
-  grid-gap: var(--spacer);
-  grid-template-columns: 15vw minmax(250px, 1fr) minmax(250px, 1fr);
-  margin-top: 2rem;
-}
 
 .meta {
   display: none;
@@ -454,6 +451,11 @@ main h1:first-child,
 main h2:first-child,
 main h3:first-child {
   margin-top: 0;
+}
+
+main h1, h2, h3, h4 {
+  font-weight: var(--weightTitle);
+  margin: 1.5em 0 1em 0;
 }
 
 main h1 {
