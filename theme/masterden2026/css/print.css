@@ -244,7 +244,7 @@
     orphans: 2;
     widows: 2;
     margin: 0;
-    margin-left: 2em;
+    margin-left: 4mm;
     line-height: 1.55;
     text-align: justify; 
     /* text-justify: inter-word; */
@@ -410,6 +410,7 @@
     /* column-gap: 20px !important; */
     height: auto !important;
     line-height: 1.4;
+    margin-left: 4mm;
   }
 
   .pagedjs_footnote_inner_content > .footnote ~ .footnote{
