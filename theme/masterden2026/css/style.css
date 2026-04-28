@@ -359,6 +359,7 @@ button:active::before {
   position: fixed;
   width: 95%;
   bottom: 0;
+  bottom: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -375,7 +376,8 @@ button:active::before {
 
 #fastTravel ul{
   position: absolute;
-  right: -75.5vw;
+  bottom: 0;
+  right: -72vw;
   margin: 0;
   padding: 0;
   width: 100%;

@@ -139,9 +139,9 @@ window.addEventListener('DOMContentLoaded', () => {
     window.onscroll = function() {
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
-        document.getElementById("quicklinks").style.top = "93vh";
+        document.getElementById("quicklinks").style.bottom = "0px";
       } else {
-        document.getElementById("quicklinks").style.top = "120vh";
+        document.getElementById("quicklinks").style.bottom = "-120vh";
       }
       prevScrollpos = currentScrollPos;
     } 
