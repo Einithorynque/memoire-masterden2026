@@ -103,14 +103,6 @@
     min-height: fit-content;
     justify-content: flex-start;
   }
-
-   /*#header {
-    padding: 0;
-    background: url(logo.svg) no-repeat 0 100%;
-    background-size: 100% auto;
-    height: 275mm;
-    min-height: 0;
-  }*/
   
   #header {
     page: cover;
