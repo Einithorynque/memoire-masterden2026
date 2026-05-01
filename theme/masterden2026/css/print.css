@@ -118,6 +118,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 0;
+    min-height: 100%;
   }
 
   #index { display: none; } 
@@ -129,7 +130,7 @@
   .meta-data { 
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
   }
 
   .meta-column {
