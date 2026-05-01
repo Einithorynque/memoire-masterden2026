@@ -20,7 +20,7 @@
   }  
 
   @page:right {
-    margin: 18mm 10mm 24mm 14mm;
+    margin: 18mm 6mm 24mm 14mm;
     bleed: 6mm 6mm 6mm 0cm;      
     /* --pagedjs-bleed-right-left: 0mm; 
     --pagedjs-bleed-right-right: 6mm;
@@ -147,7 +147,7 @@
   }
 
   .meta-year { 
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) translatey(9mm) translatex(-2mm);
     block-size: fit-content;
   }
 
@@ -237,7 +237,7 @@
     orphans: 2;
     widows: 2;
     margin: 0;
-    margin-left: 4mm;
+    margin: 0 4mm;
     line-height: 1.55;
     /* text-align: justify;  */
     /* text-justify: inter-word; */
@@ -391,8 +391,10 @@
   
   .pagedjs_footnote_inner_content {
     font-size: var(--smallsize);
-    margin-top: 1em;
-    margin-bottom: 0.8em;
+    margin: 4mm 4mm 0 4mm;
+    /* margin-bottom: 0.8em; */
+    /* margin-left: 4mm;
+    margin-right: 4mm; */
     padding-top: 1em;
     padding-right: 25%;
     border-top: 0.75em solid;
@@ -403,7 +405,6 @@
     /* column-gap: 20px !important; */
     height: auto !important;
     line-height: 1.4;
-    margin-left: 4mm;
   }
 
   .pagedjs_footnote_inner_content > .footnote ~ .footnote{
