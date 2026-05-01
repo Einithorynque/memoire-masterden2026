@@ -69,12 +69,12 @@ Sommaire :
   --basesize: 1.25rem;
   --weightTitle : 500;
   /* couleur */
-  --color: rgba(0, 0, 0, 0.85);
   --primary:  rgb(255, 108, 0);; 
   --secondary: rgb(255, 194, 156);
   --gradient: linear-gradient(90deg,var(--primary) 0%, var(--white) 100%);
   --gradient-bg-btn: linear-gradient(90deg,var(--primary) 0%, var(--white) 28%);
   --white:  rgb(255, 251, 249);
+  --black: rgba(0, 0, 0, 0.85);
   /* espacements homogènes */
   --spacerXS: 1rem;
   --spacer: 2rem;
@@ -111,7 +111,7 @@ html {
 /* page defaults */
 body {
   font-family: var(--fontfamily);
-  color: var(--color);
+  color: var(--black);
   font-size: var(--basesize);
   line-height: 1.45;
   margin: 0;
@@ -291,7 +291,7 @@ button:active::before {
 
 .quicklinks_text{
   display: block;
-  color: var(--color);
+  color: var(--black);
   font-size: .75rem;
   font-family: var(--fontfamily);
   line-height: 1.2;

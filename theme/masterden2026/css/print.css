@@ -70,7 +70,7 @@
     --baseplussize: 14px;
     --basesize: 10pt;
     --smallsize: 7.5pt;
-    --color: rgba(0, 0, 0, 0.85);
+    --black: rgba(0, 0, 0, 0.85);
     --gradientvertical: linear-gradient(180deg,var(--primary) 0%, var(--white) 100%);
     --spacer: .5cm;
     /* couleur d’accentuation */
@@ -200,20 +200,47 @@
   .runningtitle {
     display: none;
     position: running(titleRunning);
+    font-family: var(--fontTitle);
+    font-size: var(--basesize);
   }
   .runningtitle br { display: none;}
   .folio{
-    font-weight: bold;
+    font-weight: var(--weightTitle);
     text-align: right;
+    transform: rotate(270deg) translateY(100%) translateX(15%); /*translateX(115%) */
+    transform-origin: bottom left;
+  }
+
+  .pagedjs_right_page .folio{
+    transform: rotate(270deg) translateY(150%) translateX(15%); /*translateX(115%) */
+    transform-origin: bottom left;
   }
   .folio::before{
     content: counter(page);
-    font-weight: bold;
+  }
+  .folio::after{
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.4em;
+    background-color: var(--primary);  
+    mask-image: url("../assets/icone-memoire.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    vertical-align: sub;
+  }
+  /* .pagedjs_margin-bottom{
+    display: flex;
+    align-items: flex-end;
+  } */
+  .pagedjs_margin-content{
+    margin-top: auto;
   }
   .pagedjs_margin .runningtitle {
     gap:var(--spacer);
-    padding: 0.1cm 0cm;
     display: flex !important;
+    padding: 0.6cm 0cm;
     justify-content: space-between;
   }
   .pagedjs_left_page .runningtitle {
@@ -222,8 +249,7 @@
   .pagedjs_right_page .runningtitle {
     flex-direction: row;
   }
-  .pagedjs_left_page .runningtitle .title,
-  .pagedjs_right_page .runningtitle .name { display: none; }
+  .pagedjs_left_page .runningtitle .title, .name { display: none; }
 
   
   /* ------------------------------------------------------------------------ Content */
@@ -250,7 +276,7 @@
   line-height: 1.1;
   max-width: calc(var(--bigsize) * 16);
   font-size: calc(var(--bigsize) * 1);
-  color: var(--color);
+  color: var(--black);
   font-family: var(--fontTitle);
   font-weight: var(--weightTitle);
   }
@@ -259,7 +285,7 @@
   line-height: 1.2;
   max-width: calc(var(--bigsize) * 16);
   font-size: calc(var(--bigsize) * .75);
-  color: var(--color);
+  color: var(--black);
   font-family: var(--fontTitle);
   font-weight: var(--weightTitle);
   }
