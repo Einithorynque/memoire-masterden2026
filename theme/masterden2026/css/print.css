@@ -245,10 +245,15 @@
     font-size: var(--smallsize);
   }
   .video[style]{
+    display: block;
     background: var(--poster);
     background-size: cover;
+    background-position: center;
   }
   .video[style] iframe {visibility: hidden;}
+  .videoytb{
+    display: none;
+  }
   /* ------------------------------------------------------------------------ Break */
   .breakpage {
     height: 0;
