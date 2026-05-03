@@ -185,10 +185,10 @@ hr{
   font-size: 1.5rem;
 }
 
-#header nav a {
+/* #header nav a {
   display: inline-block;
   margin-right: 1em;
-}
+} */
 
 .nav-principale {
   display: grid;
