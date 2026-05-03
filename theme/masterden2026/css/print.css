@@ -65,14 +65,15 @@
 
   /* ------------------------------------------------------------------------ Variables */
   :root {
-    --bigsize: 32px;
-    --mediumsize: 18px;
-    --baseplussize: 14px;
+    --bigsize: 28pt;
+    --mediumsize: 16pt;
+    --baseplussize: 12pt;
     --basesize: 10pt;
     --smallsize: 7.5pt;
     --black: rgba(0, 0, 0, 0.85);
     --gradientvertical: linear-gradient(180deg,var(--primary) 0%, var(--white) 100%);
     --spacer: .5cm;
+    --lineheightTitle: 1.2;
     /* couleur d’accentuation */
     --accentcolor: black;
     /* maximum width for texts */
@@ -171,8 +172,8 @@
     position: unset !important;
     height: auto;
     min-height: 0;
-    page-break-before: right;
-    page-break-after: right;
+    page-break-before: left;
+    /* page-break-after: right; */
     counter-reset: page 1;
     transform: unset;
     transition: unset;
@@ -185,7 +186,8 @@
 
   #nav::before{
     content: "Sommaire";
-    font-size: var(--bigsize);
+    font-size: 2em;
+    font-weight: var(--weightTitle);
     font-family: var(--fontTitle);
   }
 
@@ -274,6 +276,7 @@
   color: var(--black);
   font-family: var(--fontTitle);
   font-weight: var(--weightTitle);
+  line-height: var(--lineheightTitle);
   }
   #header h2 {
   margin: 0;
@@ -283,6 +286,7 @@
   color: var(--black);
   font-family: var(--fontTitle);
   font-weight: var(--weightTitle);
+  line-height: var(--lineheightTitle);
   }
   #header h2::before{
   content: "—";
@@ -295,24 +299,41 @@
     font-size: 3em;
     font-weight: var(--weightTitle);
     font-family: var(--fontTitle);
+    line-height: var(--lineheightTitle);
   }
+
   main h2 {
     font-size: 2em;
     font-weight: var(--weightTitle);
     font-family: var(--fontTitle);
+    break-before: always;
+    break-after: always;
+    page-break-before: right;
+    color: var(--primary);
+    transform: rotate(-90deg) translateX(8%);
+    transform-origin: bottom right; 
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    line-height: var(--lineheightTitle);
   }
+
   main h3 {
     font-size: 1.5em;
     margin-left: 0;
     font-weight: var(--weightTitle);
     text-decoration: none;
     font-family: var(--fontTitle);
+    line-height: var(--lineheightTitle);
   }
   main h4 {
     font-size: 1em;
     margin-left: 0;
     font-weight: var(--weightTitle);
     font-family: var(--fontTitle);
+    line-height: var(--lineheightTitle);
   }
 
   #nav, section { 
@@ -521,8 +542,8 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    padding: 0 0 0 1cm !important;
-    margin-left: -1cm !important;
+    padding: 0 0 0 0.6cm !important;
+    /* margin-left: -1cm !important; */
     gap: 8px;
     border-left: 1cm solid;
     border-image: var(--gradientvertical)1;
