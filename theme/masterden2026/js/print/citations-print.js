@@ -321,6 +321,20 @@
         groups[rawType].push(key);
       });
 
+      //Trier les références par ordre alphabétique à l'intérieur des groupes
+      Object.keys(groups).forEach((type) => {
+        groups[type].sort((keyA, keyB) => {
+          const sortKey = (entry) => {
+            if (entry.author?.[0])
+              return (entry.author[0].family || entry.author[0].literal || "").toLowerCase();
+            if (entry.editor?.[0])
+              return (entry.editor[0].family || entry.editor[0].literal || "").toLowerCase();
+            return (entry["title"] || entry.id || "").toLowerCase();
+          };
+          return sortKey(_entries[keyA]).localeCompare(sortKey(_entries[keyB]), CONFIG.locale);
+        });
+      });
+
       // Types présents, dans l'ordre canonique + éventuels types inconnus à la fin
       const presentTypes = [
         ...TYPE_ORDER.filter((t) => groups[t]),
