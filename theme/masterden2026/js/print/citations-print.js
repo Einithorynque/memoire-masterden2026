@@ -347,7 +347,7 @@
         const label = TYPE_LABELS[type] || type;
         bibHtml += `
           <div class="bib-group bib-group-${type}">
-            <h3 class="bib-group-title">${label}s</h3>
+            <h3 class="bib-group-title">${label}</h3>
             <ul class="bib-list">`;
         groups[type].forEach((key) => {
           bibHtml += _formatBibEntry(key);
