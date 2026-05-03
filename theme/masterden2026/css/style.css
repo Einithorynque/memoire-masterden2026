@@ -803,6 +803,9 @@ figcaption::before {
   aspect-ratio: 16/9;
   position: relative;
   margin: 1em 0;
+  background-size: cover;
+  background-position: center;
+  display: none;
 }
 .video iframe {
   position: absolute;
@@ -814,6 +817,13 @@ figcaption::before {
 }
 .video + figcaption {
   margin-top: -1em;
+}
+.videoytb{
+  max-width: var(--maxwidth);
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+  border: none;
 }
 
 /* ------------------------------------------------------------------------ Citations et bibliographie */
