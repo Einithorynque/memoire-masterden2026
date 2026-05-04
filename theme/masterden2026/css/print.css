@@ -262,13 +262,13 @@
     margin: 0;
     margin: 0 4mm;
     line-height: 1.55;
-    /* Paramètres pour aligner à droite ↓ */
-    word-break: break-word;
-    text-wrap: pretty;
-    /* Paramètres pour justifier ↓ */
-    /* text-align: justify; 
+    word-break: break-all;
+    /* Paramètres pour aligner à droite ↓ (à commenter sinon) */
+    /* text-wrap: pretty; */ 
+    /* Paramètres pour justifier ↓ (à commenter sinon, et peut être mettre les titres en balance pour créer un rythme de bloc) */
+    text-align : justify; 
     hyphenate-limit-chars: 10 4 4;
-    hyphens: auto; */
+    hyphens: auto;
   }
   .default p + p:not([data-split-from]) { padding-top: 1em;}
 
@@ -304,7 +304,10 @@
     font-family: var(--fontTitle);
     line-height: var(--lineheightTitle);
     orphans: 4;
-    text-wrap: pretty;
+    /* Paramètres pour aligner à droite ↓ (à commenter sinon) */
+    /* text-wrap: pretty; */
+    /* Paramètres pour justifier ↓ (à commenter sinon) */
+    text-wrap: balance;
   }
 
   main h1 {
@@ -336,6 +339,7 @@
   main h4 {
     font-size: 1.4em;
     margin-left: 0;
+    orphans: 4;
   }
   main h5 {
     font-size: 1.2em;
