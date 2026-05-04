@@ -262,8 +262,10 @@
     margin: 0;
     margin: 0 4mm;
     line-height: 1.55;
+    /* Paramètres pour aligner à droite ↓ */
     word-break: break-word;
     text-wrap: pretty;
+    /* Paramètres pour justifier ↓ */
     /* text-align: justify; 
     hyphenate-limit-chars: 10 4 4;
     hyphens: auto; */
@@ -301,7 +303,7 @@
     font-weight: var(--weightTitle);
     font-family: var(--fontTitle);
     line-height: var(--lineheightTitle);
-    orphans: 3;
+    orphans: 4;
     text-wrap: pretty;
   }
 
