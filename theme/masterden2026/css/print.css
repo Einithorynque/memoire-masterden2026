@@ -262,9 +262,11 @@
     margin: 0;
     margin: 0 4mm;
     line-height: 1.55;
-    /* text-align: justify;  */
-    /* text-justify: inter-word; */
-    /* hyphens: auto; */
+    word-break: break-word;
+    text-wrap: pretty;
+    /* text-align: justify; 
+    hyphenate-limit-chars: 10 4 4;
+    hyphens: auto; */
   }
   .default p + p:not([data-split-from]) { padding-top: 1em;}
 
@@ -300,6 +302,7 @@
     font-family: var(--fontTitle);
     line-height: var(--lineheightTitle);
     orphans: 3;
+    text-wrap: pretty;
   }
 
   main h1 {
@@ -320,6 +323,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    text-wrap: balance;
   }
 
   main h3 {
