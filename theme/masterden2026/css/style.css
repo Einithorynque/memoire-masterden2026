@@ -43,7 +43,39 @@ Sommaire :
   font-family: "DMsans";
   src: url("fonts/BBBDMSans-Bold.woff") format("woff");
   font-weight: bold;
+  font-style: normal;
 }
+
+/* DMsans italic */
+
+@font-face {
+  font-family: "DMsans";
+  src: url("fonts/DMSans-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DMsans";
+  src: url("fonts/DMSans-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DMsans";
+  src: url("fonts/DMSans-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DMsans";
+  src: url("fonts/DMSans-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
 
 /* Font personnelle */
 
@@ -74,7 +106,7 @@ Sommaire :
   --gradient: linear-gradient(90deg,var(--primary) 0%, var(--white) 100%);
   --gradient-bg-btn: linear-gradient(90deg,var(--primary) 0%, var(--white) 28%);
   --white:  rgb(255, 251, 249);
-  --black: rgba(0, 0, 0, 0.85);
+  --black: rgba(0, 0, 0);
   /* espacements homogènes */
   --spacerXS: 1rem;
   --spacer: 2rem;
