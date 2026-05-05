@@ -870,6 +870,7 @@ figcaption::before {
   max-width: 92rem;
 }
 .bib-entry{
+  word-break: break-word;
   list-style: none;
   max-width: 20rem;
   min-width: 16rem;

@@ -70,12 +70,10 @@
     --baseplussize: 12pt;
     --basesize: 10pt;
     --smallsize: 7.5pt;
-    --black: rgba(0, 0, 0, 0.85);
     --gradientvertical: linear-gradient(180deg,var(--primary) 0%, var(--white) 100%);
     --spacer: .5cm;
     --lineheightTitle: 1.2;
     /* couleur d’accentuation */
-    --accentcolor: black;
     /* maximum width for texts */
     --maxwidth: 40em;
     /* columns */
@@ -262,7 +260,7 @@
     margin: 0;
     margin: 0 4mm;
     line-height: 1.55;
-    word-break: break-all;
+    word-break: break-word;
     /* Paramètres pour aligner à droite ↓ (à commenter sinon) */
     /* text-wrap: pretty; */ 
     /* Paramètres pour justifier ↓ (à commenter sinon, et peut être mettre les titres en balance pour créer un rythme de bloc) */
