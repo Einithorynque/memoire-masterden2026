@@ -347,6 +347,48 @@ button:active::before {
 } 
 
 
+.print-button{
+  position: relative;
+  display: inline-flex;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.print-button::before{
+  position: absolute;
+  z-index: 2;
+  content: '';
+  background: var(--secondary) ;
+  mix-blend-mode: multiply;
+  height: 2.25rem;
+  left: -1px;
+  width: 0;
+  transition: all 0.5s;
+}
+
+.print-button::after{
+  display: inline-flex;
+  padding-left: 0.5em;
+  width: 3rem;
+  content: url('../assets/imprimante.svg');
+}
+
+.print-button:hover{
+  text-decoration: none;
+}
+.print-button:active{
+  text-decoration: none;
+}
+
+.print-button:hover::before {
+  width:100%;
+}
+.print-button:active::before {
+  width:100%;
+}
+
+
 /* ------------------------------------------------------------------------ Nav */
 
 #nav {
@@ -453,7 +495,7 @@ button:active::before {
 
 /* bouton toggle menu */
 
-@media screen  and (max-width:80rem) {
+@media screen  and (max-width:60rem) {
   #nav {
     display: block;
     min-height: 0;
@@ -934,7 +976,6 @@ figcaption::before {
   padding-left: 0.5em;
   content: url('../assets/download-button.svg');
   zoom:80%
-
 }
 
 #footer-button-next{
