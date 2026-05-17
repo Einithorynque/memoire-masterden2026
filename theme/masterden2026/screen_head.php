@@ -1,5 +1,6 @@
 <!-- Styles communs -->
 <link rel="stylesheet" href="<?= $theme_url ?>/css/style.css">
+<link rel="stylesheet" href="<?= $theme_url ?>/css/web.css">
 
 <!-- Notes de marge -->
 <script src="<?= $theme_url ?>/js/screen/sideNotes.js" media="screen"></script>

@@ -394,11 +394,13 @@ button:active::before {
 #nav {
   background-color: var(--primary); 
   height: 100vh;
+  overflow: scroll;
   width: 33vw;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   transform: translate(50vw);
   transition: transform 0.6s ease-in-out;
-  grid-gap: var(--spacer);
+  gap: var(--spacer);
   padding: var(--spacerXL) var(--spacer);
   align-content: space-between;
   position: absolute;
@@ -411,7 +413,7 @@ button:active::before {
 #nav ul {
   grid-column: 1;
   margin: 0;
-  font-size: 1em;
+  /* font-size: 1em; */
 }
 .nav-default + .nav-appendices { margin-top: 1em;}
 
@@ -996,4 +998,95 @@ figcaption::before {
 #footer-button-next button::after {
   content: url('../assets/arrow-button.svg');
   zoom:100%
+}
+
+/* ── TOC dans #nav ────────────────────────────────────────────── */
+
+/* boutons de navigation h2 */
+.toc-section{
+  padding-bottom: 1rem;
+}
+
+.toc-section-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  width: 100%;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all ease-in-out .3s;
+}
+
+.toc-section.active > .toc-section-btn {
+  /* votre style pour la section active */
+  opacity: 1;
+}
+
+.toc-section:not(.active) > .toc-section-btn {
+  opacity: 1;
+}
+
+.toc-chevron::after {
+  content: '▼';
+  font-size: 0.8em;
+  margin-left: .5rem;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.toc-section.open > .toc-section-btn .toc-chevron::after {
+  transform: rotate(180deg);
+}
+
+/* Sous-liste h3 */
+.toc-sublist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.toc-section.open > .toc-sublist {
+  max-height: 600px; /* assez grand pour contenir tous les liens */
+}
+
+.toc-sub-h2 button,
+.toc-sub-h3 button {
+  display: block;
+  width: 100%;
+  padding: 0.35rem 1rem 0.35rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  opacity: 0.7;
+  transition: all ease-in-out .3s;
+  text-decoration: none;
+}
+
+.toc-section-btn:hover::before,
+.toc-sub-h3 button:hover::before {
+  display: none;
+}
+
+.toc-sub-h3 button {
+  padding-left: 1rem;
+  opacity: 0.7;
+}
+
+/* .toc-section-btn:hover, */
+.toc-sub-h2 button:hover,
+.toc-sub-h3 button:hover,
+.toc-sub-h2 button.active,
+.toc-sub-h3 button.active {
+  opacity: 1;
+  transform: translateX(1rem);
+  text-decoration: underline;
 }
