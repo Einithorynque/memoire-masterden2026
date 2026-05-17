@@ -14,6 +14,7 @@ class MyHandler extends Paged.Handler {
     }
 
     beforeParsed(content) { //-> avant de transformer le body en page
+        
         // 1. Transformer les [@clé] partout dans le contenu (corps + notes)
         this._replaceCitationMarkers(content);
 
@@ -32,7 +33,7 @@ class MyHandler extends Paged.Handler {
             call.after(inline_note);
             call.parentElement.removeChild(call);
         });
-
+        
         // 3. Générer la bibliographie dans #biblio (ou à la fin de #main)
         CitationManager.renderBibliography(content.querySelector("#main") || content);
     }

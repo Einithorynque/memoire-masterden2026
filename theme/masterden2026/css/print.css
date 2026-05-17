@@ -195,6 +195,12 @@
     display: none;
   }
 
+  @media(max-width:60rem){
+    #nav{
+      display: block;
+    }
+  }
+
   /* ------------------------------------------------------------------------ Running titles */
   /* running title */
   .runningtitle {

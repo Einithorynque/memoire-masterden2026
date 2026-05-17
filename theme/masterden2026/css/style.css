@@ -503,6 +503,16 @@ button:active::before {
   }
 
   #quicklinks{
+    width: 100%;
+    height: fit-content;
+    padding: 1rem 0;
+    left: 0;
+    justify-content: center;
+    background-color: var(--white);
+    border-top: var(--primary) solid 1px;
+  }
+
+  #fastTravel{
     display: none;
   }
 }
