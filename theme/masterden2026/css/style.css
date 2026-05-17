@@ -415,6 +415,7 @@ button:active::before {
   margin: 0;
   /* font-size: 1em; */
 }
+
 .nav-default + .nav-appendices { margin-top: 1em;}
 
 #nav ul,
