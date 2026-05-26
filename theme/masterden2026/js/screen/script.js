@@ -42,10 +42,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
       //création du chevron
       if (subHeadings.length) {
-        const chevron = document.createElement('span');
-        chevron.className = 'toc-chevron';
-        chevron.setAttribute('aria-hidden', 'true');
-        secBtn.appendChild(chevron);
+        // const chevron = document.createElement('span');
+        secBtn.classList.add('toc-chevron');
+        // chevron.setAttribute('aria-hidden', 'true');
+        // secBtn.appendChild(chevron);
       }
 
       // Toggle le sous-menu avec les h3 en leur ajoutant une classe open, si il n 'y a pas

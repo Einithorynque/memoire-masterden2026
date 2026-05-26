@@ -1010,7 +1010,7 @@ figcaption::before {
 
 .toc-section-btn {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   text-decoration: none;
   width: 100%;
@@ -1031,16 +1031,22 @@ figcaption::before {
   opacity: 1;
 }
 
-.toc-chevron::after {
-  content: '▼';
-  font-size: 0.8em;
-  margin-left: .5rem;
-  display: inline-block;
-  transition: transform 0.2s ease;
+.toc-chevron{
+  order: 1;
 }
 
-.toc-section.open > .toc-section-btn .toc-chevron::after {
-  transform: rotate(180deg);
+.toc-chevron::before {
+  content: url(../assets/chevron-button.svg);
+  display: inline-block;
+  width: auto;
+  transition: transform 0.2s ease;
+  position: relative;
+  background: transparent;
+  margin-right: 1rem;
+}
+
+.toc-section.open .toc-chevron::before {
+  transform: rotate(-180deg);
 }
 
 /* Sous-liste h3 */
@@ -1074,11 +1080,19 @@ figcaption::before {
 
 .toc-section-btn:hover::before,
 .toc-sub-h3 button:hover::before {
-  display: none;
+  background: transparent;
+  width: 0;
+}
+
+.toc-chevron:hover::before{
+  width: auto;
+  background: transparent;
+  position: inherit;
+  margin-right: 1rem;
 }
 
 .toc-sub-h3 button {
-  padding-left: 1rem;
+  padding-left: 2rem;
   opacity: 0.7;
 }
 
