@@ -542,6 +542,8 @@ main blockquote,
 main ol {
   grid-column: 2;
   max-width: var(--maxwidth);
+  margin: 0;
+  margin-bottom: 1em;
 }
 /* main h1:first-child,
 main h2:first-child,
