@@ -259,6 +259,11 @@
     display: block;
     padding: 0;
   }
+
+ main > section:not(#index){
+    display: initial !important;
+  }
+
   .default p {
     /* minimume deux lignes présentes sur la page, au début ou à la fin d’un paragraphe */
     orphans: 2;
