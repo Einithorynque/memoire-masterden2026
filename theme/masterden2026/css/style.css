@@ -566,25 +566,26 @@ main h2 {
 @media(min-width:30rem){
   main h2{
     position: sticky;
-    transform: translateX(-40vw);
     top: 20px;
+    transform: translateX(-41vw);
     max-width: 38vw;
   }
 }
 
 main h3 {
   font-size: 1.6rem;
-  /* margin-left: 2em; */
-  font-weight: normal;
-  text-decoration: underline;
+  /* A modifier en fonction de vos typos de titre */
+  font-weight: 500; 
   font-family: var(--fontTitle);
 }
 
 main h4 {
-  font-size: 1em;
-  margin-left: 2em;
-  font-weight: normal;
+  font-size: 1.4rem;
   font-family: var(--fontTitle);
+}
+
+main h5 {
+  font-size: 1.2rem
 }
 
 main figure {
