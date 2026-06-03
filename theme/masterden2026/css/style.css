@@ -984,13 +984,6 @@ figcaption::before {
   z-index:2;
 }
 
-#footer-nav button::after {
-  display: inline-flex;
-  padding-left: 0.5em;
-  content: url('../assets/download-button.svg');
-  zoom:80%
-}
-
 #footer-button-next{
   display: flex;
   justify-content: center;

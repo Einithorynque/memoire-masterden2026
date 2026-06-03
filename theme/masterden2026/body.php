@@ -67,6 +67,6 @@
         <div id="footer-nav">
             <div id="footer-button-next"></div>
             <hr/>
-            <a href="content\text-no-median.md" download="texte-sans-median.md"><button>Télécharger sans les points médians</button></a>
+            <a href="projet.html"><button>Accéder au projet</button></a>
         </div>
 </footer>
