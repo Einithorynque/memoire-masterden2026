@@ -63,7 +63,7 @@
 </main>
 
 <footer id="footer">
-        <h2>Lire la partie suivante</h2>
+        <h2>Lire la partie suivante ou accéder au projet</h2>
         <div id="footer-nav">
             <div id="footer-button-next"></div>
             <hr/>

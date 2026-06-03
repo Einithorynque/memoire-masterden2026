@@ -971,6 +971,7 @@ figcaption::before {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: calc(var(--spacerXS) * .8)
 }
 
@@ -982,6 +983,13 @@ figcaption::before {
 
 #footer-nav button{
   z-index:2;
+}
+
+#footer-nav button::after {
+  display: inline-flex;
+  padding-left: 0.5em;
+  content: '';
+  zoom:80%
 }
 
 #footer-button-next{
