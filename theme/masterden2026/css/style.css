@@ -880,7 +880,7 @@ figcaption::before {
     flex-direction: column-reverse;
   }
   figcaption::before {
-    content: "↓ " !important;
+    content: "↑ " !important;
   }
 }
 
