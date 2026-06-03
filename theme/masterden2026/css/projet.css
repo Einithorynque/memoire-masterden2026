@@ -1,0 +1,81 @@
+body{
+  margin: 0;
+  overflow-x: hidden;
+  height: fit-content;
+  background-color: var(--white);
+}
+
+nav{
+    padding: var(--spacer);
+}
+
+
+.secondarymain{
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-width: inherit;
+}
+
+main > :not(#index){
+    margin-bottom: 0;
+}
+
+.hero{
+    padding: var(--spacer);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title h1{
+    line-height: 1.1;
+    max-width: calc(var(--bigsize) * 16);
+    font-size: calc(var(--bigsize) * 1);
+    color: var(--black);
+    font-family: var(--fontTitle);
+    font-weight: var(--weightTitle);
+    margin-bottom: 1rem;
+}
+
+.projetIcon{
+    width: 35vw;
+    height: 35vw;
+}
+
+.damier{
+    padding: var(--spacer);
+    display: flex;
+    justify-content: space-between;
+}
+
+.damierContenu{
+    max-width: 40vw;
+}
+
+.damier img{
+    width: 58vw;
+    height: 55vh;
+    object-fit: cover;
+}
+
+.gridImg{
+    padding: var(--spacer);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+}
+
+.gridImg img{
+    width: 100%;
+    object-fit: cover;
+}
+
+#footer{
+    margin: 0;
+}
+
+#footer-nav button::after{
+    display: none;
+}
