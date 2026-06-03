@@ -559,7 +559,7 @@ main h1 {
   font-family: var(--fontTitle);
 }
 main h2 {
-  font-size: 2em;
+  font-size: 2.5rem;
   font-family: var(--fontTitle);
 }
 
@@ -573,7 +573,7 @@ main h2 {
 }
 
 main h3 {
-  font-size: 1.25em;
+  font-size: 1.6rem;
   /* margin-left: 2em; */
   font-weight: normal;
   text-decoration: underline;
