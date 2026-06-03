@@ -528,6 +528,7 @@ main {
   grid-gap: var(--spacer);
   align-self: start;
   padding: var(--spacer);
+  position: relative;
 }
 /* les sections */
 main > *:not(#index) {
@@ -558,16 +559,27 @@ main h1 {
   font-family: var(--fontTitle);
 }
 main h2 {
-  font-size: 1em;
+  font-size: 2em;
   font-family: var(--fontTitle);
 }
+
+@media(min-width:30rem){
+  main h2{
+    position: sticky;
+    transform: translateX(-40vw);
+    top: 20px;
+    max-width: 38vw;
+  }
+}
+
 main h3 {
-  font-size: 1em;
-  margin-left: 2em;
+  font-size: 1.25em;
+  /* margin-left: 2em; */
   font-weight: normal;
   text-decoration: underline;
   font-family: var(--fontTitle);
 }
+
 main h4 {
   font-size: 1em;
   margin-left: 2em;
