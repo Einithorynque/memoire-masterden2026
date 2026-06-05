@@ -216,6 +216,20 @@ hr{
   font-size: 1.5rem;
 }
 
+@media(max-width:30rem){
+  #header{
+    min-height: 50vh;
+    background-size: 80%;
+  }
+  .header-content{
+    min-height: 40vh;
+  }
+
+  .meta-name{
+    font-size: 1rem;
+  }
+}
+
 /* #header nav a {
   display: inline-block;
   margin-right: 1em;
@@ -245,6 +259,18 @@ hr{
   width: 3.25rem;
   height: 3.25rem;
   filter: var(--filter);
+}
+
+@media(max-width:30rem){
+
+  .nav-principale{
+    display: flex;
+    justify-content: space-between;
+  }
+  .iconsContainer{
+    display: none;
+  }
+  
 }
 
 
@@ -585,11 +611,11 @@ main h1 {
 }
 main h2 {
   position: relative;
-  font-size: 2.5rem;
+  font-size: 2em;
   font-family: var(--fontTitle);
 }
 
-@media only screen and (min-width : 1400px) {
+@media only screen and (min-width : 1300px) {
   main h2{
     position: sticky;
     top: 20px;
@@ -630,6 +656,9 @@ main blockquote {
     display: block; 
     max-width: var(--maxwidth);
     margin: 0 auto;
+  }
+  main h2 {
+  font-size: calc(var(--bigsize)*.9);
   }
 }
 
