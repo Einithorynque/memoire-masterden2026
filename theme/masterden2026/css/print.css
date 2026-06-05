@@ -366,6 +366,7 @@
     max-width: none;
   }  
   figcaption {
+    background: none;
     font-size: var(--smallsize);
   }
   figure.videofigure::after{

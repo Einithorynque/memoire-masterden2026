@@ -2,8 +2,11 @@
     <!-- navigation en header -->
      <div class="nav-principale">
         <a href=""><button>Retour à l'accueil</button></a>
-        <img src="theme/masterden2026/assets/icons-nav-principale.svg" alt="icons">
-        <a href=""><button id="toggle-btn">Sommaire</button></a>
+        <div class="iconsContainer">
+            <img class=" iconHead" src="theme/masterden2026/assets/icone-memoire.svg"/>
+            <img class=" iconHead" src="theme/masterden2026/assets/icone-projet.svg"/>
+        </div>
+        <button id="toggle-btn">Sommaire</button>
      </div>
 
     <!-- contenu du hero + cover haut -->

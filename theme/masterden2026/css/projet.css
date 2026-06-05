@@ -54,9 +54,10 @@ main > :not(#index){
 }
 
 .damier img{
-    width: 58vw;
+    width: 50vw;
     height: 55vh;
     object-fit: cover;
+    border-radius: .5rem;
 }
 
 .gridImg{

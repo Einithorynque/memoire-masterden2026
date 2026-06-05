@@ -106,7 +106,8 @@ Sommaire :
   --gradient: linear-gradient(90deg,var(--primary) 0%, var(--white) 100%);
   --gradient-bg-btn: linear-gradient(90deg,var(--primary) 0%, var(--white) 28%);
   --white:  rgb(255, 251, 249);
-  --black: rgba(0, 0, 0);
+  --black: rgba(34, 18, 12);
+  --filter : brightness(0) saturate(100%) invert(6%) sepia(39%) saturate(855%) hue-rotate(331deg) brightness(99%) contrast(96%);
   /* espacements homogènes */
   --spacerXS: 1rem;
   --spacer: 2rem;
@@ -118,7 +119,7 @@ Sommaire :
   /* largeur max. des textes */
   --maxwidth: 50rem;
   /* image */
-  --background-header : url("../assets/background-header.jpg");
+  --background-header : url("../assets/icone-memoire.svg");
 }
 
 @media (max-width:30rem) {
@@ -174,7 +175,8 @@ hr{
   min-height: 100vh;
   padding: var(--spacer);
   background-image: var(--background-header);
-  background-size: cover;
+  background-size: 35%;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
@@ -186,28 +188,25 @@ hr{
 }
 
 #header h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   line-height: 1.1;
   max-width: calc(var(--bigsize) * 16);
   font-size: calc(var(--bigsize) * 1);
-  color: var(--accentcolor);
+  color: var(--black);
   font-family: var(--fontTitle);
   font-weight: var(--weightTitle);
 }
 #header h2 {
-  margin: 0;
+  margin: 0 0 2rem 0;
   line-height: 1.2;
-  max-width: calc(var(--bigsize) * 16);
-  font-size: calc(var(--bigsize) * .75);
-  color: var(--accentcolor);
+  max-width: calc(var(--bigsize) * 10);
+  font-size: calc(var(--bigsize) * .5);
+  color: var(--black);
   font-family: var(--fontTitle);
 }
-#header h2::before{
-  content: "—";
-  display: block;
-  font-size: calc(var(--bigsize) * .75);
-}
+
 #header h2:empty { display: none;}
+
 
 .meta {
   display: none;
@@ -232,8 +231,20 @@ hr{
   justify-self: center;
 }
 
-.nav-principale img+a {
+.nav-principale div+button {
   justify-self: end;
+}
+
+.iconsContainer{
+  display: flex;
+  gap: .5rem;
+  justify-self: center;
+}
+
+.iconHead{
+  width: 3.25rem;
+  height: 3.25rem;
+  filter: var(--filter);
 }
 
 
@@ -866,7 +877,7 @@ hr.footnotes-sep {
 }
 figcaption {
   font-size: 0.85rem;
-  background: white;
+  background: var(--white);
   padding: 0.5em 0 0;
 }
 figcaption::before {
