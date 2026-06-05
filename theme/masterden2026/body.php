@@ -9,6 +9,7 @@
     <!-- contenu du hero + cover haut -->
     <div class="header-content">
         <h1><?= $title ?></h1>
+        <h2><?= $subtitle ?></h2>
         <div class="meta-name"><?= $name ?></div>
         <div class="meta meta-column">
             <p><?= $mention ?></p>
