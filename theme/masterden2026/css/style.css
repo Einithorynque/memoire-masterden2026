@@ -1015,7 +1015,7 @@ figcaption::before {
   zoom:100%
 }
 
-/* ── TOC dans #nav ────────────────────────────────────────────── */
+/* ── Sommaire ────────────────────────────────────────────── */
 
 /* boutons de navigation h2 */
 .toc-section{
@@ -1118,4 +1118,23 @@ figcaption::before {
   opacity: 1;
   transform: translateX(1rem);
   text-decoration: underline;
+}
+
+/* ── Mise en page des images web ────────────────────────────────────────────── */
+
+.quarter {
+  width: 25%;
+}
+
+.half{
+  width: 50%;
+}
+
+.threequarter{
+  width: 75%;
+}
+
+.imgGrid{
+  display: flex;
+  flex-wrap: wrap;
 }
