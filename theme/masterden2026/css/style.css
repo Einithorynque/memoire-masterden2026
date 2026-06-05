@@ -874,6 +874,7 @@ figcaption::before {
 }
 
 .imgGrid{
+  max-width: var(--maxwidth);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
