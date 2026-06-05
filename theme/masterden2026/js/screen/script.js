@@ -204,7 +204,7 @@ window.addEventListener('DOMContentLoaded', () => {
       nav.style.transform = "translateX(0)";
     });
     closeBtn.addEventListener('click', () => {
-      nav.style.transform = "translateX(50vw)";
+      nav.style.transform = "translateX(100%)";
     });
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') nav.style.transform = "translateX(50vw)";

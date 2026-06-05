@@ -409,6 +409,20 @@ button:active::before {
   z-index: 90;
 }
 
+@media(max-width:30rem){
+  #nav{
+    width: 100%;
+    transform: translate(100%);
+  }
+
+  #nav button{
+    order: 1;
+  }
+  #toc-tree{
+    order: 2;
+  }
+}
+
 #nav button,
 #nav ul {
   grid-column: 1;
@@ -500,7 +514,7 @@ button:active::before {
 
 @media screen  and (max-width:60rem) {
   #nav {
-    display: block;
+    display: flex;
     min-height: 0;
     margin-bottom: calc(var(--spacer) * 2);
   }
@@ -559,11 +573,12 @@ main h1 {
   font-family: var(--fontTitle);
 }
 main h2 {
+  position: relative;
   font-size: 2.5rem;
   font-family: var(--fontTitle);
 }
 
-@media(min-width:30rem){
+@media only screen and (min-width : 1400px) {
   main h2{
     position: sticky;
     top: 20px;
@@ -890,7 +905,7 @@ figcaption::before {
   }
   .figure { 
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   figcaption::before {
     content: "↑ " !important;
@@ -1123,18 +1138,20 @@ figcaption::before {
 /* ── Mise en page des images web ────────────────────────────────────────────── */
 
 .quarter {
-  width: 25%;
+  width: 24%;
 }
 
 .half{
-  width: 50%;
+  width: 49%;
 }
 
 .threequarter{
-  width: 75%;
+  width: 74%;
 }
 
 .imgGrid{
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
+  row-gap: 1rem;
 }
