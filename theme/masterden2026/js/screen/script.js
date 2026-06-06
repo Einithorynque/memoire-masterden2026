@@ -177,6 +177,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
       if (!isFirstLoad) {
         el.scrollIntoView({ behavior: 'smooth' });
+
+        const h2 = el.querySelector('h2');
+      if (h2) {
+        h2.setAttribute('tabindex', '-1');
+        h2.focus();
+      }
       }
 
       // Activer le bon bloc dans le TOC
