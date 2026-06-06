@@ -304,7 +304,7 @@ button::before{
   content: '';
   background: var(--secondary) ;
   mix-blend-mode: multiply;
-  height: 1.2em;
+  height: 1.3em;
   left: -1px;
   width: 0;
   transition: all 0.5s;
@@ -326,8 +326,47 @@ button:active::before {
   width:100%;
 }
 
+a{
+  width: fit-content;
+  background: none;
+  position: relative;
+  border: none;
+  text-decoration: underline;
+  font-family: var(--fontfamily);
+  font-size: var(--basesize);
+  cursor: pointer;
+}
+a::before{
+  position: absolute;
+  z-index: 2;
+  content: '';
+  background: var(--secondary) ;
+  mix-blend-mode: multiply;
+  height: 1.3em;
+  left: -1px;
+  width: 0;
+  transition: all 0.5s;
+}
+a:after {
+  display: none;
+}
+a:hover{
+  text-decoration: none;
+}
+a:active{
+  text-decoration: none;
+}
+
+a:hover::before {
+  width:100%;
+}
+a:active::before {
+  width:100%;
+}
+
 /* Quicklinks v2 */ 
  .quicklinks-button{
+  text-decoration: none;
   position: relative;
   display: flex;
   justify-content: start;
@@ -382,6 +421,13 @@ button:active::before {
   transform:none;
   clip-path: polygon(10% 0, 12% 77%, 100% 77%, 100% 100%, 36% 100%, 0 100%, 0 0);
 } 
+
+.quicklinks-button:focus-visible{
+  background: var(--black);
+}
+.quicklinks-button:focus-visible .quicklinks_text{
+  color: var(--white);
+}
 
 
 .print-button{
@@ -793,6 +839,7 @@ label[for^="sn-"] {
   cursor: pointer;
   background-color: var(--secondary);
 }
+
 .sn-toggle-label,
 sup a.footnote-ref {
   text-decoration: none;
@@ -1053,13 +1100,13 @@ figcaption::before {
   gap: calc(var(--spacerXS) * .8)
 }
 
-#footer-nav button::before{
+#footer-nav button::before, #footer-nav a::before{
   background: var(--white) ;
   mix-blend-mode: normal;
   z-index:-1;
 }
 
-#footer-nav button{
+#footer-nav button, #footer-nav a {
   z-index:2;
 }
 
