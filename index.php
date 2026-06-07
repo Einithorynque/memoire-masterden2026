@@ -7,10 +7,11 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="keywords" content="memoire master, master numérique, memoire design, master design, projet design, etude design numérique">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- dummy favicon -->
-  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEhEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP7/AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon" />
+  <link href="favicon-masterden.ico" rel="icon" />
 
   <!-- Le titre du mémoire / doc écrit – votre nom -->
   <title><?= strip_tags( $title ) ?> <?= isset($name) ? "— $name" : "" ?></title>
