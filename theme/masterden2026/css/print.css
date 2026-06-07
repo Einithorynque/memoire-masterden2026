@@ -194,6 +194,17 @@
     font-family: var(--fontTitle);
   }
 
+  #nav a{
+    text-decoration: none;
+    position: inherit;
+  }
+
+  #nav a::before{
+    background: none;
+    position: inherit;
+    mix-blend-mode: normal;
+  }
+
   #nav h2, #nav ul { grid-column: 1; }
 
   #quicklinks{
@@ -204,6 +215,16 @@
     #nav{
       display: block;
     }
+  }
+  .toc-element-level-2{
+    margin-left: 0;
+  }
+
+  .toc-element{
+    display: block;
+    text-decoration: none;
+    width: auto;
+    margin-left: 0;
   }
 
   /* ------------------------------------------------------------------------ Running titles */
