@@ -54,6 +54,7 @@
 
   <!-- la navigation (= le sommaire) -->
  <div id="nav" aria-hidden="true" inert>
+        <h3>Table des matières</h3>
         <ul class="nav-ul">
             <?= $nav() ?>
         </ul>

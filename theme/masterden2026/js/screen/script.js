@@ -41,10 +41,12 @@ window.addEventListener('DOMContentLoaded', () => {
         !(idx === 0 && h.tagName === 'H2') // on exclut le premier h2 déjà utilisé comme titre
       );
 
-      //création du chevron
+      //création du chevron + accessibilité
       if (subHeadings.length) {
         // const chevron = document.createElement('span');
         secBtn.classList.add('toc-chevron');
+        secBtn.setAttribute('aria-expanded','false')
+        secBtn.setAttribute('aria-controls', 'Sous-chapitre')
         // chevron.setAttribute('aria-hidden', 'true');
         // secBtn.appendChild(chevron);
       }
@@ -54,6 +56,8 @@ window.addEventListener('DOMContentLoaded', () => {
       if (subHeadings.length) {
         secBtn.addEventListener('click', () => {
         secBlock.classList.toggle('open');
+        const isOpen = secBlock.classList.contains('open');
+        secBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         const subList = secBlock.querySelector('.toc-sublist');
         if (subList) {
           if (secBlock.classList.contains('open')) {
@@ -223,28 +227,32 @@ window.addEventListener('DOMContentLoaded', () => {
     var nav = document.getElementById('nav');
     var closeBtn = document.getElementById('btn-fermer');
 
-    toggleBtn.addEventListener('click', (e) => {
-      e.preventDefault();
+    function openNav() {
+      toggleBtn.setAttribute('aria-expanded', 'true');
       nav.style.transform = "translateX(0)";
       nav.removeAttribute('inert');
       nav.setAttribute('aria-hidden', 'false');
       const firstLink = nav.querySelector('#toc-tree button');
       if (firstLink) firstLink.focus();
-    });
-    closeBtn.addEventListener('click', () => {
+    }
+
+    function closeNav() {
+      toggleBtn.setAttribute('aria-expanded', 'false');
       nav.style.transform = "translateX(100%)";
       nav.setAttribute('inert', '');
       nav.setAttribute('aria-hidden', 'true');
       toggleBtn.focus();
+    }
+
+    toggleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleBtn.getAttribute('aria-expanded') === 'true' ? closeNav() : openNav();
     });
+
+    closeBtn.addEventListener('click', closeNav);
+
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && nav.getAttribute('aria-hidden') === 'false') {
-      // ⚠️ Dans votre version, les accolades manquaient — tout s'exécutait toujours
-      nav.setAttribute('inert', '');
-      nav.setAttribute('aria-hidden', 'true');
-      nav.style.transform = "translateX(100%)";
-      toggleBtn.focus();
-  }
+      if (e.key === 'Escape' && nav.getAttribute('aria-hidden') === 'false') closeNav();
     });
 
     // ── PDF download guard  ──────────────────────────────────────
