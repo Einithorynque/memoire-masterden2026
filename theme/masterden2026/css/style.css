@@ -1043,6 +1043,16 @@ figcaption::before {
 /* ── Sommaire ────────────────────────────────────────────── */
 
 /* boutons de navigation h2 */
+#btn-fermer::before{
+  background: var(--white) ;
+  mix-blend-mode: normal;
+  z-index:-1;
+}
+
+#btn-fermer{
+  z-index:2;
+}
+
 .toc-section{
   padding-bottom: 1rem;
 }
