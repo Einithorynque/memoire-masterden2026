@@ -24,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
       //création d'une div par partie du mémoire.
       const secBlock = document.createElement('div');
       secBlock.className = 'toc-section';
+      
       secBlock.dataset.index = i;
 
       // Bouton du h2
@@ -40,10 +41,12 @@ window.addEventListener('DOMContentLoaded', () => {
         !(idx === 0 && h.tagName === 'H2') // on exclut le premier h2 déjà utilisé comme titre
       );
 
-      //création du chevron
+      //création du chevron + accessibilité
       if (subHeadings.length) {
         // const chevron = document.createElement('span');
         secBtn.classList.add('toc-chevron');
+        secBtn.setAttribute('aria-expanded','false')
+        secBtn.setAttribute('aria-controls', 'Sous-chapitre')
         // chevron.setAttribute('aria-hidden', 'true');
         // secBtn.appendChild(chevron);
       }
@@ -53,6 +56,16 @@ window.addEventListener('DOMContentLoaded', () => {
       if (subHeadings.length) {
         secBtn.addEventListener('click', () => {
         secBlock.classList.toggle('open');
+        const isOpen = secBlock.classList.contains('open');
+        secBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        const subList = secBlock.querySelector('.toc-sublist');
+        if (subList) {
+          if (secBlock.classList.contains('open')) {
+            subList.removeAttribute('inert');
+          } else {
+            subList.setAttribute('inert', '');
+          }
+        }
       });
       } else {
         secBtn.addEventListener('click', () => {
@@ -66,6 +79,7 @@ window.addEventListener('DOMContentLoaded', () => {
       // Sous-liste h2/h3
       if (subHeadings.length) {
         const subList = document.createElement('ul');
+        subList.setAttribute('inert', '')
         subList.className = 'toc-sublist';
 
         subHeadings.forEach(heading => {
@@ -167,6 +181,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
       if (!isFirstLoad) {
         el.scrollIntoView({ behavior: 'smooth' });
+
+        const h2 = el.querySelector('h2');
+      if (h2) {
+        h2.setAttribute('tabindex', '-1');
+        h2.focus();
+      }
       }
 
       // Activer le bon bloc dans le TOC
@@ -175,6 +195,14 @@ window.addEventListener('DOMContentLoaded', () => {
         block.classList.toggle('active', isActive);
         // Ouvrir automatiquement la section active, fermer les autres
         block.classList.toggle('open', isActive);
+        const subList = block.querySelector('.toc-sublist');
+        if (subList) {
+          if (isActive) {
+            subList.removeAttribute('inert');
+          } else {
+            subList.setAttribute('inert', '');
+          }
+        }
       });
 
       // Activer le bon lien dans le fast travel
@@ -199,15 +227,32 @@ window.addEventListener('DOMContentLoaded', () => {
     var nav = document.getElementById('nav');
     var closeBtn = document.getElementById('btn-fermer');
 
+    function openNav() {
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      nav.style.transform = "translateX(0)";
+      nav.removeAttribute('inert');
+      nav.setAttribute('aria-hidden', 'false');
+      const firstLink = nav.querySelector('#toc-tree button');
+      if (firstLink) firstLink.focus();
+    }
+
+    function closeNav() {
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      nav.style.transform = "translateX(100%)";
+      nav.setAttribute('inert', '');
+      nav.setAttribute('aria-hidden', 'true');
+      toggleBtn.focus();
+    }
+
     toggleBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      nav.style.transform = "translateX(0)";
+      toggleBtn.getAttribute('aria-expanded') === 'true' ? closeNav() : openNav();
     });
-    closeBtn.addEventListener('click', () => {
-      nav.style.transform = "translateX(100%)";
-    });
+
+    closeBtn.addEventListener('click', closeNav);
+
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') nav.style.transform = "translateX(50vw)";
+      if (e.key === 'Escape' && nav.getAttribute('aria-hidden') === 'false') closeNav();
     });
 
     // ── PDF download guard  ──────────────────────────────────────

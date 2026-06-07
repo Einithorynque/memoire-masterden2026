@@ -19,21 +19,22 @@
     }
   }  
 
-  @page:right {
-    margin: 18mm 6mm 24mm 14mm;
-    bleed: 6mm 6mm 6mm 0cm;      
-    /* --pagedjs-bleed-right-left: 0mm; 
-    --pagedjs-bleed-right-right: 6mm;
-    --pagedjs-bleed-right-top: 3mm; 
-    --pagedjs-bleed-right-bottom: 3mm;  */
-  }
-  @page:left {
-    margin: 18mm 14mm 24mm 6mm;
-    bleed: 6mm 0cm 6mm 6mm;
-    /* --pagedjs-bleed-left-left: 6mm; 
-    --pagedjs-bleed-left-right: 0mm;  
-    --pagedjs-bleed-left-top: 3mm; 
-    --pagedjs-bleed-left-bottom: 3mm;  */
+  @page:right {    
+    margin: 18mm 6mm 24mm 14mm;    
+    bleed: 6mm 6mm 6mm 6mm;          
+    /* --pagedjs-bleed-right-left: 0mm;     
+    --pagedjs-bleed-right-right: 6mm;    
+    --pagedjs-bleed-right-top: 3mm;     
+    --pagedjs-bleed-right-bottom: 3mm;  */  
+  }  
+	
+  @page:left {    
+    margin: 18mm 14mm 24mm 6mm;    
+    bleed: 6mm 6mm 6mm 6mm;          
+    /* --pagedjs-bleed-left-left: 6mm;     
+    --pagedjs-bleed-left-right: 0mm;      
+    --pagedjs-bleed-left-top: 3mm;     
+    --pagedjs-bleed-left-bottom: 3mm;  */  
   }
   @page fullp {
     margin: 0;
@@ -79,6 +80,10 @@
     /* columns */
     --columnwidth: calc((186mm - var(--spacer) * 11) / 12);
     --maxwidth:100%;
+  }
+
+  body{
+    background-color: unset;
   }
 
   .fullpage{
@@ -361,6 +366,7 @@
     max-width: none;
   }  
   figcaption {
+    background: none;
     font-size: var(--smallsize);
   }
   figure.videofigure::after{
@@ -378,6 +384,23 @@
   .videoytb{
     display: none;
   }
+  /* ------------------------------------------------------------------------ Classe d'image */
+
+  /* Commentez celui que vous ne voulez pas */
+
+  /* version classique */
+  .img-50{height: 84mm; margin: 0;}
+  .img-100{height: 168mm; margin: 0;}
+  .img-100 img{height: 95%;}
+
+  /* pour les images format téléphones */
+  /* .img-50{height: 84mm; margin: 0; display: flex; flex-direction: row; justify-content: center; gap: 3mm}
+  .img-50 .figcaption{width: 40%;}
+  .img-50 img{height: 95%;}
+  .img-100{height: 168mm; margin: 0;}
+  .img-100 img{height: 65%;} */
+
+  
   /* ------------------------------------------------------------------------ Break */
   .breakpage {
     height: 0;
@@ -613,5 +636,7 @@
   #footer{
     display: none;
   }
+
+  
 
 }

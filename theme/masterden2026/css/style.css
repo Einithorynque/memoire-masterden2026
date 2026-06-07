@@ -106,7 +106,8 @@ Sommaire :
   --gradient: linear-gradient(90deg,var(--primary) 0%, var(--white) 100%);
   --gradient-bg-btn: linear-gradient(90deg,var(--primary) 0%, var(--white) 28%);
   --white:  rgb(255, 251, 249);
-  --black: rgba(0, 0, 0);
+  --black: rgba(34, 18, 12);
+  --filter : brightness(0) saturate(100%) invert(6%) sepia(39%) saturate(855%) hue-rotate(331deg) brightness(99%) contrast(96%);
   /* espacements homogènes */
   --spacerXS: 1rem;
   --spacer: 2rem;
@@ -118,7 +119,7 @@ Sommaire :
   /* largeur max. des textes */
   --maxwidth: 50rem;
   /* image */
-  --background-header : url("../assets/background-header.jpg");
+  --background-header : url("../assets/icone-memoire.svg");
 }
 
 @media (max-width:30rem) {
@@ -174,7 +175,8 @@ hr{
   min-height: 100vh;
   padding: var(--spacer);
   background-image: var(--background-header);
-  background-size: cover;
+  background-size: 35%;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
@@ -186,28 +188,25 @@ hr{
 }
 
 #header h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   line-height: 1.1;
   max-width: calc(var(--bigsize) * 16);
   font-size: calc(var(--bigsize) * 1);
-  color: var(--accentcolor);
+  color: var(--black);
   font-family: var(--fontTitle);
   font-weight: var(--weightTitle);
 }
 #header h2 {
-  margin: 0;
+  margin: 0 0 2rem 0;
   line-height: 1.2;
-  max-width: calc(var(--bigsize) * 16);
-  font-size: calc(var(--bigsize) * .75);
-  color: var(--accentcolor);
+  max-width: calc(var(--bigsize) * 10);
+  font-size: calc(var(--bigsize) * .5);
+  color: var(--black);
   font-family: var(--fontTitle);
 }
-#header h2::before{
-  content: "—";
-  display: block;
-  font-size: calc(var(--bigsize) * .75);
-}
+
 #header h2:empty { display: none;}
+
 
 .meta {
   display: none;
@@ -215,6 +214,20 @@ hr{
 
 .meta-name{
   font-size: 1.5rem;
+}
+
+@media(max-width:30rem){
+  #header{
+    min-height: 50vh;
+    background-size: 80%;
+  }
+  .header-content{
+    min-height: 40vh;
+  }
+
+  .meta-name{
+    font-size: 1rem;
+  }
 }
 
 /* #header nav a {
@@ -232,8 +245,32 @@ hr{
   justify-self: center;
 }
 
-.nav-principale img+a {
+.nav-principale div+button {
   justify-self: end;
+}
+
+.iconsContainer{
+  display: flex;
+  gap: .5rem;
+  justify-self: center;
+}
+
+.iconHead{
+  width: 3.25rem;
+  height: 3.25rem;
+  filter: var(--filter);
+}
+
+@media(max-width:30rem){
+
+  .nav-principale{
+    display: flex;
+    justify-content: space-between;
+  }
+  .iconsContainer{
+    display: none;
+  }
+  
 }
 
 
@@ -267,7 +304,7 @@ button::before{
   content: '';
   background: var(--secondary) ;
   mix-blend-mode: multiply;
-  height: 1.2em;
+  height: 1.3em;
   left: -1px;
   width: 0;
   transition: all 0.5s;
@@ -289,8 +326,47 @@ button:active::before {
   width:100%;
 }
 
+a{
+  width: fit-content;
+  background: none;
+  position: relative;
+  border: none;
+  text-decoration: underline;
+  font-family: var(--fontfamily);
+  font-size: var(--basesize);
+  cursor: pointer;
+}
+a::before{
+  position: absolute;
+  z-index: 2;
+  content: '';
+  background: var(--secondary) ;
+  mix-blend-mode: multiply;
+  height: 1.3em;
+  left: -1px;
+  width: 0;
+  transition: all 0.5s;
+}
+a:after {
+  display: none;
+}
+a:hover{
+  text-decoration: none;
+}
+a:active{
+  text-decoration: none;
+}
+
+a:hover::before {
+  width:100%;
+}
+a:active::before {
+  width:100%;
+}
+
 /* Quicklinks v2 */ 
  .quicklinks-button{
+  text-decoration: none;
   position: relative;
   display: flex;
   justify-content: start;
@@ -345,6 +421,13 @@ button:active::before {
   transform:none;
   clip-path: polygon(10% 0, 12% 77%, 100% 77%, 100% 100%, 36% 100%, 0 100%, 0 0);
 } 
+
+.quicklinks-button:focus-visible{
+  background: var(--black);
+}
+.quicklinks-button:focus-visible .quicklinks_text{
+  color: var(--white);
+}
 
 
 .print-button{
@@ -574,11 +657,11 @@ main h1 {
 }
 main h2 {
   position: relative;
-  font-size: 2.5rem;
+  font-size: 2em;
   font-family: var(--fontTitle);
 }
 
-@media only screen and (min-width : 1400px) {
+@media only screen and (min-width : 1300px) {
   main h2{
     position: sticky;
     top: 20px;
@@ -619,6 +702,9 @@ main blockquote {
     display: block; 
     max-width: var(--maxwidth);
     margin: 0 auto;
+  }
+  main h2 {
+  font-size: calc(var(--bigsize)*.9);
   }
 }
 
@@ -753,6 +839,7 @@ label[for^="sn-"] {
   cursor: pointer;
   background-color: var(--secondary);
 }
+
 .sn-toggle-label,
 sup a.footnote-ref {
   text-decoration: none;
@@ -866,7 +953,7 @@ hr.footnotes-sep {
 }
 figcaption {
   font-size: 0.85rem;
-  background: white;
+  background: var(--white);
   padding: 0.5em 0 0;
 }
 figcaption::before {
@@ -1013,13 +1100,13 @@ figcaption::before {
   gap: calc(var(--spacerXS) * .8)
 }
 
-#footer-nav button::before{
+#footer-nav button::before, #footer-nav a::before{
   background: var(--white) ;
   mix-blend-mode: normal;
   z-index:-1;
 }
 
-#footer-nav button{
+#footer-nav button, #footer-nav a {
   z-index:2;
 }
 

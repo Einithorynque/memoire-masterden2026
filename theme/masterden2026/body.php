@@ -1,14 +1,18 @@
 <header id="header">
     <!-- navigation en header -->
-     <div class="nav-principale">
-        <a href=""><button>Retour à l'accueil</button></a>
-        <img src="theme/masterden2026/assets/icons-nav-principale.svg" alt="icons">
-        <a href=""><button id="toggle-btn">Sommaire</button></a>
+     <div class="nav-principale" aria-hidden="false">
+        <a href="" >Retour à l'accueil</a>
+        <div class="iconsContainer">
+            <img class=" iconHead" src="theme/masterden2026/assets/icone-memoire.svg"/>
+            <img class=" iconHead" src="theme/masterden2026/assets/icone-projet.svg"/>
+        </div>
+        <button id="toggle-btn">Sommaire</button>
      </div>
 
     <!-- contenu du hero + cover haut -->
     <div class="header-content">
         <h1><?= $title ?></h1>
+        <h2><?= $subtitle ?></h2>
         <div class="meta-name"><?= $name ?></div>
         <div class="meta meta-column">
             <p><?= $mention ?></p>
@@ -49,12 +53,13 @@
 </header>
 
   <!-- la navigation (= le sommaire) -->
- <nav id="nav">
+ <div id="nav" aria-hidden="true" inert>
+        <h3>Table des matières</h3>
         <ul class="nav-ul">
             <?= $nav() ?>
         </ul>
         <button id="btn-fermer">Fermer</button>
-</nav>
+</div>
 
 
 <main id="main">
@@ -67,6 +72,6 @@
         <div id="footer-nav">
             <div id="footer-button-next"></div>
             <hr/>
-            <a href="projet.html"><button>Accéder au projet</button></a>
+            <a href="projet.html">Accéder au projet</a>
         </div>
 </footer>
